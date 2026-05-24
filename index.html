@@ -9,19 +9,24 @@
 
 <body>
 
-  <!-- NAVBAR + BURGER -->
+  <!-- NAVBAR -->
   <nav class="navbar">
 
     <div class="logo">Mondes Subtils</div>
 
-    <!-- BURGER -->
-    <div class="burger" id="burger">
-      <span></span>
-      <span></span>
-      <span></span>
+    <!-- zone droite (important pour alignement) -->
+    <div class="nav-right">
+
+      <!-- BURGER -->
+      <div class="burger" id="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
     </div>
 
-    <!-- MENU -->
+    <!-- MENU FULL SCREEN -->
     <div class="menu" id="menu">
       <a href="index.html">Accueil</a>
       <a href="a-propos.html">À propos</a>
@@ -60,7 +65,7 @@
     <p>Mondes Subtils — accompagnement bien-être</p>
   </footer>
 
-  <!-- SCRIPT BURGER + MENU -->
+  <!-- SCRIPT -->
   <script>
     const burger = document.getElementById("burger");
     const menu = document.getElementById("menu");
@@ -70,7 +75,6 @@
       burger.classList.toggle("active");
     });
 
-    // MENU DISPARAÎT AU SCROLL
     let lastScroll = 0;
     const nav = document.querySelector(".navbar");
 
