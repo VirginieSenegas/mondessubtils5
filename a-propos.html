@@ -1,42 +1,186 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>À propos - Mondes Subtils</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>À propos — Mondes Subtils</title>
+
+  <meta name="description" content="Découvrez l’approche humaine et attentive de Mondes Subtils, accompagnement en magnétisme et mieux-être en Occitanie, à distance ou sur rendez-vous.">
+
+  <!-- TYPO -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-<header class="page-header">
-  <h1>À propos</h1>
-</header>
+  <!-- NAVBAR -->
+  <header class="navbar">
 
-<section class="section">
-  <p>
-    En formation continue depuis plusieurs années, j’ai débuté mon apprentissage auprès d’une praticienne reconnue dans ce domaine.
-  </p>
+    <!-- LOGO -->
+    <a href="index.html" class="logo">
+      <img src="logo.png" alt="Logo Mondes Subtils">
+    </a>
 
-  <p>
-    L’accompagnement vers un mieux-être global guide aujourd’hui ma pratique avec attention, écoute et bienveillance.
-  </p>
+    <!-- BURGER -->
+    <div class="burger" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
 
-  <p>
-    Chaque séance se déroule uniquement avec votre accord, dans un cadre respectueux.
-  </p>
+  </header>
 
-  <p>
-    Titulaire d’une licence en psychologie, j’accorde une importance particulière à l’écoute.
-  </p>
+  <!-- MENU -->
+  <nav class="menu" id="menu">
 
-  <p>
-    Les consultations se font sur rendez-vous, à distance ou en présentiel.
-  </p>
+    <a href="index.html">Accueil</a>
+    <a href="a-propos.html">À propos</a>
+    <a href="pratiques.html">Les pratiques</a>
+    <a href="faq.html">FAQ</a>
+    <a href="reservation.html">Réserver</a>
 
-  <p>
-    Les règlements sont libres et conscients.
-  </p>
-</section>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero hero-small">
+
+    <div class="hero-content">
+
+      <p class="subtitle">
+        Mondes Subtils
+      </p>
+
+      <h1>
+        Une approche attentive, humaine et respectueuse.
+      </h1>
+
+    </div>
+
+  </section>
+
+  <!-- INTRO -->
+  <section class="section narrow">
+
+    <p class="intro-text">
+      En formation continue depuis plusieurs années, j’ai débuté mon apprentissage auprès d’une praticienne reconnue dans ce domaine.
+    </p>
+
+  </section>
+
+  <!-- EDITORIAL SECTION -->
+  <section class="editorial-grid">
+
+    <div class="editorial-image">
+      <img 
+        src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=1200&auto=format&fit=crop"
+        alt="Espace calme et lumineux"
+      >
+    </div>
+
+    <div class="editorial-text">
+
+      <h2>
+        Une présence fondée sur l’écoute
+      </h2>
+
+      <p>
+        L’accompagnement vers un mieux-être global guide aujourd’hui ma pratique avec attention, écoute et bienveillance.
+      </p>
+
+      <p>
+        Chaque séance se déroule uniquement avec votre accord, dans un cadre respectueux et après un échange clair sur vos besoins et les possibilités d’accompagnement.
+      </p>
+
+      <p>
+        Titulaire d’une licence en psychologie, j’accorde une importance particulière à l’écoute de votre histoire, de votre vécu et de vos ressentis.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- SECTION -->
+  <section class="section soft-section">
+
+    <div class="soft-box">
+
+      <h2>
+        Consultations
+      </h2>
+
+      <p>
+        Les consultations se réalisent sur rendez-vous, à distance ou en présentiel, selon la nature de la demande et les possibilités.
+      </p>
+
+      <p>
+        Les règlements prennent la forme de dons libres, afin de laisser à chacun la liberté de définir le prix juste de la pratique reçue.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- REASSURANCE -->
+  <section class="section reassurance">
+
+    <p>
+      Chaque accompagnement est proposé dans une démarche de mieux-être complémentaire et ne remplace jamais un suivi médical ou un traitement.
+    </p>
+
+  </section>
+
+  <!-- CTA -->
+  <section class="final-cta">
+
+    <h2>
+      Prendre un temps d’échange
+    </h2>
+
+    <p>
+      Un premier contact permet d’échanger simplement sur votre besoin et les possibilités d’accompagnement.
+    </p>
+
+    <div class="cta-buttons">
+
+      <a href="reservation.html" class="btn">
+        Réserver une séance
+      </a>
+
+      <a href="faq.html" class="btn btn-outline">
+        Consulter la FAQ
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+
+    <p>
+      Mondes Subtils — accompagnement bien-être
+    </p>
+
+  </footer>
+
+  <!-- SCRIPT BURGER -->
+  <script>
+
+    const burger = document.getElementById("burger");
+    const menu = document.getElementById("menu");
+
+    burger.addEventListener("click", () => {
+
+      burger.classList.toggle("active");
+      menu.classList.toggle("open");
+
+    });
+
+  </script>
 
 </body>
 </html>
