@@ -10,29 +10,43 @@ body{
   margin:0;
   font-family:Arial;
   background:#f7f7f9;
+  color:#111;
 }
 
-/* NAVBAR */
+/* =========================
+   NAVBAR
+========================= */
+
 .navbar{
   position:fixed;
   top:0;
   left:0;
   width:100%;
   height:70px;
+
   display:flex;
   justify-content:space-between;
   align-items:center;
+
   padding:0 20px;
-  background:rgba(255,255,255,0.85);
+
+  background:rgba(255,255,255,0.75);
+  backdrop-filter:blur(12px);
+
   z-index:9999;
 }
 
 /* LOGO */
 .logo img{
   height:45px;
+  width:auto;
+  display:block;
 }
 
-/* BURGER */
+/* =========================
+   BURGER
+========================= */
+
 .burger{
   width:30px;
   height:22px;
@@ -45,21 +59,45 @@ body{
 .burger span{
   height:3px;
   background:#00205b;
+  border-radius:2px;
+  transition:0.3s ease;
 }
 
-/* MENU */
+/* animation croix */
+.burger.active span:nth-child(1){
+  transform:rotate(45deg) translateY(8px);
+}
+
+.burger.active span:nth-child(2){
+  opacity:0;
+}
+
+.burger.active span:nth-child(3){
+  transform:rotate(-45deg) translateY(-8px);
+}
+
+/* =========================
+   MENU PREMIUM (GLASS)
+========================= */
+
 .menu{
   position:fixed;
   inset:0;
-  background:#00205b;
+
   display:flex;
   flex-direction:column;
   justify-content:center;
   align-items:center;
-  gap:25px;
+  gap:30px;
+
+  background:rgba(0,32,91,0.6);
+  backdrop-filter:blur(18px);
+
   opacity:0;
   pointer-events:none;
-  transition:0.3s;
+  transition:0.4s ease;
+
+  z-index:9000;
 }
 
 .menu.open{
@@ -69,27 +107,89 @@ body{
 
 .menu a{
   color:white;
-  font-size:24px;
+  font-size:28px;
   text-decoration:none;
+  letter-spacing:0.1em;
+  transition:0.3s;
 }
 
-/* HERO */
+.menu a:hover{
+  opacity:0.6;
+  transform:translateY(-2px);
+}
+
+/* =========================
+   HERO
+========================= */
+
 .hero{
   height:100vh;
   margin-top:70px;
+
+  background:
+  linear-gradient(rgba(0,32,91,0.35), rgba(0,32,91,0.35)),
+  url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1600&auto=format&fit=crop");
+
+  background-size:cover;
+  background-position:center;
+
   display:flex;
-  justify-content:center;
   align-items:center;
+  justify-content:center;
+
   text-align:center;
-  background:url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1600") center/cover;
   color:white;
 }
 
-.overlay{
-  position:absolute;
-  inset:0;
-  background:rgba(0,0,0,0.3);
+.hero h1{
+  font-size:58px;
+  font-weight:300;
 }
+
+.hero p{
+  font-size:18px;
+  margin-top:15px;
+}
+
+/* BUTTON */
+.btn{
+  display:inline-block;
+  margin-top:25px;
+  padding:14px 28px;
+  background:white;
+  color:#00205b;
+  border-radius:40px;
+  text-decoration:none;
+}
+
+/* SECTION */
+.section{
+  padding:100px 20px;
+  text-align:center;
+}
+
+/* CARDS */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+  padding:40px 20px;
+}
+
+.card{
+  background:white;
+  padding:30px;
+  border-radius:14px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:40px;
+  background:#f0f0f0;
+}
+
 </style>
 </head>
 
@@ -99,7 +199,7 @@ body{
 <div class="navbar">
 
   <div class="logo">
-    <img src="logo.png" alt="logo">
+    <img src="logo.png" alt="Mondes Subtils">
   </div>
 
   <div class="burger" id="burger">
@@ -115,19 +215,26 @@ body{
   <a href="#">Accueil</a>
   <a href="#">À propos</a>
   <a href="#">Pratiques</a>
+  <a href="#">FAQ</a>
   <a href="#">Réserver</a>
 </div>
 
 <!-- HERO -->
-<div class="hero">
-  <h1>Mondes Subtils</h1>
-</div>
+<section class="hero">
+  <div>
+    <h1>Mondes Subtils</h1>
+    <p>Un espace de calme, d’écoute et d’accompagnement</p>
+    <a class="btn" href="#">Réserver une séance</a>
+  </div>
+</section>
 
+<!-- SCRIPT -->
 <script>
 const burger=document.getElementById("burger");
 const menu=document.getElementById("menu");
 
 burger.onclick=()=>{
+  burger.classList.toggle("active");
   menu.classList.toggle("open");
 };
 </script>
