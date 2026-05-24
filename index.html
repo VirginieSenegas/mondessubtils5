@@ -1,286 +1,100 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Mondes Subtils</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mondes Subtils</title>
 
-<style>
+  <!-- TYPO PREMIUM -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
-/* RESET */
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
-body{
-  font-family:Arial;
-  background:#f7f7f9;
-  color:#111;
-}
-
-/* =========================
-   NAVBAR
-========================= */
-
-.navbar{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:70px;
-
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-
-  padding:0 25px;
-
-  background:rgba(255,255,255,0.75);
-  backdrop-filter:blur(12px);
-
-  z-index:9999;
-}
-
-/* LOGO */
-.logo img{
-  height:45px;
-  width:auto;
-  display:block;
-}
-
-/* RIGHT SIDE */
-.nav-right{
-  display:flex;
-  align-items:center;
-}
-
-/* =========================
-   BURGER
-========================= */
-
-.burger{
-  width:30px;
-  height:22px;
-
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
-
-  cursor:pointer;
-}
-
-.burger span{
-  height:3px;
-  width:100%;
-  background:#00205b;
-  border-radius:2px;
-  transition:0.3s ease;
-}
-
-/* animation croix */
-.burger.active span:nth-child(1){
-  transform:rotate(45deg) translateY(8px);
-}
-
-.burger.active span:nth-child(2){
-  opacity:0;
-}
-
-.burger.active span:nth-child(3){
-  transform:rotate(-45deg) translateY(-8px);
-}
-
-/* =========================
-   MENU PREMIUM GLASS
-========================= */
-
-.menu{
-  position:fixed;
-  inset:0;
-
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  gap:35px;
-
-  background:rgba(0,32,91,0.55);
-  backdrop-filter:blur(20px);
-
-  opacity:0;
-  pointer-events:none;
-
-  transition:0.35s ease;
-
-  z-index:9000;
-}
-
-.menu.open{
-  opacity:1;
-  pointer-events:auto;
-}
-
-/* LINKS */
-.menu a{
-  color:white;
-  font-size:26px;
-  text-decoration:none;
-  letter-spacing:0.12em;
-
-  opacity:0;
-  transform:translateY(10px);
-  transition:0.4s ease;
-}
-
-/* animation entrée */
-.menu.open a{
-  opacity:1;
-  transform:translateY(0);
-}
-
-/* petit delay progressif */
-.menu.open a:nth-child(1){ transition-delay:0.05s; }
-.menu.open a:nth-child(2){ transition-delay:0.10s; }
-.menu.open a:nth-child(3){ transition-delay:0.15s; }
-.menu.open a:nth-child(4){ transition-delay:0.20s; }
-.menu.open a:nth-child(5){ transition-delay:0.25s; }
-
-/* =========================
-   HERO
-========================= */
-
-.hero{
-  height:100vh;
-  margin-top:70px;
-
-  background:
-  linear-gradient(rgba(0,32,91,0.35), rgba(0,32,91,0.35)),
-  url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1600&auto=format&fit=crop");
-
-  background-size:cover;
-  background-position:center;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  text-align:center;
-  color:white;
-}
-
-.hero h1{
-  font-size:58px;
-  font-weight:300;
-}
-
-.hero p{
-  margin-top:15px;
-  font-size:18px;
-}
-
-/* BUTTON */
-.btn{
-  display:inline-block;
-  margin-top:25px;
-  padding:14px 28px;
-  background:white;
-  color:#00205b;
-  border-radius:40px;
-  text-decoration:none;
-  transition:0.3s;
-}
-
-.btn:hover{
-  transform:translateY(-2px);
-}
-
-/* SECTION */
-.section{
-  padding:100px 20px;
-  text-align:center;
-}
-
-/* CARDS */
-.cards{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:20px;
-  padding:40px 20px;
-}
-
-.card{
-  background:white;
-  padding:30px;
-  border-radius:14px;
-}
-
-/* FOOTER */
-footer{
-  text-align:center;
-  padding:40px;
-  background:#f0f0f0;
-}
-
-</style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<div class="navbar">
+  <!-- NAVBAR -->
+  <header class="navbar">
 
-  <div class="logo">
-    <img src="logo.png" alt="Mondes Subtils">
-  </div>
+    <!-- LOGO -->
+    <div class="logo">
+      <img src="logo.png" alt="Mondes Subtils">
+    </div>
 
-  <div class="nav-right">
+    <!-- BURGER -->
     <div class="burger" id="burger">
       <span></span>
       <span></span>
       <span></span>
     </div>
-  </div>
 
-</div>
+  </header>
 
-<!-- MENU -->
-<div class="menu" id="menu">
-  <a href="#">Accueil</a>
-  <a href="#">À propos</a>
-  <a href="#">Pratiques</a>
-  <a href="#">FAQ</a>
-  <a href="#">Réserver</a>
-</div>
+  <!-- MENU FULL SCREEN -->
+  <nav class="menu" id="menu">
+    <a href="#">Accueil</a>
+    <a href="#">À propos</a>
+    <a href="#">Pratiques</a>
+    <a href="#">FAQ</a>
+    <a href="#">Réserver</a>
+  </nav>
 
-<!-- HERO -->
-<section class="hero">
-  <div>
-    <h1>Mondes Subtils</h1>
-    <p>Un espace de calme, d’écoute et d’accompagnement</p>
-    <a href="#" class="btn">Réserver une séance</a>
-  </div>
-</section>
+  <!-- HERO -->
+  <section class="hero">
 
-<script>
-const burger=document.getElementById("burger");
-const menu=document.getElementById("menu");
+    <div class="hero-content">
+      <h1>Mondes Subtils</h1>
+      <p>Un espace de calme, d’écoute et d’accompagnement personnalisé.</p>
+      <a href="#" class="btn">Réserver une séance</a>
+    </div>
 
-/* toggle menu */
-burger.onclick=()=>{
-  burger.classList.toggle("active");
-  menu.classList.toggle("open");
-};
+  </section>
 
-/* fermer en cliquant dehors */
-menu.onclick=(e)=>{
-  if(e.target===menu){
-    burger.classList.remove("active");
-    menu.classList.remove("open");
-  }
-};
-</script>
+  <!-- SECTION -->
+  <section class="section">
+    <h2>Une approche douce et humaine</h2>
+    <p>Chaque séance est un espace de recentrage, d’écoute et de présence.</p>
+  </section>
+
+  <!-- CARDS -->
+  <section class="cards">
+
+    <div class="card">
+      <h3>Arrêt du tabac</h3>
+      <p>Accompagnement progressif.</p>
+    </div>
+
+    <div class="card">
+      <h3>Nettoyage énergétique</h3>
+      <p>Libération des charges.</p>
+    </div>
+
+    <div class="card">
+      <h3>Libération émotionnelle</h3>
+      <p>Apaisement émotionnel.</p>
+    </div>
+
+    <div class="card">
+      <h3>Douleurs & inconforts</h3>
+      <p>Travail énergétique global.</p>
+    </div>
+
+  </section>
+
+  <footer>
+    Mondes Subtils — accompagnement bien-être
+  </footer>
+
+  <!-- SCRIPT BURGER -->
+  <script>
+    const burger = document.getElementById("burger");
+    const menu = document.getElementById("menu");
+
+    burger.addEventListener("click", () => {
+      burger.classList.toggle("active");
+      menu.classList.toggle("open");
+    });
+  </script>
 
 </body>
 </html>
