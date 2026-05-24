@@ -1,201 +1,72 @@
-<style>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mondes Subtils</title>
 
-/* RESET */
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
+  <style>
+    body{
+      margin:0;
+      font-family:Arial;
+      background:white;
+    }
 
-body{
-  font-family: Arial, sans-serif;
-  background:#f7f7f9;
-  color:#111;
-}
+    .navbar{
+      height:70px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:0 20px;
+      background:#fff;
+      position:fixed;
+      top:0;
+      width:100%;
+      z-index:9999;
+    }
 
-/* =========================
-   NAVBAR
-========================= */
+    .burger{
+      width:30px;
+      height:22px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+    }
 
-.navbar{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:70px;
+    .burger span{
+      height:3px;
+      background:black;
+    }
 
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
+    .menu{
+      display:none;
+    }
 
-  padding:0 25px;
+    .hero{
+      margin-top:70px;
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+  </style>
+</head>
 
-  background:rgba(255,255,255,0.75);
-  backdrop-filter:blur(12px);
+<body>
 
-  z-index:9999;
-}
+  <div class="navbar">
+    <div>Mondes Subtils</div>
 
-/* =========================
-   LOGO (IMPORTANT FIX)
-========================= */
+    <div class="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
 
-.logo img{
-  height:45px;          /* 🔥 taille contrôlée */
-  width:auto;
-  display:block;
-  object-fit:contain;
-}
+  <div class="hero">
+    <h1>OK SITE CHARGE</h1>
+  </div>
 
-/* =========================
-   BURGER
-========================= */
-
-.burger{
-  width:34px;
-  height:24px;
-
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
-
-  cursor:pointer;
-  z-index:10000;
-}
-
-.burger span{
-  width:100%;
-  height:3px;
-  background:#00205b;
-  border-radius:2px;
-  transition:0.4s;
-}
-
-/* animation */
-.burger.active span:nth-child(1){
-  transform:rotate(45deg) translateY(9px);
-}
-
-.burger.active span:nth-child(2){
-  opacity:0;
-}
-
-.burger.active span:nth-child(3){
-  transform:rotate(-45deg) translateY(-9px);
-}
-
-/* =========================
-   MENU
-========================= */
-
-.menu{
-  position:fixed;
-  inset:0;
-  background:#00205b;
-
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-
-  gap:30px;
-
-  opacity:0;
-  pointer-events:none;
-
-  transition:0.4s;
-
-  z-index:9000;
-}
-
-.menu.open{
-  opacity:1;
-  pointer-events:auto;
-}
-
-.menu a{
-  color:white;
-  text-decoration:none;
-  font-size:28px;
-}
-
-/* =========================
-   HERO
-========================= */
-
-.hero{
-  height:100vh;
-
-  background:
-  linear-gradient(rgba(0,32,91,0.35), rgba(0,32,91,0.35)),
-  url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1600&auto=format&fit=crop");
-
-  background-size:cover;
-  background-position:center;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  text-align:center;
-  color:white;
-
-  padding:20px;
-
-  margin-top:70px; /* 🔥 évite que la navbar cache */
-}
-
-.hero-content{
-  max-width:700px;
-}
-
-.hero h1{
-  font-size:58px;
-  font-weight:300;
-}
-
-.hero p{
-  font-size:20px;
-  margin-bottom:30px;
-}
-
-/* BUTTON */
-.btn{
-  display:inline-block;
-  padding:14px 28px;
-  background:white;
-  color:#00205b;
-  border-radius:40px;
-  text-decoration:none;
-}
-
-/* SECTION */
-.section{
-  padding:100px 20px;
-  max-width:900px;
-  margin:auto;
-  text-align:center;
-}
-
-/* CARDS */
-.cards{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:20px;
-  padding:40px 20px 100px 20px;
-}
-
-.card{
-  background:white;
-  padding:30px;
-  border-radius:16px;
-}
-
-/* FOOTER */
-footer{
-  text-align:center;
-  padding:40px;
-  background:#f0f0f0;
-}
-
-</style>
+</body>
+</html>
