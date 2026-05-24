@@ -1,366 +1,201 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mondes Subtils</title>
-
-  <style>
-
-    /* RESET */
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-    }
-
-    body{
-      font-family: Arial, sans-serif;
-      background:#f7f7f9;
-      color:#111;
-    }
-
-    /* =========================
-       NAVBAR
-    ========================= */
-
-    .navbar{
-      position:fixed;
-      top:0;
-      left:0;
-      width:100%;
-      height:70px;
-
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-
-      padding:0 25px;
-
-      background:rgba(255,255,255,0.75);
-      backdrop-filter:blur(12px);
-
-      z-index:9999;
-    }
-
-    /* LOGO */
-
-    .logo{
-      font-size:20px;
-      font-weight:300;
-      letter-spacing:0.15em;
-      color:#00205b;
-    }
-
-    /* =========================
-       BURGER
-    ========================= */
-
-    .burger{
-      width:34px;
-      height:24px;
-
-      display:flex;
-      flex-direction:column;
-      justify-content:space-between;
-
-      cursor:pointer;
-      z-index:10000;
-    }
-
-    .burger span{
-      width:100%;
-      height:3px;
-      background:#00205b;
-      border-radius:2px;
-
-      transition:0.4s;
-    }
-
-    /* ANIMATION */
-
-    .burger.active span:nth-child(1){
-      transform:rotate(45deg) translateY(9px);
-    }
-
-    .burger.active span:nth-child(2){
-      opacity:0;
-    }
-
-    .burger.active span:nth-child(3){
-      transform:rotate(-45deg) translateY(-9px);
-    }
-
-    /* =========================
-       MENU
-    ========================= */
-
-    .menu{
-      position:fixed;
-      top:0;
-      left:0;
-
-      width:100%;
-      height:100vh;
-
-      background:#00205b;
-
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      align-items:center;
-
-      gap:30px;
-
-      opacity:0;
-      pointer-events:none;
-
-      transition:0.4s;
-
-      z-index:9000;
-    }
-
-    .menu.open{
-      opacity:1;
-      pointer-events:auto;
-    }
-
-    .menu a{
-      color:white;
-      text-decoration:none;
-      font-size:28px;
-      letter-spacing:0.1em;
-      transition:0.3s;
-    }
-
-    .menu a:hover{
-      opacity:0.7;
-    }
-
-    /* =========================
-       HERO
-    ========================= */
-
-    .hero{
-      height:100vh;
-
-      background:
-      linear-gradient(rgba(0,32,91,0.35), rgba(0,32,91,0.35)),
-      url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1600&auto=format&fit=crop");
-
-      background-size:cover;
-      background-position:center;
-
-      display:flex;
-      align-items:center;
-      justify-content:center;
-
-      text-align:center;
-      color:white;
-
-      padding:20px;
-    }
-
-    .hero-content{
-      max-width:700px;
-    }
-
-    .hero h1{
-      font-size:58px;
-      font-weight:300;
-      margin-bottom:20px;
-    }
-
-    .hero p{
-      font-size:20px;
-      line-height:1.6;
-      margin-bottom:30px;
-    }
-
-    /* BOUTON */
-
-    .btn{
-      display:inline-block;
-
-      padding:14px 28px;
-
-      background:white;
-      color:#00205b;
-
-      border-radius:40px;
-
-      text-decoration:none;
-      font-weight:bold;
-
-      transition:0.3s;
-    }
-
-    .btn:hover{
-      transform:translateY(-2px);
-    }
-
-    /* =========================
-       SECTION
-    ========================= */
-
-    .section{
-      padding:100px 20px;
-      max-width:900px;
-      margin:auto;
-      text-align:center;
-    }
-
-    .section h2{
-      margin-bottom:20px;
-      font-size:36px;
-      color:#00205b;
-    }
-
-    .section p{
-      line-height:1.8;
-      font-size:18px;
-    }
-
-    /* =========================
-       CARDS
-    ========================= */
-
-    .cards{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-      gap:20px;
-
-      padding:40px 20px 100px 20px;
-    }
-
-    .card{
-      background:white;
-      padding:30px;
-      border-radius:16px;
-
-      box-shadow:0 8px 30px rgba(0,0,0,0.06);
-    }
-
-    .card h3{
-      margin-bottom:10px;
-      color:#00205b;
-    }
-
-    /* FOOTER */
-
-    footer{
-      text-align:center;
-      padding:40px;
-      background:#f0f0f0;
-    }
-
-  </style>
-</head>
-
-<body>
-
-  <!-- NAVBAR -->
-  <div class="navbar">
-
-  <div class="logo">
-  <img src="logo.png" alt="Mondes Subtils">
-</div>
-
-    <!-- BURGER -->
-    <div class="burger" id="burger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-
-  </div>
-
-  <!-- MENU -->
-  <div class="menu" id="menu">
-
-    <a href="#">Accueil</a>
-    <a href="#">À propos</a>
-    <a href="#">Pratiques</a>
-    <a href="#">FAQ</a>
-    <a href="#">Réserver</a>
-
-  </div>
-
-  <!-- HERO -->
-  <section class="hero">
-
-    <div class="hero-content">
-
-      <h1>Mondes Subtils</h1>
-
-      <p>
-        Un espace de calme, d’écoute et d’accompagnement personnalisé.
-      </p>
-
-      <a href="#" class="btn">
-        Réserver une séance
-      </a>
-
-    </div>
-
-  </section>
-
-  <!-- SECTION -->
-  <section class="section">
-
-    <h2>Une approche douce et humaine</h2>
-
-    <p>
-      Chaque séance est un espace de recentrage,
-      d’écoute et de présence.
-    </p>
-
-  </section>
-
-  <!-- CARDS -->
-  <section class="cards">
-
-    <div class="card">
-      <h3>Arrêt du tabac</h3>
-      <p>Accompagnement progressif.</p>
-    </div>
-
-    <div class="card">
-      <h3>Nettoyage énergétique</h3>
-      <p>Libération des charges.</p>
-    </div>
-
-    <div class="card">
-      <h3>Libération émotionnelle</h3>
-      <p>Apaisement émotionnel.</p>
-    </div>
-
-    <div class="card">
-      <h3>Douleurs & inconforts</h3>
-      <p>Travail énergétique global.</p>
-    </div>
-
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    Mondes Subtils — accompagnement bien-être
-  </footer>
-
-  <!-- SCRIPT -->
-  <script>
-
-    const burger = document.getElementById("burger");
-    const menu = document.getElementById("menu");
-
-    burger.addEventListener("click", () => {
-
-      burger.classList.toggle("active");
-      menu.classList.toggle("open");
-
-    });
-
-  </script>
-
-</body>
-</html>
+<style>
+
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family: Arial, sans-serif;
+  background:#f7f7f9;
+  color:#111;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:70px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:0 25px;
+
+  background:rgba(255,255,255,0.75);
+  backdrop-filter:blur(12px);
+
+  z-index:9999;
+}
+
+/* =========================
+   LOGO (IMPORTANT FIX)
+========================= */
+
+.logo img{
+  height:45px;          /* 🔥 taille contrôlée */
+  width:auto;
+  display:block;
+  object-fit:contain;
+}
+
+/* =========================
+   BURGER
+========================= */
+
+.burger{
+  width:34px;
+  height:24px;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+
+  cursor:pointer;
+  z-index:10000;
+}
+
+.burger span{
+  width:100%;
+  height:3px;
+  background:#00205b;
+  border-radius:2px;
+  transition:0.4s;
+}
+
+/* animation */
+.burger.active span:nth-child(1){
+  transform:rotate(45deg) translateY(9px);
+}
+
+.burger.active span:nth-child(2){
+  opacity:0;
+}
+
+.burger.active span:nth-child(3){
+  transform:rotate(-45deg) translateY(-9px);
+}
+
+/* =========================
+   MENU
+========================= */
+
+.menu{
+  position:fixed;
+  inset:0;
+  background:#00205b;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+
+  gap:30px;
+
+  opacity:0;
+  pointer-events:none;
+
+  transition:0.4s;
+
+  z-index:9000;
+}
+
+.menu.open{
+  opacity:1;
+  pointer-events:auto;
+}
+
+.menu a{
+  color:white;
+  text-decoration:none;
+  font-size:28px;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+  height:100vh;
+
+  background:
+  linear-gradient(rgba(0,32,91,0.35), rgba(0,32,91,0.35)),
+  url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1600&auto=format&fit=crop");
+
+  background-size:cover;
+  background-position:center;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  text-align:center;
+  color:white;
+
+  padding:20px;
+
+  margin-top:70px; /* 🔥 évite que la navbar cache */
+}
+
+.hero-content{
+  max-width:700px;
+}
+
+.hero h1{
+  font-size:58px;
+  font-weight:300;
+}
+
+.hero p{
+  font-size:20px;
+  margin-bottom:30px;
+}
+
+/* BUTTON */
+.btn{
+  display:inline-block;
+  padding:14px 28px;
+  background:white;
+  color:#00205b;
+  border-radius:40px;
+  text-decoration:none;
+}
+
+/* SECTION */
+.section{
+  padding:100px 20px;
+  max-width:900px;
+  margin:auto;
+  text-align:center;
+}
+
+/* CARDS */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+  padding:40px 20px 100px 20px;
+}
+
+.card{
+  background:white;
+  padding:30px;
+  border-radius:16px;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:40px;
+  background:#f0f0f0;
+}
+
+</style>
