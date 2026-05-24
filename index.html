@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mondes Subtils</title>
   <link rel="stylesheet" href="style.css" />
@@ -9,42 +9,78 @@
 
 <body>
 
+  <!-- MENU (NAVIGATION) -->
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="a-propos.html">À propos</a>
+    <a href="pratiques.html">Pratiques</a>
+    <a href="faq.html">FAQ</a>
+    <a href="reservation.html">Réserver</a>
+  </nav>
+
+  <!-- HERO -->
   <header class="hero">
     <div class="overlay"></div>
 
     <div class="content">
       <h1>Mondes Subtils</h1>
-      <p>Un espace de calme, d’écoute et d’accompagnement personnalisé.</p>
 
-      <a href="#reservation" class="btn">Réserver une séance</a>
+      <p>
+        Un espace de calme, d’écoute et d’accompagnement personnalisé.
+      </p>
+
+      <a href="reservation.html" class="btn">
+        Réserver une séance
+      </a>
     </div>
   </header>
 
+  <!-- PRESENTATION -->
   <section class="section">
     <h2>Une approche douce et humaine</h2>
+
     <p>
       Chaque séance est un espace de recentrage, d’écoute et de présence.
       L’accompagnement se fait dans le respect et la simplicité.
     </p>
   </section>
 
+  <!-- PRATIQUES -->
   <section class="cards">
-    <div class="card">Arrêt du tabac</div>
-    <div class="card">Nettoyage énergétique</div>
-    <div class="card">Libération émotionnelle</div>
-    <div class="card">Douleurs & inconforts</div>
+
+    <div class="card">
+      <h3>Arrêt du tabac</h3>
+      <p>Accompagnement progressif ou ponctuel selon votre démarche.</p>
+    </div>
+
+    <div class="card">
+      <h3>Nettoyage énergétique</h3>
+      <p>Libération des charges dans les lieux ou ressentis.</p>
+    </div>
+
+    <div class="card">
+      <h3>Libération émotionnelle</h3>
+      <p>Accompagnement des périodes émotionnelles difficiles.</p>
+    </div>
+
+    <div class="card">
+      <h3>Douleurs & inconforts</h3>
+      <p>Travail énergétique d’apaisement global.</p>
+    </div>
+
   </section>
 
-  <section id="reservation" class="section">
-    <h2>Réservation</h2>
-    <p>Choisissez un créneau simplement et rapidement.</p>
+  <!-- CTA FINAL -->
+  <section class="section">
+    <h2>Réserver une séance</h2>
+    <p>Un accompagnement simple, respectueux et personnalisé.</p>
 
-    <iframe
-      src="https://calendly.com/"
-      class="calendar"
-    ></iframe>
+    <a href="reservation.html" class="btn">
+      Accéder à la réservation
+    </a>
   </section>
 
+  <!-- FOOTER -->
   <footer>
     <p>Mondes Subtils — accompagnement bien-être</p>
   </footer>
