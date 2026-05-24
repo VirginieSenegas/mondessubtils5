@@ -9,15 +9,32 @@ body {
 nav {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  padding: 20px;
-  background: white;
+  gap: 28px;
+  padding: 22px 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
 }
 
 nav a {
   text-decoration: none;
   color: #00205b;
   font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.75;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  opacity: 1;
+  letter-spacing: 0.14em;
+  transform: translateY(-1px);
 }
 
 /* HERO */
