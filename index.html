@@ -1,72 +1,136 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mondes Subtils</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Mondes Subtils</title>
 
-  <style>
-    body{
-      margin:0;
-      font-family:Arial;
-      background:white;
-    }
+<style>
+body{
+  margin:0;
+  font-family:Arial;
+  background:#f7f7f9;
+}
 
-    .navbar{
-      height:70px;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      padding:0 20px;
-      background:#fff;
-      position:fixed;
-      top:0;
-      width:100%;
-      z-index:9999;
-    }
+/* NAVBAR */
+.navbar{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:70px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:0 20px;
+  background:rgba(255,255,255,0.85);
+  z-index:9999;
+}
 
-    .burger{
-      width:30px;
-      height:22px;
-      display:flex;
-      flex-direction:column;
-      justify-content:space-between;
-    }
+/* LOGO */
+.logo img{
+  height:45px;
+}
 
-    .burger span{
-      height:3px;
-      background:black;
-    }
+/* BURGER */
+.burger{
+  width:30px;
+  height:22px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  cursor:pointer;
+}
 
-    .menu{
-      display:none;
-    }
+.burger span{
+  height:3px;
+  background:#00205b;
+}
 
-    .hero{
-      margin-top:70px;
-      height:100vh;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-    }
-  </style>
+/* MENU */
+.menu{
+  position:fixed;
+  inset:0;
+  background:#00205b;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  gap:25px;
+  opacity:0;
+  pointer-events:none;
+  transition:0.3s;
+}
+
+.menu.open{
+  opacity:1;
+  pointer-events:auto;
+}
+
+.menu a{
+  color:white;
+  font-size:24px;
+  text-decoration:none;
+}
+
+/* HERO */
+.hero{
+  height:100vh;
+  margin-top:70px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  background:url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1600") center/cover;
+  color:white;
+}
+
+.overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.3);
+}
+</style>
 </head>
 
 <body>
 
-  <div class="navbar">
-    <div>Mondes Subtils</div>
+<!-- NAV -->
+<div class="navbar">
 
-    <div class="burger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
+  <div class="logo">
+    <img src="logo.png" alt="logo">
   </div>
 
-  <div class="hero">
-    <h1>OK SITE CHARGE</h1>
+  <div class="burger" id="burger">
+    <span></span>
+    <span></span>
+    <span></span>
   </div>
+
+</div>
+
+<!-- MENU -->
+<div class="menu" id="menu">
+  <a href="#">Accueil</a>
+  <a href="#">À propos</a>
+  <a href="#">Pratiques</a>
+  <a href="#">Réserver</a>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>Mondes Subtils</h1>
+</div>
+
+<script>
+const burger=document.getElementById("burger");
+const menu=document.getElementById("menu");
+
+burger.onclick=()=>{
+  menu.classList.toggle("open");
+};
+</script>
 
 </body>
 </html>
