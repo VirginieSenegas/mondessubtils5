@@ -9,13 +9,25 @@
 
 <body>
 
-  <!-- MENU (NAVIGATION) -->
-  <nav>
-    <a href="index.html">Accueil</a>
-    <a href="a-propos.html">À propos</a>
-    <a href="pratiques.html">Pratiques</a>
-    <a href="faq.html">FAQ</a>
-    <a href="reservation.html">Réserver</a>
+  <!-- NAVBAR + BURGER MENU -->
+  <nav class="navbar">
+
+    <div class="logo">Mondes Subtils</div>
+
+    <div class="burger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <div class="menu" id="menu">
+      <a href="index.html">Accueil</a>
+      <a href="a-propos.html">À propos</a>
+      <a href="pratiques.html">Pratiques</a>
+      <a href="faq.html">FAQ</a>
+      <a href="reservation.html">Réserver</a>
+    </div>
+
   </nav>
 
   <!-- HERO -->
@@ -85,10 +97,19 @@
     <p>Mondes Subtils — accompagnement bien-être</p>
   </footer>
 
-  <!-- SCRIPT MENU SCROLL (ICI = BON ENDROIT) -->
+  <!-- SCRIPT MENU BURGER -->
   <script>
+    function toggleMenu() {
+      const menu = document.getElementById("menu");
+      const burger = document.querySelector(".burger");
+
+      menu.classList.toggle("open");
+      burger.classList.toggle("active");
+    }
+
+    // MENU DISPARAÎT AU SCROLL
     let lastScroll = 0;
-    const nav = document.querySelector("nav");
+    const nav = document.querySelector(".navbar");
 
     window.addEventListener("scroll", () => {
       const currentScroll = window.pageYOffset;
