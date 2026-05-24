@@ -50,6 +50,8 @@ body {
   justify-content: space-between;
   cursor: pointer;
   transition: transform 0.6s ease;
+  border: 2px solid red;
+  background: yellow;
 
    z-index: 3000;
 }
