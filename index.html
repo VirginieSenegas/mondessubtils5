@@ -85,5 +85,25 @@
     <p>Mondes Subtils — accompagnement bien-être</p>
   </footer>
 
+  <!-- SCRIPT MENU SCROLL (ICI = BON ENDROIT) -->
+  <script>
+    let lastScroll = 0;
+    const nav = document.querySelector("nav");
+
+    window.addEventListener("scroll", () => {
+      const currentScroll = window.pageYOffset;
+
+      if (currentScroll > lastScroll && currentScroll > 80) {
+        nav.style.transform = "translateY(-100%)";
+        nav.style.opacity = "0";
+      } else {
+        nav.style.transform = "translateY(0)";
+        nav.style.opacity = "1";
+      }
+
+      lastScroll = currentScroll;
+    });
+  </script>
+
 </body>
 </html>
