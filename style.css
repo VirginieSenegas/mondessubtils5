@@ -29,11 +29,10 @@ body {
 }
 
 /* LOGO */
-.logo {
-  font-weight: 300;
-  letter-spacing: 0.2em;
-  color: #00205b;
-  transition: transform 0.6s ease;
+.logo img{
+  height:50px;
+  width:auto;
+  display:block;
 }
 
 .logo:hover {
