@@ -6,8 +6,15 @@
 <title>Mondes Subtils</title>
 
 <style>
-body{
+
+/* RESET */
+*{
   margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
   font-family:Arial;
   background:#f7f7f9;
   color:#111;
@@ -28,7 +35,7 @@ body{
   justify-content:space-between;
   align-items:center;
 
-  padding:0 20px;
+  padding:0 25px;
 
   background:rgba(255,255,255,0.75);
   backdrop-filter:blur(12px);
@@ -43,6 +50,12 @@ body{
   display:block;
 }
 
+/* zone droite */
+.nav-right{
+  display:flex;
+  align-items:center;
+}
+
 /* =========================
    BURGER
 ========================= */
@@ -50,14 +63,22 @@ body{
 .burger{
   width:30px;
   height:22px;
+
   display:flex;
   flex-direction:column;
   justify-content:space-between;
+
   cursor:pointer;
+}
+
+/* 🔥 IMPORTANT: alignement à droite */
+.nav-right .burger{
+  margin-left:auto;
 }
 
 .burger span{
   height:3px;
+  width:100%;
   background:#00205b;
   border-radius:2px;
   transition:0.3s ease;
@@ -77,7 +98,7 @@ body{
 }
 
 /* =========================
-   MENU PREMIUM (GLASS)
+   MENU FULL SCREEN
 ========================= */
 
 .menu{
@@ -110,7 +131,6 @@ body{
   font-size:28px;
   text-decoration:none;
   letter-spacing:0.1em;
-  transition:0.3s;
 }
 
 .menu a:hover{
@@ -147,8 +167,8 @@ body{
 }
 
 .hero p{
-  font-size:18px;
   margin-top:15px;
+  font-size:18px;
 }
 
 /* BUTTON */
@@ -180,7 +200,6 @@ body{
   background:white;
   padding:30px;
   border-radius:14px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.05);
 }
 
 /* FOOTER */
@@ -195,17 +214,19 @@ footer{
 
 <body>
 
-<!-- NAV -->
+<!-- NAVBAR -->
 <div class="navbar">
 
   <div class="logo">
     <img src="logo.png" alt="Mondes Subtils">
   </div>
 
-  <div class="burger" id="burger">
-    <span></span>
-    <span></span>
-    <span></span>
+  <div class="nav-right">
+    <div class="burger" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </div>
 
 </div>
@@ -224,7 +245,7 @@ footer{
   <div>
     <h1>Mondes Subtils</h1>
     <p>Un espace de calme, d’écoute et d’accompagnement</p>
-    <a class="btn" href="#">Réserver une séance</a>
+    <a href="#" class="btn">Réserver une séance</a>
   </div>
 </section>
 
