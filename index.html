@@ -50,7 +50,7 @@ body{
   display:block;
 }
 
-/* zone droite */
+/* RIGHT SIDE */
 .nav-right{
   display:flex;
   align-items:center;
@@ -69,11 +69,6 @@ body{
   justify-content:space-between;
 
   cursor:pointer;
-}
-
-/* 🔥 IMPORTANT: alignement à droite */
-.nav-right .burger{
-  margin-left:auto;
 }
 
 .burger span{
@@ -98,7 +93,7 @@ body{
 }
 
 /* =========================
-   MENU FULL SCREEN
+   MENU PREMIUM GLASS
 ========================= */
 
 .menu{
@@ -109,14 +104,15 @@ body{
   flex-direction:column;
   justify-content:center;
   align-items:center;
-  gap:30px;
+  gap:35px;
 
-  background:rgba(0,32,91,0.6);
-  backdrop-filter:blur(18px);
+  background:rgba(0,32,91,0.55);
+  backdrop-filter:blur(20px);
 
   opacity:0;
   pointer-events:none;
-  transition:0.4s ease;
+
+  transition:0.35s ease;
 
   z-index:9000;
 }
@@ -126,17 +122,30 @@ body{
   pointer-events:auto;
 }
 
+/* LINKS */
 .menu a{
   color:white;
-  font-size:28px;
+  font-size:26px;
   text-decoration:none;
-  letter-spacing:0.1em;
+  letter-spacing:0.12em;
+
+  opacity:0;
+  transform:translateY(10px);
+  transition:0.4s ease;
 }
 
-.menu a:hover{
-  opacity:0.6;
-  transform:translateY(-2px);
+/* animation entrée */
+.menu.open a{
+  opacity:1;
+  transform:translateY(0);
 }
+
+/* petit delay progressif */
+.menu.open a:nth-child(1){ transition-delay:0.05s; }
+.menu.open a:nth-child(2){ transition-delay:0.10s; }
+.menu.open a:nth-child(3){ transition-delay:0.15s; }
+.menu.open a:nth-child(4){ transition-delay:0.20s; }
+.menu.open a:nth-child(5){ transition-delay:0.25s; }
 
 /* =========================
    HERO
@@ -180,6 +189,11 @@ body{
   color:#00205b;
   border-radius:40px;
   text-decoration:none;
+  transition:0.3s;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
 }
 
 /* SECTION */
@@ -249,14 +263,22 @@ footer{
   </div>
 </section>
 
-<!-- SCRIPT -->
 <script>
 const burger=document.getElementById("burger");
 const menu=document.getElementById("menu");
 
+/* toggle menu */
 burger.onclick=()=>{
   burger.classList.toggle("active");
   menu.classList.toggle("open");
+};
+
+/* fermer en cliquant dehors */
+menu.onclick=(e)=>{
+  if(e.target===menu){
+    burger.classList.remove("active");
+    menu.classList.remove("open");
+  }
 };
 </script>
 
