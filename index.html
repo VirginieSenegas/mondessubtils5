@@ -14,12 +14,14 @@
 
     <div class="logo">Mondes Subtils</div>
 
-    <div class="burger" onclick="toggleMenu()">
+    <!-- BURGER -->
+    <div class="burger" id="burger">
       <span></span>
       <span></span>
       <span></span>
     </div>
 
+    <!-- MENU -->
     <div class="menu" id="menu">
       <a href="index.html">Accueil</a>
       <a href="a-propos.html">À propos</a>
@@ -58,13 +60,17 @@
     <p>Mondes Subtils — accompagnement bien-être</p>
   </footer>
 
-  <!-- SCRIPT -->
+  <!-- SCRIPT BURGER + MENU -->
   <script>
-    function toggleMenu() {
-      document.getElementById("menu").classList.toggle("open");
-      document.querySelector(".burger").classList.toggle("active");
-    }
+    const burger = document.getElementById("burger");
+    const menu = document.getElementById("menu");
 
+    burger.addEventListener("click", () => {
+      menu.classList.toggle("open");
+      burger.classList.toggle("active");
+    });
+
+    // MENU DISPARAÎT AU SCROLL
     let lastScroll = 0;
     const nav = document.querySelector(".navbar");
 
