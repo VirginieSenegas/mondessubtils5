@@ -40,6 +40,12 @@ body {
   transform: rotate(6deg);
 }
 
+/* zone droite navbar */
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
 /* =========================
    BURGER MENU
 ========================= */
@@ -52,12 +58,9 @@ body {
   justify-content: space-between;
 
   cursor: pointer;
-
-  position: relative; /* IMPORTANT */
-  z-index: 4000;
+  z-index: 9999;
 }
 
-/* lignes burger */
 .burger span {
   display: block;
   height: 2px;
@@ -126,6 +129,7 @@ body {
   position: relative;
   text-align: center;
   color: white;
+
   margin-top: 70px;
 }
 
