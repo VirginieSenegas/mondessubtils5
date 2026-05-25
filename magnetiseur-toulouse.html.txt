@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Magnétiseur à Toulouse | Mondes Subtils</title>
+
+  <meta
+    name="description"
+    content="Accompagnement énergétique à Toulouse. Séances personnalisées, libération émotionnelle, travail énergétique à distance et mieux-être en Occitanie."
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+
+  <header class="navbar">
+
+    <a href="index.html" class="logo">
+      <img src="logo.png" alt="Mondes Subtils">
+    </a>
+
+    <div class="burger" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+  </header>
+
+  <!-- MENU -->
+
+  <nav class="menu" id="menu">
+
+    <a href="index.html">Accueil</a>
+    <a href="a-propos.html">À propos</a>
+    <a href="pratiques.html">Pratiques</a>
+    <a href="faq.html">FAQ</a>
+    <a href="reservation.html">Réserver</a>
+
+  </nav>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+
+      <h1>Magnétiseur à Toulouse</h1>
+
+      <p>
+        Un accompagnement énergétique sobre, humain et personnalisé,
+        dans un espace de calme, d’écoute et de présence.
+      </p>
+
+      <a href="reservation.html" class="btn">
+        Réserver une séance
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- INTRO -->
+
+  <section class="section">
+
+    <h2>
+      Une approche contemporaine du mieux-être
+    </h2>
+
+    <p>
+      Mondes Subtils propose des séances de magnétisme à Toulouse,
+      dans une approche attentive et respectueuse,
+      centrée sur l’écoute, le ressenti et le confort émotionnel.
+    </p>
+
+  </section>
+
+  <!-- CARDS -->
+
+  <section class="cards">
+
+    <div class="card">
+
+      <h3>
+        Libération émotionnelle
+      </h3>
+
+      <p>
+        Accompagnement des périodes de fatigue intérieure,
+        surcharge émotionnelle et transitions personnelles.
+      </p>
+
+    </div>
+
+    <div class="card">
+
+      <h3>
+        Nettoyage énergétique
+      </h3>
+
+      <p>
+        Harmonisation des ressentis personnels
+        et des espaces de vie ou de travail.
+      </p>
+
+    </div>
+
+    <div class="card">
+
+      <h3>
+        Travail énergétique à distance
+      </h3>
+
+      <p>
+        Des séances accessibles à distance
+        dans les mêmes conditions d’écoute et d’attention.
+      </p>
+
+    </div>
+
+    <div class="card">
+
+      <h3>
+        Arrêt du tabac
+      </h3>
+
+      <p>
+        Un accompagnement progressif et personnalisé
+        selon votre démarche et votre rythme.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- SEO -->
+
+  <section class="section">
+
+    <h2>
+      Accompagnement énergétique à Toulouse
+    </h2>
+
+    <p>
+      Les séances proposées par Mondes Subtils s’adressent
+      aux personnes recherchant un accompagnement énergétique
+      à Toulouse et plus largement en Occitanie.
+    </p>
+
+    <br>
+
+    <p>
+      Le travail énergétique peut accompagner
+      certaines périodes de stress,
+      de fatigue émotionnelle,
+      de surcharge intérieure
+      ou de besoin de recentrage.
+    </p>
+
+    <br>
+
+    <p>
+      Les consultations sont disponibles
+      à distance ou en présentiel,
+      selon votre situation et votre besoin du moment.
+    </p>
+
+    <br>
+
+    <p>
+      Cette approche reste complémentaire
+      et ne remplace en aucun cas
+      un traitement médical ou un suivi professionnel.
+    </p>
+
+    <br><br>
+
+    <p>
+
+      Découvrez également :
+
+      <br><br>
+
+      <a href="magnetiseur-castres.html">
+        Magnétiseur Castres
+      </a>
+
+      <br><br>
+
+      <a href="magnetiseur-tarn.html">
+        Magnétisme Tarn
+      </a>
+
+    </p>
+
+  </section>
+
+  <!-- CTA -->
+
+  <section class="section">
+
+    <h2>
+      Réserver une séance
+    </h2>
+
+    <p>
+      Chaque accompagnement débute par un échange
+      afin de comprendre votre besoin
+      et de vous proposer un cadre adapté.
+    </p>
+
+    <br>
+
+    <a href="reservation.html" class="btn">
+      Réserver
+    </a>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    Mondes Subtils — accompagnement énergétique à Toulouse
+
+  </footer>
+
+  <!-- SCRIPT -->
+
+  <script>
+
+    const burger = document.getElementById("burger");
+    const menu = document.getElementById("menu");
+
+    burger.addEventListener("click", () => {
+
+      burger.classList.toggle("active");
+      menu.classList.toggle("open");
+
+    });
+
+  </script>
+
+</body>
+
+</html>
