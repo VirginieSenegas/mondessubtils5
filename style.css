@@ -720,17 +720,8 @@ footer{
 
 .testimonials-grid{
   position:relative;
-  padding:80px 20px;
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
-  gap:24px;
-}
-
-.testimonials-grid{
-  position:relative;
   isolation:isolate;
-  width:100%;
-  overflow:hidden; /* IMPORTANT : supprime les bandes blanches */
+  overflow:hidden; /* empêche la bande sur les côtés */
 }
 
 .testimonials-grid::before{
@@ -749,7 +740,7 @@ footer{
   pointer-events:none;
 }
 
-/* assure que tout le contenu est bien au-dessus */
+/* sécurité : tout le contenu passe au-dessus */
 .testimonials-grid > *{
   position:relative;
   z-index:1;
