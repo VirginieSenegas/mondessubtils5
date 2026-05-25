@@ -288,21 +288,19 @@ footer{
 ========================= */
 
 .about-hero{
-  height:75vh;
-
-  background:
-  linear-gradient(rgba(0,32,91,0.28), rgba(0,32,91,0.32)),
-  url("temoignageimage.png");
-
-  background-size:cover;
-  background-position:center;
-
+  position:relative;
+  height:100vh;
   display:flex;
   align-items:center;
   justify-content:center;
-
   text-align:center;
-  position:relative;
+
+  background:
+    linear-gradient(rgba(0,32,91,0.35), rgba(0,32,91,0.35)),
+    url("https://images.unsplash.com/photo-1520975928316-9f9b6c6f6f3a?q=80&w=1600&auto=format&fit=crop");
+
+  background-size:cover;
+  background-position:center;
 
   color:white;
 }
@@ -831,13 +829,22 @@ html, body{
   font-weight:300;
 }
 
+.about-hero .mini-title{
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  font-size:14px;
+  opacity:0.8;
+  margin-bottom:10px;
+}
+
 /* WRAPPER DES CARDS ABOUT = IDENTIQUE AU SYSTEME GLOBAL */
 .about-wrapper{
   max-width:900px;
   margin:auto;
   padding:100px 20px;
+
   display:grid;
-  gap:20px;
+  gap:24px;
 }
 
 /* CARD ABOUT = ALIGNÉE SUR .card GLOBAL */
@@ -851,7 +858,7 @@ html, body{
   overflow:hidden;
 }
 
-/* même effet premium que tes autres cards */
+/* même ligne premium que index */
 .about-card::before{
   content:"";
   position:absolute;
@@ -864,6 +871,7 @@ html, body{
   transition:0.3s ease;
 }
 
+/* hover identique index */
 .about-card:hover{
   transform:translateY(-6px);
   box-shadow:0 18px 45px rgba(0,0,0,0.10);
@@ -871,6 +879,13 @@ html, body{
 
 .about-card:hover::before{
   opacity:1;
+}
+
+/* texte propre */
+.about-card p{
+  color:#444;
+  font-size:16px;
+  line-height:1.6;
 }
 
 /* TEXTE */
