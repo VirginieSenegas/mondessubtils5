@@ -1,5 +1,5 @@
 /* =========================
-   BASE RESET
+   RESET GLOBAL
 ========================= */
 
 *{
@@ -20,18 +20,7 @@ body{
 }
 
 /* =========================
-   DESIGN TOKENS
-========================= */
-
-:root{
-  --primary:#00205b;
-  --radius:22px;
-  --shadow:0 10px 30px rgba(0,0,0,0.06);
-  --shadow-hover:0 18px 50px rgba(0,0,0,0.10);
-}
-
-/* =========================
-   NAVBAR
+   NAVBAR PREMIUM
 ========================= */
 
 .navbar{
@@ -43,58 +32,53 @@ body{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:0 32px;
-  background:rgba(255,255,255,0.72);
-  backdrop-filter:blur(12px);
+  padding:0 28px;
+  background:rgba(255,255,255,0.75);
+  backdrop-filter:blur(14px);
   z-index:9999;
 }
 
 .logo img{
   height:44px;
-  transition:transform .4s ease;
+  transition:0.4s ease;
 }
 .logo img:hover{
-  transform:rotate(4deg) scale(1.02);
+  transform:rotate(3deg) scale(1.03);
 }
 
-/* =========================
-   MENU BURGER
-========================= */
-
+/* BURGER */
 .burger{
-  width:32px;
+  width:30px;
   height:22px;
   display:flex;
   flex-direction:column;
   justify-content:space-between;
   cursor:pointer;
 }
-
 .burger span{
   height:2px;
-  background:var(--primary);
+  background:#00205b;
   border-radius:2px;
-  transition:.4s;
+  transition:0.4s;
 }
 
 .burger.active span:nth-child(1){transform:rotate(45deg) translateY(8px);}
 .burger.active span:nth-child(2){opacity:0;}
 .burger.active span:nth-child(3){transform:rotate(-45deg) translateY(-8px);}
 
-/* MENU FULL SCREEN */
-
+/* MENU */
 .menu{
   position:fixed;
   inset:0;
-  background:var(--primary);
+  background:#00205b;
   display:flex;
   flex-direction:column;
   justify-content:center;
   align-items:center;
-  gap:32px;
+  gap:28px;
   opacity:0;
   pointer-events:none;
-  transition:.4s;
+  transition:0.4s ease;
 }
 
 .menu.open{
@@ -106,13 +90,12 @@ body{
   color:#fff;
   font-size:26px;
   text-decoration:none;
-  letter-spacing:.05em;
-  transition:.3s;
+  transition:0.3s;
 }
-.menu a:hover{opacity:.7;}
+.menu a:hover{opacity:0.6;}
 
 /* =========================
-   HERO GLOBAL
+   HERO BASE (UNIFIÉ)
 ========================= */
 
 .hero{
@@ -121,47 +104,46 @@ body{
   align-items:center;
   justify-content:center;
   text-align:center;
-  color:#fff;
+  color:white;
   position:relative;
   background-size:cover;
   background-position:center;
 }
 
 .hero-content{
-  max-width:700px;
+  max-width:760px;
   padding:20px;
   position:relative;
-  z-index:2;
 }
 
-.hero-content h1{
-  font-size:60px;
+.hero h1{
+  font-size:58px;
   font-weight:300;
   letter-spacing:-0.03em;
 }
 
-.hero-content p{
-  font-size:20px;
-  line-height:1.7;
+.hero p{
+  font-size:18px;
+  line-height:1.8;
 }
 
 /* =========================
-   BUTTON
+   BUTTON GLOBAL
 ========================= */
 
 .btn{
   display:inline-block;
-  padding:14px 30px;
+  padding:14px 28px;
   border-radius:40px;
   background:#fff;
-  color:var(--primary);
+  color:#00205b;
   font-weight:600;
   text-decoration:none;
-  transition:.3s;
+  transition:0.3s ease;
 }
 
 .btn:hover{
-  transform:translateY(-2px);
+  transform:translateY(-3px);
 }
 
 /* =========================
@@ -171,14 +153,15 @@ body{
 .section{
   max-width:900px;
   margin:auto;
-  padding:100px 20px;
+  padding:90px 20px;
   text-align:center;
 }
 
 .section h2{
-  font-size:40px;
+  font-size:36px;
   font-weight:300;
-  color:var(--primary);
+  color:#00205b;
+  margin-bottom:18px;
 }
 
 .section p{
@@ -187,125 +170,120 @@ body{
 }
 
 /* =========================
-   PREMIUM CARD SYSTEM (GLOBAL UNIQUE)
+   GRID GLOBAL (TOUTES PAGES)
+========================= */
+
+.cards,
+.about-wrapper,
+.testimonials-grid,
+.faq-container,
+.reservation-grid,
+.practices-grid{
+  display:grid;
+  gap:24px;
+  max-width:1100px;
+  margin:auto;
+  padding:60px 20px 100px;
+}
+
+/* =========================
+   PREMIUM CARD SYSTEM (CLÉ DU DESIGN)
 ========================= */
 
 .card,
 .about-card,
-.res-card,
 .testimonial-card,
 .faq-item,
-.practice-card{
+.res-card{
   background:#fff;
-  border-radius:var(--radius);
-  box-shadow:var(--shadow);
+  border-radius:22px;
+  padding:32px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.06);
   position:relative;
   overflow:hidden;
-  transition:.35s;
-  padding:32px;
+  transition:0.35s ease;
+  height:100%;
   display:flex;
   flex-direction:column;
 }
 
+/* TRAIT BLEU UNIFIÉ */
 .card::before,
 .about-card::before,
-.res-card::before,
 .testimonial-card::before,
 .faq-item::before,
-.practice-card::before{
+.res-card::before{
   content:"";
   position:absolute;
   top:0;
   left:0;
   width:100%;
   height:3px;
-  background:var(--primary);
-  opacity:.12;
-  transition:.3s;
+  background:#00205b;
+  opacity:0.12;
+  transition:0.3s ease;
 }
 
+/* HOVER PREMIUM UNIQUE */
 .card:hover,
 .about-card:hover,
-.res-card:hover,
 .testimonial-card:hover,
 .faq-item:hover,
-.practice-card:hover{
-  transform:translateY(-4px);
-  box-shadow:var(--shadow-hover);
+.res-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 18px 50px rgba(0,0,0,0.12);
 }
 
 .card:hover::before,
 .about-card:hover::before,
-.res-card:hover::before,
 .testimonial-card:hover::before,
 .faq-item:hover::before,
-.practice-card:hover::before{
+.res-card:hover::before{
   opacity:1;
 }
 
-/* TEXT UNIFORME */
-.card p,
+/* TYPO UNIFIÉE */
+.card h3,
 .about-card p,
-.res-card p,
-.testimonial-card p,
-.faq-answer{
+.testimonial-text,
+.faq-answer,
+.res-card p{
   font-size:16px;
   line-height:1.7;
-  color:#444;
+  color:#333;
 }
 
 /* TITRES */
-.card h3,
-.about-card h3,
-.res-card h2,
-.testimonial-card h3{
-  color:var(--primary);
+.card h3{
+  font-size:18px;
+  color:#00205b;
   font-weight:500;
 }
 
 /* =========================
-   GRIDS UNIFORMES
-========================= */
-
-.cards,
-.about-wrapper,
-.reservation-grid,
-.testimonials-grid,
-.faq-container,
-.practices-grid{
-  display:grid;
-  gap:24px;
-  align-items:stretch;
-}
-
-/* =========================
-   ABOUT HERO
-========================= */
-
-.about-hero{
-  height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  color:#fff;
-  background-size:cover;
-  background-position:center;
-}
-
-/* =========================
-   PRACTICES (KEEP PREMIUM LOOK)
+   PRACTICES (GARDÉ PREMIUM ORIGINAL)
 ========================= */
 
 .practice-card{
-  min-height:560px;
+  position:relative;
+  min-height:600px;
+  border-radius:32px;
+  overflow:hidden;
+  display:flex;
   align-items:flex-end;
+  background:#000;
+  transition:0.4s ease;
+}
+
+.practice-card:hover{
+  transform:scale(1.01);
 }
 
 .practice-content{
   position:relative;
   z-index:2;
-  color:#fff;
+  padding:34px;
+  color:white;
 }
 
 /* =========================
@@ -314,31 +292,32 @@ body{
 
 footer{
   text-align:center;
-  padding:50px 20px;
-  font-size:14px;
-  color:#666;
+  padding:40px;
+  font-size:13px;
+  color:#777;
   background:#f0f0f0;
 }
 
 /* =========================
-   RESPONSIVE
+   RESPONSIVE GLOBAL
 ========================= */
 
 @media(max-width:768px){
 
-  .hero-content h1{
+  .hero h1{
     font-size:38px;
   }
 
-  .menu a{
-    font-size:22px;
+  .section{
+    padding:70px 16px;
   }
 
-  .section h2{
-    font-size:30px;
+  .card,
+  .about-card,
+  .testimonial-card,
+  .faq-item,
+  .res-card{
+    padding:24px;
   }
 
-  .practice-card{
-    min-height:460px;
-  }
 }
