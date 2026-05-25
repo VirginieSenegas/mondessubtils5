@@ -899,3 +899,35 @@ html, body{
 .section-soft{
   background:#f7f7f9;
 }
+
+.testimonial-card{
+  background:white;
+  border-radius:22px;
+  padding:40px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.06);
+  transition:0.35s ease;
+  position:relative;
+  overflow:hidden;
+}
+
+/* même trait bleu premium que les autres cards */
+.testimonial-card::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:3px;
+  background:#00205b;
+  opacity:0.12;
+  transition:0.3s ease;
+}
+
+.testimonial-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 18px 45px rgba(0,0,0,0.10);
+}
+
+.testimonial-card:hover::before{
+  opacity:1;
+}
