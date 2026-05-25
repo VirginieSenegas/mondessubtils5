@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <title>Réserver — Mondes Subtils</title>
+  <title>Réserver une séance — Mondes Subtils</title>
 
-  <meta name="description" content="Réservez une séance de magnétisme avec Mondes Subtils. Consultation à distance ou en présentiel dans le Tarn, Toulouse et en Occitanie.">
+  <meta name="description" content="Réserver une séance de magnétisme avec Mondes Subtils à distance ou en présentiel dans le Tarn, Toulouse et en Occitanie.">
 
   <link rel="stylesheet" href="style.css" />
 
@@ -17,10 +17,12 @@
     ========================= */
 
     .reservation-hero{
-      height:85vh;
+      position:relative;
+
+      height:90vh;
 
       background:
-      linear-gradient(rgba(0,32,91,0.32), rgba(0,32,91,0.38)),
+      linear-gradient(rgba(0,32,91,0.28), rgba(0,32,91,0.36)),
       url("https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?q=80&w=1800&auto=format&fit=crop");
 
       background-size:cover;
@@ -31,74 +33,71 @@
       justify-content:center;
 
       text-align:center;
-      color:white;
 
-      padding:20px;
+      color:white;
     }
 
     .reservation-hero-content{
       max-width:760px;
+      padding:20px;
     }
 
     .reservation-hero h1{
-      font-size:58px;
+      font-size:64px;
       font-weight:300;
-      letter-spacing:-0.03em;
+      letter-spacing:-0.04em;
       line-height:1.1;
+      margin-bottom:24px;
     }
 
     .reservation-hero p{
-      font-size:18px;
-      margin-top:22px;
-      opacity:0.92;
-      line-height:1.8;
+      font-size:20px;
+      line-height:1.9;
       font-weight:300;
+      opacity:0.92;
     }
 
     /* INTRO */
 
     .reservation-intro{
-      max-width:820px;
+      max-width:860px;
       margin:auto;
-
-      padding:90px 20px 40px;
-
+      padding:90px 20px 50px;
       text-align:center;
     }
 
     .reservation-intro p{
-      font-size:21px;
+      font-size:22px;
       line-height:1.9;
       font-weight:300;
-      color:#222;
+      color:#1b1b1b;
     }
 
     /* GRID */
 
     .reservation-grid{
-      max-width:1180px;
-
+      max-width:1200px;
       margin:auto;
 
-      padding:20px 20px 90px;
+      padding:20px 20px 110px;
 
       display:grid;
 
       grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 
-      gap:24px;
+      gap:26px;
     }
 
     /* APPLE CARDS */
 
     .res-card{
-      background:rgba(255,255,255,0.84);
+      background:rgba(255,255,255,0.82);
 
       backdrop-filter:blur(18px);
 
       border-radius:34px;
 
-      padding:36px;
+      padding:38px;
 
       box-shadow:
       0 10px 40px rgba(0,0,0,0.05);
@@ -107,69 +106,53 @@
     }
 
     .res-card:hover{
-      transform:translateY(-3px) scale(1.01);
+      transform:translateY(-4px) scale(1.01);
 
       box-shadow:
-      0 20px 60px rgba(0,0,0,0.08);
+      0 18px 50px rgba(0,0,0,0.08);
     }
 
     .res-card h2{
       font-size:28px;
-
-      color:#00205b;
-
       font-weight:300;
-
-      margin-bottom:16px;
-
+      color:#00205b;
+      margin-bottom:18px;
       line-height:1.3;
     }
 
     .res-card p{
       font-size:17px;
-
       line-height:1.8;
-
       color:#333;
-
       font-weight:300;
     }
 
     /* TRANSITION */
 
     .reservation-transition{
-      max-width:760px;
-
-      margin:auto;
-
-      padding:0 20px 70px;
-
       text-align:center;
+      max-width:760px;
+      margin:auto;
+      padding:0 20px 80px;
     }
 
     .reservation-transition h2{
       font-size:42px;
-
-      color:#00205b;
-
       font-weight:300;
-
-      margin-bottom:20px;
+      color:#00205b;
+      margin-bottom:18px;
     }
 
     .reservation-transition p{
       font-size:18px;
-
       line-height:1.8;
-
       color:#444;
     }
 
-    /* BOOKING CARD */
+    /* FORMULAIRE PREMIUM */
 
     .booking-wrapper{
-      max-width:900px;
-
+      max-width:860px;
       margin:auto;
 
       padding:0 20px 120px;
@@ -180,94 +163,103 @@
 
       border-radius:38px;
 
-      padding:70px 50px;
-
-      text-align:center;
+      padding:60px;
 
       box-shadow:
-      0 20px 60px rgba(0,0,0,0.05);
+      0 10px 40px rgba(0,0,0,0.05);
     }
 
-    .booking-card h2{
+    .booking-header{
+      text-align:center;
+      margin-bottom:50px;
+    }
+
+    .booking-header h2{
       font-size:42px;
-
       font-weight:300;
-
       color:#00205b;
-
-      margin-bottom:20px;
+      margin-bottom:16px;
     }
 
-    .booking-card p{
-      max-width:620px;
-
-      margin:auto;
-
+    .booking-header p{
       font-size:18px;
-
-      line-height:1.9;
-
-      color:#444;
-
-      margin-bottom:40px;
+      line-height:1.8;
+      color:#555;
     }
 
-    .booking-actions{
-      display:flex;
+    /* FORM */
 
-      justify-content:center;
-
-      gap:18px;
-
-      flex-wrap:wrap;
+    .booking-form{
+      display:grid;
+      gap:22px;
     }
 
-    .btn-secondary{
-      display:inline-block;
+    .booking-form input,
+    .booking-form textarea{
+      width:100%;
 
-      padding:14px 30px;
+      padding:20px 22px;
 
-      border:1px solid rgba(0,32,91,0.12);
+      border:none;
 
-      border-radius:40px;
+      background:#f4f5f7;
 
-      text-decoration:none;
+      border-radius:18px;
 
-      color:#00205b;
+      font-size:16px;
 
-      background:white;
+      outline:none;
 
       transition:0.3s;
     }
 
-    .btn-secondary:hover{
-      transform:translateY(-2px);
+    .booking-form input:focus,
+    .booking-form textarea:focus{
+      background:#eef1f6;
+
+      box-shadow:
+      0 0 0 1px rgba(0,32,91,0.12);
     }
 
-    /* REASSURANCE */
+    .booking-form textarea{
+      min-height:150px;
+      resize:vertical;
+    }
 
-    .reservation-note{
-      max-width:820px;
-
-      margin:auto;
-
-      padding:0 20px 120px;
-
+    .booking-submit{
+      margin-top:10px;
       text-align:center;
     }
 
-    .reservation-note p{
-      background:#f1f2f5;
+    .booking-note{
+      margin-top:24px;
 
-      border-radius:28px;
+      text-align:center;
 
-      padding:34px;
+      font-size:14px;
+      line-height:1.7;
+      color:#666;
+    }
 
-      font-size:17px;
+    /* CTA FINAL */
 
-      line-height:1.9;
+    .reservation-cta{
+      text-align:center;
+      padding:0 20px 120px;
+    }
 
+    .reservation-cta h2{
+      font-size:38px;
+      font-weight:300;
+      color:#00205b;
+      margin-bottom:18px;
+    }
+
+    .reservation-cta p{
+      font-size:18px;
+      line-height:1.8;
       color:#444;
+      margin-bottom:34px;
     }
 
     /* MOBILE */
@@ -275,33 +267,36 @@
     @media(max-width:768px){
 
       .reservation-hero{
-        height:72vh;
+        height:78vh;
       }
 
       .reservation-hero h1{
-        font-size:38px;
+        font-size:42px;
       }
 
       .reservation-hero p{
-        font-size:17px;
+        font-size:18px;
       }
 
-      .reservation-grid{
-        grid-template-columns:1fr;
+      .reservation-intro p{
+        font-size:18px;
+      }
+
+      .booking-card{
+        padding:34px 24px;
+        border-radius:28px;
+      }
+
+      .booking-header h2{
+        font-size:32px;
       }
 
       .res-card{
         padding:30px;
-        border-radius:28px;
       }
 
-      .booking-card{
-        padding:50px 28px;
-        border-radius:30px;
-      }
-
-      .booking-card h2{
-        font-size:34px;
+      .res-card h2{
+        font-size:24px;
       }
 
     }
@@ -373,21 +368,21 @@
     <div class="res-card">
       <h2>Nettoyage énergétique</h2>
       <p>
-        Pour alléger certaines charges et retrouver une sensation d’équilibre intérieur.
+        Pour alléger certaines charges et retrouver un espace plus apaisé.
       </p>
     </div>
 
     <div class="res-card">
       <h2>Libération émotionnelle</h2>
       <p>
-        Un accompagnement dans les périodes de surcharge émotionnelle ou de fatigue intérieure.
+        Accompagnement dans les périodes de surcharge émotionnelle ou de fatigue intérieure.
       </p>
     </div>
 
     <div class="res-card">
       <h2>Douleurs & inconforts</h2>
       <p>
-        Travail énergétique doux et global dans une approche complémentaire de mieux-être.
+        Travail énergétique doux visant à accompagner certaines tensions persistantes.
       </p>
     </div>
 
@@ -399,46 +394,66 @@
     <h2>Prendre rendez-vous</h2>
 
     <p>
-      Une fois votre besoin identifié, vous pouvez choisir le mode de prise de contact qui vous convient le mieux.
+      Une fois votre besoin identifié, vous pouvez effectuer une première prise de contact ci-dessous.
     </p>
 
   </section>
 
-  <!-- BOOKING -->
+  <!-- FORMULAIRE -->
   <section class="booking-wrapper">
 
     <div class="booking-card">
 
-      <h2>Choisir un créneau</h2>
+      <div class="booking-header">
 
-      <p>
-        Les consultations se réalisent à distance ou en présentiel, uniquement sur rendez-vous.
-      </p>
+        <h2>Première prise de contact</h2>
 
-      <div class="booking-actions">
+        <p>
+          Je vous recontacte rapidement afin d’échanger sur votre demande et convenir ensemble d’un créneau.
+        </p>
 
-        <!-- REMPLACE LE LIEN PAR TON VRAI CALENDLY -->
-        <a href="https://calendly.com/" target="_blank" class="btn">
-          Ouvrir le calendrier
-        </a>
+      </div>
 
-        <a href="faq.html" class="btn-secondary">
-          Poser une question
-        </a>
+      <form class="booking-form">
 
+        <input type="text" placeholder="Nom" required>
+
+        <input type="text" placeholder="Prénom" required>
+
+        <input type="date" required>
+
+        <input type="tel" placeholder="Téléphone" required>
+
+        <textarea placeholder="Commentaires"></textarea>
+
+        <div class="booking-submit">
+          <button type="submit" class="btn">
+            Envoyer la demande
+          </button>
+        </div>
+
+      </form>
+
+      <div class="booking-note">
+        Je vous remercie pour cette première prise de contact, je reviens vers vous rapidement.
       </div>
 
     </div>
 
   </section>
 
-  <!-- REASSURANCE -->
-  <section class="reservation-note">
+  <!-- CTA -->
+  <section class="reservation-cta">
+
+    <h2>Besoin d’un échange avant réservation ?</h2>
 
     <p>
-      Chaque séance est réalisée dans un cadre respectueux, sans substitution médicale.
-      Vous restez libre et acteur de votre démarche à tout moment.
+      Les consultations se déroulent dans un cadre respectueux, sans substitution médicale.
     </p>
+
+    <a href="faq.html" class="btn">
+      Voir les questions fréquentes
+    </a>
 
   </section>
 
@@ -449,7 +464,6 @@
 
   <!-- SCRIPT -->
   <script>
-
     const burger = document.getElementById("burger");
     const menu = document.getElementById("menu");
 
@@ -457,7 +471,6 @@
       burger.classList.toggle("active");
       menu.classList.toggle("open");
     });
-
   </script>
 
 </body>
