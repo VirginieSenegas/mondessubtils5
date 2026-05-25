@@ -1,6 +1,4 @@
-/* =========================
-   RESET GLOBAL
-========================= */
+/* RESET */
 
 *{
   margin:0;
@@ -13,15 +11,13 @@ html{
 }
 
 body{
-  font-family:Arial, sans-serif;
+  font-family:Arial,sans-serif;
   background:#f7f7f9;
   color:#111;
   overflow-x:hidden;
 }
 
-/* =========================
-   NAVBAR PREMIUM
-========================= */
+/* NAVBAR */
 
 .navbar{
   position:fixed;
@@ -29,56 +25,95 @@ body{
   left:0;
   width:100%;
   height:72px;
+
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:0 28px;
-  background:rgba(255,255,255,0.75);
-  backdrop-filter:blur(14px);
+
+  padding:0 32px;
+
+  background:rgba(255,255,255,0.72);
+
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+
   z-index:9999;
 }
 
+/* LOGO */
+
 .logo img{
   height:44px;
-  transition:0.4s ease;
+  width:auto;
+  display:block;
+
+  transition:transform 0.5s ease;
 }
+
 .logo img:hover{
-  transform:rotate(3deg) scale(1.03);
+  transform:rotate(4deg) scale(1.02);
 }
 
 /* BURGER */
+
 .burger{
-  width:30px;
+  width:32px;
   height:22px;
+
   display:flex;
   flex-direction:column;
   justify-content:space-between;
+
   cursor:pointer;
+  z-index:10000;
 }
+
 .burger span{
+  width:100%;
   height:2px;
+
   background:#00205b;
+
   border-radius:2px;
+
   transition:0.4s;
 }
 
-.burger.active span:nth-child(1){transform:rotate(45deg) translateY(8px);}
-.burger.active span:nth-child(2){opacity:0;}
-.burger.active span:nth-child(3){transform:rotate(-45deg) translateY(-8px);}
+/* ANIMATION */
+
+.burger.active span:nth-child(1){
+  transform:rotate(45deg) translateY(8px);
+}
+
+.burger.active span:nth-child(2){
+  opacity:0;
+}
+
+.burger.active span:nth-child(3){
+  transform:rotate(-45deg) translateY(-8px);
+}
 
 /* MENU */
+
 .menu{
   position:fixed;
   inset:0;
+
   background:#00205b;
+
   display:flex;
   flex-direction:column;
   justify-content:center;
   align-items:center;
-  gap:28px;
+
+  gap:32px;
+
   opacity:0;
   pointer-events:none;
+
   transition:0.4s ease;
+
+  z-index:9000;
 }
 
 .menu.open{
@@ -87,81 +122,113 @@ body{
 }
 
 .menu a{
-  color:#fff;
-  font-size:26px;
+  color:white;
   text-decoration:none;
-  transition:0.3s;
-}
-.menu a:hover{opacity:0.6;}
+  font-size:28px;
+  letter-spacing:0.05em;
 
-/* =========================
-   HERO BASE (UNIFIÉ)
-========================= */
+  transition:opacity 0.3s ease;
+}
+
+.menu a:hover{
+  opacity:0.7;
+}
+
+/* HERO */
 
 .hero{
+  position:relative;
+
   height:100vh;
+
+  background:
+  linear-gradient(rgba(0,32,91,0.35), rgba(0,32,91,0.35)),
+  url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1600&auto=format&fit=crop");
+
+  background-size:cover;
+  background-position:center;
+
   display:flex;
   align-items:center;
   justify-content:center;
+
   text-align:center;
-  color:white;
-  position:relative;
-  background-size:cover;
-  background-position:center;
 }
+
+/* OVERLAY */
+
+.overlay{
+  position:absolute;
+  inset:0;
+}
+
+/* HERO CONTENT */
 
 .hero-content{
-  max-width:760px;
-  padding:20px;
   position:relative;
+  z-index:2;
+
+  max-width:700px;
+
+  padding:20px;
+
+  color:white;
 }
 
-.hero h1{
-  font-size:58px;
+.hero-content h1{
+  font-size:64px;
   font-weight:300;
+  margin-bottom:20px;
+
   letter-spacing:-0.03em;
 }
 
-.hero p{
-  font-size:18px;
-  line-height:1.8;
+.hero-content p{
+  font-size:20px;
+  line-height:1.7;
+  margin-bottom:30px;
 }
 
-/* =========================
-   BUTTON GLOBAL
-========================= */
+/* BUTTON */
 
 .btn{
   display:inline-block;
-  padding:14px 28px;
-  border-radius:40px;
-  background:#fff;
+
+  padding:14px 30px;
+
+  background:white;
   color:#00205b;
-  font-weight:600;
+
+  border-radius:40px;
+
   text-decoration:none;
+  font-weight:600;
+
   transition:0.3s ease;
 }
 
 .btn:hover{
-  transform:translateY(-3px);
+  transform:translateY(-2px);
 }
 
-/* =========================
-   SECTIONS
-========================= */
+/* SECTION */
 
 .section{
+  padding:100px 20px;
+
   max-width:900px;
+
   margin:auto;
-  padding:90px 20px;
+
   text-align:center;
 }
 
 .section h2{
-  font-size:36px;
-  font-weight:300;
+  font-size:40px;
+  margin-bottom:20px;
   color:#00205b;
-  margin-bottom:18px;
+
+  font-weight:300;
 }
 
 .section p{
@@ -169,49 +236,754 @@ body{
   line-height:1.8;
 }
 
-/* =========================
-   GRID GLOBAL (TOUTES PAGES)
-========================= */
+/* CARDS */
 
-.cards,
-.about-wrapper,
-.testimonials-grid,
-.faq-container,
-.reservation-grid,
-.practices-grid{
+.cards{
   display:grid;
+
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
   gap:24px;
-  max-width:1100px;
-  margin:auto;
-  padding:60px 20px 100px;
+
+  padding:40px 20px 100px;
+}
+
+.card{
+  background:white;
+
+  padding:32px;
+
+  border-radius:24px;
+
+  box-shadow:
+  0 10px 30px rgba(0,0,0,0.05);
+
+  transition:0.35s ease;
+}
+
+.card:hover{
+  transform:translateY(-4px);
+}
+
+.card h3{
+  margin-bottom:12px;
+  color:#00205b;
+
+  font-weight:500;
+}
+
+/* FOOTER */
+
+footer{
+  text-align:center;
+  padding:50px 20px;
+  background:#f0f0f0;
+
+  font-size:14px;
+  color:#666;
 }
 
 /* =========================
-   PREMIUM CARD SYSTEM (CLÉ DU DESIGN)
+   ABOUT PAGE PREMIUM
 ========================= */
 
-.card,
-.about-card,
-.testimonial-card,
-.faq-item,
-.res-card{
-  background:#fff;
-  border-radius:22px;
-  padding:32px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.06);
+.about-hero{
   position:relative;
-  overflow:hidden;
-  transition:0.35s ease;
-  height:100%;
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+
+  background:
+    linear-gradient(rgba(0,32,91,0.35), rgba(0,32,91,0.35)),
+    url("https://images.unsplash.com/photo-1520975928316-9f9b6c6f6f3a?q=80&w=1600&auto=format&fit=crop");
+
+  background-size:cover;
+  background-position:center;
+
+  color:white;
+}
+
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  backdrop-filter:blur(1px);
+}
+
+.about-hero .hero-content{
+  position:relative;
+  z-index:2;
+  max-width:800px;
+  padding:20px;
+}
+
+.mini-title{
+  font-size:12px;
+  letter-spacing:0.35em;
+  text-transform:uppercase;
+  opacity:0.85;
+  margin-bottom:20px;
+}
+
+.about-hero h1{
+  font-size:56px;
+  font-weight:300;
+  line-height:1.2;
+  letter-spacing:-0.03em;
+}
+
+/* WRAPPER */
+
+.about-wrapper{
+  max-width:1100px;
+
+  margin:auto;
+
+  padding:70px 20px 120px;
+
   display:flex;
   flex-direction:column;
+
+  gap:18px;
 }
 
-/* TRAIT BLEU UNIFIÉ */
-.card::before,
-.about-card::before,
-.testimonial-card::before,
-.faq-item::before,
+/* APPLE CARDS */
+
+.about-card{
+  background:rgba(255,255,255,0.92);
+
+  border-radius:32px;
+
+  padding:42px;
+
+  border:1px solid rgba(255,255,255,0.6);
+
+  box-shadow:
+    0 8px 40px rgba(0,0,0,0.06),
+    0 1px 1px rgba(255,255,255,0.9) inset;
+
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+
+  transition:all 0.4s ease;
+
+  max-width:860px;
+
+  margin:0 auto;
+}
+
+.about-card:hover{
+  transform:translateY(-3px) scale(1.01);
+
+  box-shadow:
+    0 20px 60px rgba(0,0,0,0.08),
+    0 1px 1px rgba(255,255,255,0.95) inset;
+}
+
+.about-card p{
+  font-size:20px;
+  line-height:1.9;
+  font-weight:300;
+  color:#111;
+
+  letter-spacing:-0.01em;
+}
+
+/* SECTION DOUCE */
+
+.section-soft{
+  background:#f5f6f8;
+
+  border-radius:40px;
+
+  margin:0 20px 80px;
+
+  padding:80px 30px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+  .navbar{
+    padding:0 20px;
+  }
+
+  .hero-content h1{
+    font-size:42px;
+  }
+
+  .hero-content p{
+    font-size:18px;
+  }
+
+  .menu a{
+    font-size:24px;
+  }
+
+  .about-hero{
+    height:65vh;
+  }
+
+  .about-hero h1{
+    font-size:38px;
+  }
+
+  .about-wrapper{
+    gap:16px;
+    padding:50px 16px 100px;
+  }
+
+  .about-card{
+    padding:28px;
+    border-radius:24px;
+  }
+
+  .about-card p{
+    font-size:17px;
+    line-height:1.7;
+  }
+
+}
+
+/* =========================
+   PRACTICES — APPLE PREMIUM CARDS
+========================= */
+
+.practices-hero{
+  height:78vh;
+
+  background:
+  linear-gradient(rgba(0,32,91,0.28), rgba(0,32,91,0.34)),
+  url("https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1800&auto=format&fit=crop");
+
+  background-size:cover;
+  background-position:center;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  text-align:center;
+}
+
+.hero-overlay{
+  position:absolute;
+  inset:0;
+}
+
+.practices-intro{
+  max-width:850px;
+  margin:auto;
+  padding:80px 20px 30px;
+  text-align:center;
+}
+
+.practices-intro p{
+  font-size:22px;
+  line-height:1.9;
+  font-weight:300;
+  color:#1a1a1a;
+}
+
+/* GRID */
+
+.practices-grid{
+  max-width:1350px;
+  margin:auto;
+
+  padding:20px 20px 120px;
+
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(380px,1fr));
+  gap:26px;
+}
+
+/* APPLE CARD STYLE */
+
+.practice-card{
+  position:relative;
+  min-height:620px;
+
+  border-radius:36px;
+  overflow:hidden;
+
+  display:flex;
+  align-items:flex-end;
+
+  background:#000;
+
+  box-shadow:0 10px 40px rgba(0,0,0,0.08);
+
+  transition:transform 0.45s ease, box-shadow 0.45s ease;
+}
+
+.practice-card:hover{
+  transform:translateY(-4px) scale(1.01);
+  box-shadow:0 25px 70px rgba(0,0,0,0.12);
+}
+
+/* IMAGE FULL */
+
+.practice-image{
+  position:absolute;
+  inset:0;
+
+  background-size:cover;
+  background-position:center;
+
+  transition:transform 1.2s ease;
+}
+
+.practice-card:hover .practice-image{
+  transform:scale(1.03);
+}
+
+/* DARK OVERLAY */
+
+.practice-card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:linear-gradient(
+    to top,
+    rgba(0,0,0,0.72) 10%,
+    rgba(0,0,0,0.15) 60%,
+    rgba(0,0,0,0.05) 100%
+  );
+}
+
+/* CONTENT */
+
+.practice-content{
+  position:relative;
+  z-index:2;
+
+  padding:42px;
+  color:white;
+}
+
+.practice-content h2{
+  font-size:34px;
+  font-weight:300;
+  margin-bottom:16px;
+  letter-spacing:-0.03em;
+}
+
+.practice-content p{
+  font-size:17px;
+  line-height:1.8;
+  margin-bottom:26px;
+  color:rgba(255,255,255,0.88);
+}
+
+/* BUTTON reuse global .btn */
+
+.practice-content .btn{
+  background:white;
+  color:#00205b;
+}
+
+/* DISCLAIMER */
+
+.medical-note{
+  max-width:900px;
+  margin:0 auto 100px;
+  padding:0 20px;
+}
+
+.medical-note p{
+  background:rgba(255,255,255,0.92);
+  backdrop-filter:blur(16px);
+
+  border-radius:26px;
+  padding:30px;
+
+  text-align:center;
+
+  box-shadow:0 10px 40px rgba(0,0,0,0.05);
+
+  font-size:16px;
+  line-height:1.8;
+  color:#444;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+  .practices-grid{
+    grid-template-columns:1fr;
+  }
+
+  .practice-card{
+    min-height:520px;
+  }
+
+}
+
+@media(max-width:768px){
+
+  .practices-intro p{
+    font-size:18px;
+  }
+
+  .practice-card{
+    min-height:480px;
+    border-radius:28px;
+  }
+
+  .practice-content{
+    padding:30px;
+  }
+
+  .practice-content h2{
+    font-size:28px;
+  }
+
+}
+
+/* =========================
+   CALENDLY PREMIUM STYLE
+========================= */
+
+.calendly-section{
+  max-width:1000px;
+  margin:auto;
+  padding:100px 20px;
+  text-align:center;
+}
+
+.calendly-header{
+  max-width:700px;
+  margin:auto;
+  margin-bottom:40px;
+}
+
+.calendly-header h2{
+  font-size:36px;
+  font-weight:300;
+  color:#00205b;
+  margin-bottom:12px;
+}
+
+.calendly-header p{
+  font-size:18px;
+  line-height:1.8;
+  color:#333;
+  font-weight:300;
+}
+
+/* FRAME LUXE */
+
+.calendly-frame{
+  background:rgba(255,255,255,0.8);
+
+  backdrop-filter:blur(18px);
+
+  border-radius:28px;
+
+  padding:18px;
+
+  box-shadow:0 20px 60px rgba(0,0,0,0.08);
+}
+
+.calendly-frame iframe{
+  width:100%;
+  height:700px;
+
+  border-radius:20px;
+
+  border:none;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  .calendly-header h2{
+    font-size:28px;
+  }
+
+  .calendly-frame iframe{
+    height:600px;
+  }
+}
+
+/* =========================
+   TESTIMONIALS
+========================= */
+
+.testimonials-grid{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden; /* empêche la bande sur les côtés */
+}
+
+.testimonials-grid::before{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:url("temoignageimage.png");
+  background-size:cover;
+  background-position:center;
+
+  opacity:0.06;
+  filter:blur(2px);
+
+  z-index:0;
+  pointer-events:none;
+}
+
+/* sécurité : tout le contenu passe au-dessus */
+.testimonials-grid > *{
+  position:relative;
+  z-index:1;
+}
+
+body{
+  overflow-x:hidden;
+}
+
+html, body{
+  width:100%;
+  overflow-x:hidden;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+.card{
+  background:white;
+  padding:32px;
+  border-radius:22px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.06);
+  transition:0.35s ease;
+  position:relative;
+  overflow:hidden;
+}
+
+/* hover premium */
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 18px 45px rgba(0,0,0,0.10);
+}
+
+/* ligne accent élégante */
+.card::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:3px;
+  background:#00205b;
+  opacity:0;
+  transition:0.3s ease;
+}
+
+.card:hover::before{
+  opacity:1;
+}
+
+/* typo plus clean */
+.card h3{
+  margin-bottom:12px;
+  color:#00205b;
+  font-weight:400;
+  font-size:20px;
+}
+
+.card p{
+  color:#444;
+  font-size:16px;
+  line-height:1.6;
+}
+
+.about-hero{
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  background:
+    linear-gradient(rgba(0,32,91,0.35), rgba(0,32,91,0.35)),
+    url("https://images.unsplash.com/photo-1520975928316-9f9b6c6f6f3a?q=80&w=1600&auto=format&fit=crop");
+  background-size:cover;
+  background-position:center;
+  color:white;
+}
+
+.hero-overlay{
+  position:absolute;
+  inset:0;
+}
+
+/* TITRE HERO IDENTIQUE AUX AUTRES PAGES */
+.about-hero .hero-content h1{
+  font-size:64px;
+  font-weight:300;
+}
+
+.about-hero .mini-title{
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  font-size:14px;
+  opacity:0.8;
+  margin-bottom:10px;
+}
+
+/* WRAPPER DES CARDS ABOUT = IDENTIQUE AU SYSTEME GLOBAL */
+.about-wrapper{
+  max-width:900px;
+  margin:auto;
+  padding:100px 20px;
+
+  display:grid;
+  gap:24px;
+}
+
+/* CARD ABOUT = ALIGNÉE SUR .card GLOBAL */
+.about-card{
+  background:white;
+  padding:32px;
+  border-radius:22px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.06);
+  transition:0.35s ease;
+  position:relative;
+  overflow:hidden;
+}
+
+/* même ligne premium que index */
+.about-card::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:3px;
+  background:#00205b;
+  opacity:0.12;
+  transition:0.3s ease;
+}
+
+/* hover identique index */
+.about-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 18px 45px rgba(0,0,0,0.10);
+}
+
+.about-card:hover::before{
+  opacity:1;
+}
+
+/* texte propre */
+.about-card p{
+  color:#444;
+  font-size:16px;
+  line-height:1.6;
+}
+
+/* TEXTE */
+.about-card p{
+  color:#444;
+  font-size:16px;
+  line-height:1.6;
+}
+
+/* CTA SOFT = IDENTIQUE SECTION PRINCIPALE */
+.section-soft{
+  background:#f7f7f9;
+}
+
+.testimonial-card{
+  background:white;
+  border-radius:22px;
+  padding:40px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.06);
+  transition:0.35s ease;
+  position:relative;
+  overflow:hidden;
+}
+
+/* même trait bleu premium que les autres cards */
+.testimonial-card::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:3px;
+  background:#00205b;
+  opacity:0.12;
+  transition:0.3s ease;
+}
+
+.testimonial-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 18px 45px rgba(0,0,0,0.10);
+}
+
+.testimonial-card:hover::before{
+  opacity:1;
+}
+
+.faq-item{
+  background:white;
+  border-radius:22px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.06);
+  transition:0.35s ease;
+  position:relative;
+  overflow:hidden;
+}
+
+/* trait bleu premium identique au reste du site */
+.faq-item::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:3px;
+  background:#00205b;
+  opacity:0.12;
+  transition:0.3s ease;
+}
+
+/* hover premium cohérent index */
+.faq-item:hover{
+  transform:translateY(-6px);
+  box-shadow:0 18px 45px rgba(0,0,0,0.10);
+}
+
+.faq-item:hover::before{
+  opacity:1;
+}
+
+/* amélioration micro UX (option luxe discret) */
+.faq-question{
+  transition:0.3s ease;
+}
+
+.faq-question:hover{
+  opacity:0.75;
+}
+
+.res-card{
+  background:white;
+  border-radius:22px;
+  padding:38px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.06);
+  transition:0.35s ease;
+  position:relative;
+  overflow:hidden;
+}
+
+/* petit trait bleu premium identique au reste du site */
 .res-card::before{
   content:"";
   position:absolute;
@@ -224,100 +996,12 @@ body{
   transition:0.3s ease;
 }
 
-/* HOVER PREMIUM UNIQUE */
-.card:hover,
-.about-card:hover,
-.testimonial-card:hover,
-.faq-item:hover,
+/* hover cohérent global */
 .res-card:hover{
-  transform:translateY(-5px);
-  box-shadow:0 18px 50px rgba(0,0,0,0.12);
+  transform:translateY(-6px);
+  box-shadow:0 18px 45px rgba(0,0,0,0.10);
 }
 
-.card:hover::before,
-.about-card:hover::before,
-.testimonial-card:hover::before,
-.faq-item:hover::before,
 .res-card:hover::before{
   opacity:1;
-}
-
-/* TYPO UNIFIÉE */
-.card h3,
-.about-card p,
-.testimonial-text,
-.faq-answer,
-.res-card p{
-  font-size:16px;
-  line-height:1.7;
-  color:#333;
-}
-
-/* TITRES */
-.card h3{
-  font-size:18px;
-  color:#00205b;
-  font-weight:500;
-}
-
-/* =========================
-   PRACTICES (GARDÉ PREMIUM ORIGINAL)
-========================= */
-
-.practice-card{
-  position:relative;
-  min-height:600px;
-  border-radius:32px;
-  overflow:hidden;
-  display:flex;
-  align-items:flex-end;
-  background:#000;
-  transition:0.4s ease;
-}
-
-.practice-card:hover{
-  transform:scale(1.01);
-}
-
-.practice-content{
-  position:relative;
-  z-index:2;
-  padding:34px;
-  color:white;
-}
-
-/* =========================
-   FOOTER
-========================= */
-
-footer{
-  text-align:center;
-  padding:40px;
-  font-size:13px;
-  color:#777;
-  background:#f0f0f0;
-}
-
-/* =========================
-   RESPONSIVE GLOBAL
-========================= */
-
-@media(max-width:768px){
-
-  .hero h1{
-    font-size:38px;
-  }
-
-  .section{
-    padding:70px 16px;
-  }
-
-  .card,
-  .about-card,
-  .testimonial-card,
-  .faq-item,
-  .res-card{
-    padding:24px;
-  }
-
 }
