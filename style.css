@@ -1,49 +1,126 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+/* RESET */
 
-  <title>À propos — Mondes Subtils</title>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-  <meta name="description" content="Découvrez l’approche humaine et attentive de Mondes Subtils, accompagnement en magnétisme et mieux-être en Occitanie, à distance ou sur rendez-vous.">
+html{
+  scroll-behavior:smooth;
+}
 
-  <!-- TYPO -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+body{
+  font-family:Arial,sans-serif;
+  background:#f7f7f9;
+  color:#111;
+  overflow-x:hidden;
+}
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css" />
-</head>
+/* NAVBAR */
 
-<body>
+.navbar{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:72px;
 
-  <!-- NAVBAR -->
-  <header class="navbar">
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 
-    <!-- LOGO -->
-    <a href="index.html" class="logo">
-      <img src="logo.png" alt="Logo Mondes Subtils">
-    </a>
+  padding:0 32px;
 
-    <!-- BURGER -->
-    <div class="burger" id="burger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
+  background:rgba(255,255,255,0.72);
 
-  </header>
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
 
-  <!-- MENU -->
-  <nav class="menu" id="menu">
+  z-index:9999;
+}
 
-    <a href="index.html">Accueil</a>
-    <a href="a-propos.html">À propos</a>
-    <a href="pratiques.html">Les pratiques</a>
-    <a href="faq.html">FAQ</a>
-    <a href="reservation.html">Réserver</a>
+/* LOGO */
 
-  </nav>
+.logo img{
+  height:44px;
+  width:auto;
+  display:block;
+}
+
+/* BURGER */
+
+.burger{
+  width:32px;
+  height:22px;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+
+  cursor:pointer;
+  z-index:10000;
+}
+
+.burger span{
+  width:100%;
+  height:2px;
+
+  background:#00205b;
+
+  border-radius:2px;
+
+  transition:0.4s;
+}
+
+/* ANIMATION */
+
+.burger.active span:nth-child(1){
+  transform:rotate(45deg) translateY(8px);
+}
+
+.burger.active span:nth-child(2){
+  opacity:0;
+}
+
+.burger.active span:nth-child(3){
+  transform:rotate(-45deg) translateY(-8px);
+}
+
+/* MENU */
+
+.menu{
+  position:fixed;
+  inset:0;
+
+  background:#00205b;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+
+  gap:32px;
+
+  opacity:0;
+  pointer-events:none;
+
+  transition:0.4s;
+
+  z-index:9000;
+}
+
+.menu.open{
+  opacity:1;
+  pointer-events:auto;
+}
+
+.menu a{
+  color:white;
+  text-decoration:none;
+  font-size:28px;
+  letter-spacing:0.05em;
+}
 
 /* HERO */
 
@@ -53,6 +130,7 @@
   height:100vh;
 
   background:
+  linear-gradient(rgba(0,32,91,0.35), rgba(0,32,91,0.35)),
   url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1600&auto=format&fit=crop");
 
   background-size:cover;
@@ -63,8 +141,6 @@
   justify-content:center;
 
   text-align:center;
-
-  overflow:hidden;
 }
 
 /* OVERLAY */
@@ -72,8 +148,6 @@
 .overlay{
   position:absolute;
   inset:0;
-
-  background:rgba(0,32,91,0.35);
 }
 
 /* HERO CONTENT */
@@ -83,6 +157,7 @@
   z-index:2;
 
   max-width:700px;
+
   padding:20px;
 
   color:white;
@@ -100,125 +175,106 @@
   margin-bottom:30px;
 }
 
-  <!-- INTRO -->
-  <section class="section narrow">
+/* BUTTON */
 
-    <p class="intro-text">
-      En formation continue depuis plusieurs années, j’ai débuté mon apprentissage auprès d’une praticienne reconnue dans ce domaine.
-    </p>
+.btn{
+  display:inline-block;
 
-  </section>
+  padding:14px 30px;
 
-  <!-- EDITORIAL SECTION -->
-  <section class="editorial-grid">
+  background:white;
+  color:#00205b;
 
-    <div class="editorial-image">
-      <img 
-        src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=1200&auto=format&fit=crop"
-        alt="Espace calme et lumineux"
-      >
-    </div>
+  border-radius:40px;
 
-    <div class="editorial-text">
+  text-decoration:none;
+  font-weight:600;
 
-      <h2>
-        Une présence fondée sur l’écoute
-      </h2>
+  transition:0.3s;
+}
 
-      <p>
-        L’accompagnement vers un mieux-être global guide aujourd’hui ma pratique avec attention, écoute et bienveillance.
-      </p>
+.btn:hover{
+  transform:translateY(-2px);
+}
 
-      <p>
-        Chaque séance se déroule uniquement avec votre accord, dans un cadre respectueux et après un échange clair sur vos besoins et les possibilités d’accompagnement.
-      </p>
+/* SECTION */
 
-      <p>
-        Titulaire d’une licence en psychologie, j’accorde une importance particulière à l’écoute de votre histoire, de votre vécu et de vos ressentis.
-      </p>
+.section{
+  padding:100px 20px;
 
-    </div>
+  max-width:900px;
 
-  </section>
+  margin:auto;
 
-  <!-- SECTION -->
-  <section class="section soft-section">
+  text-align:center;
+}
 
-    <div class="soft-box">
+.section h2{
+  font-size:40px;
+  margin-bottom:20px;
+  color:#00205b;
+}
 
-      <h2>
-        Consultations
-      </h2>
+.section p{
+  font-size:18px;
+  line-height:1.8;
+}
 
-      <p>
-        Les consultations se réalisent sur rendez-vous, à distance ou en présentiel, selon la nature de la demande et les possibilités.
-      </p>
+/* CARDS */
 
-      <p>
-        Les règlements prennent la forme de dons libres, afin de laisser à chacun la liberté de définir le prix juste de la pratique reçue.
-      </p>
+.cards{
+  display:grid;
 
-    </div>
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 
-  </section>
+  gap:24px;
 
-  <!-- REASSURANCE -->
-  <section class="section reassurance">
+  padding:40px 20px 100px;
+}
 
-    <p>
-      Chaque accompagnement est proposé dans une démarche de mieux-être complémentaire et ne remplace jamais un suivi médical ou un traitement.
-    </p>
+.card{
+  background:white;
 
-  </section>
+  padding:32px;
 
-  <!-- CTA -->
-  <section class="final-cta">
+  border-radius:18px;
 
-    <h2>
-      Prendre un temps d’échange
-    </h2>
+  box-shadow:0 10px 30px rgba(0,0,0,0.06);
 
-    <p>
-      Un premier contact permet d’échanger simplement sur votre besoin et les possibilités d’accompagnement.
-    </p>
+  transition:0.3s;
+}
 
-    <div class="cta-buttons">
+.card:hover{
+  transform:translateY(-4px);
+}
 
-      <a href="reservation.html" class="btn">
-        Réserver une séance
-      </a>
+.card h3{
+  margin-bottom:12px;
+  color:#00205b;
+}
 
-      <a href="faq.html" class="btn btn-outline">
-        Consulter la FAQ
-      </a>
+/* FOOTER */
 
-    </div>
+footer{
+  text-align:center;
+  padding:50px 20px;
+  background:#f0f0f0;
+}
 
-  </section>
+/* RESPONSIVE */
 
-  <!-- FOOTER -->
-  <footer>
+@media(max-width:768px){
 
-    <p>
-      Mondes Subtils — accompagnement bien-être
-    </p>
+  .hero-content h1{
+    font-size:42px;
+  }
 
-  </footer>
+  .hero-content p{
+    font-size:18px;
+  }
 
-  <!-- SCRIPT BURGER -->
-  <script>
+  .menu a{
+    font-size:24px;
+  }
 
-    const burger = document.getElementById("burger");
-    const menu = document.getElementById("menu");
-
-    burger.addEventListener("click", () => {
-
-      burger.classList.toggle("active");
-      menu.classList.toggle("open");
-
-    });
-
-  </script>
-
-</body>
-</html>
+}
