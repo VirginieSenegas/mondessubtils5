@@ -713,3 +713,43 @@ footer{
     height:600px;
   }
 }
+
+/* =========================
+   TESTIMONIALS
+========================= */
+
+.testimonials-grid{
+  position:relative;
+  padding:80px 20px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+  gap:24px;
+}
+
+.testimonials-grid::before{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:url("/images/temoignageimage.png"); /* ⚠️ IMPORTANT */
+  background-size:cover;
+  background-position:center;
+
+  opacity:0.06;
+  filter:blur(2px);
+
+  z-index:0;
+}
+
+/* pour que les cartes passent au-dessus du fond */
+.testimonial-card{
+  position:relative;
+  z-index:1;
+
+  background:rgba(255,255,255,0.9);
+  border-radius:24px;
+  padding:28px;
+
+  box-shadow:0 10px 30px rgba(0,0,0,0.06);
+  backdrop-filter:blur(12px);
+}
