@@ -1,27 +1,276 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Réservation - Mondes Subtils</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Réserver — Mondes Subtils</title>
+
+  <meta name="description" content="Réservez une séance de magnétisme avec Mondes Subtils. Consultation à distance ou en présentiel dans le Tarn, Toulouse et Occitanie.">
+
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+
+    /* =========================
+       RESERVATION PREMIUM
+    ========================= */
+
+    .reservation-hero{
+      height:85vh;
+
+      background:
+      linear-gradient(rgba(0,32,91,0.30), rgba(0,32,91,0.38)),
+      url("https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?q=80&w=1800&auto=format&fit=crop");
+
+      background-size:cover;
+      background-position:center;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      text-align:center;
+      color:white;
+    }
+
+    .reservation-hero h1{
+      font-size:58px;
+      font-weight:300;
+      letter-spacing:-0.03em;
+    }
+
+    .reservation-hero p{
+      font-size:18px;
+      margin-top:18px;
+      opacity:0.9;
+      line-height:1.7;
+    }
+
+    /* INTRO */
+
+    .reservation-intro{
+      max-width:850px;
+      margin:auto;
+      padding:80px 20px 40px;
+      text-align:center;
+    }
+
+    .reservation-intro p{
+      font-size:20px;
+      line-height:1.9;
+      font-weight:300;
+      color:#222;
+    }
+
+    /* CARDS SELECTION */
+
+    .reservation-grid{
+      max-width:1200px;
+      margin:auto;
+
+      padding:20px 20px 80px;
+
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:22px;
+    }
+
+    .res-card{
+      background:white;
+
+      border-radius:28px;
+
+      padding:32px;
+
+      box-shadow:0 10px 35px rgba(0,0,0,0.06);
+
+      transition:0.3s ease;
+
+      cursor:pointer;
+    }
+
+    .res-card:hover{
+      transform:translateY(-4px);
+    }
+
+    .res-card h2{
+      font-size:22px;
+      font-weight:300;
+      color:#00205b;
+      margin-bottom:12px;
+    }
+
+    .res-card p{
+      font-size:15px;
+      line-height:1.7;
+      color:#333;
+    }
+
+    /* CALENDLY */
+
+    .calendly-section{
+      max-width:1000px;
+      margin:auto;
+
+      padding:80px 20px;
+    }
+
+    .calendly-box{
+      border-radius:20px;
+      overflow:hidden;
+
+      box-shadow:0 20px 60px rgba(0,0,0,0.08);
+    }
+
+    /* CTA FINAL */
+
+    .reservation-cta{
+      text-align:center;
+      padding:80px 20px 120px;
+    }
+
+    .reservation-cta h2{
+      font-size:34px;
+      font-weight:300;
+      color:#00205b;
+      margin-bottom:16px;
+    }
+
+    .reservation-cta p{
+      font-size:18px;
+      line-height:1.7;
+      margin-bottom:30px;
+    }
+
+    /* MOBILE */
+
+    @media(max-width:768px){
+
+      .reservation-hero h1{
+        font-size:36px;
+      }
+
+    }
+
+  </style>
 </head>
 
 <body>
 
-<header class="page-header">
-  <h1>Réserver une séance</h1>
-</header>
+  <!-- NAVBAR -->
+  <header class="navbar">
 
-<section class="section">
+    <a href="index.html" class="logo">
+      <img src="logo.png" alt="Mondes Subtils">
+    </a>
 
-  <p>Choisissez votre créneau ci-dessous :</p>
+    <div class="burger" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
 
-  <iframe
-    src="https://calendly.com/"
-    class="calendar">
-  </iframe>
+  </header>
 
-</section>
+  <!-- MENU -->
+  <nav class="menu" id="menu">
+    <a href="index.html">Accueil</a>
+    <a href="a-propos.html">À propos</a>
+    <a href="pratiques.html">Les pratiques</a>
+    <a href="faq.html">FAQ</a>
+    <a href="reservation.html">Réserver</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="reservation-hero">
+
+    <div>
+      <h1>Réserver une séance</h1>
+      <p>
+        Un espace calme, respectueux et entièrement dédié à votre besoin du moment.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- INTRO -->
+  <section class="reservation-intro">
+
+    <p>
+      Chaque séance est adaptée à votre situation. Vous pouvez choisir un accompagnement à distance ou en présentiel.
+    </p>
+
+  </section>
+
+  <!-- SELECTION -->
+  <section class="reservation-grid">
+
+    <div class="res-card">
+      <h2>Arrêt du tabac</h2>
+      <p>Accompagnement progressif ou ponctuel selon votre démarche personnelle.</p>
+    </div>
+
+    <div class="res-card">
+      <h2>Nettoyage énergétique</h2>
+      <p>Harmonisation des lieux ou de votre état émotionnel.</p>
+    </div>
+
+    <div class="res-card">
+      <h2>Libération émotionnelle</h2>
+      <p>Travail d’apaisement dans les périodes de surcharge émotionnelle.</p>
+    </div>
+
+    <div class="res-card">
+      <h2>Douleurs & inconforts</h2>
+      <p>Accompagnement énergétique doux et global.</p>
+    </div>
+
+  </section>
+
+  <!-- CALENDLY -->
+  <section class="calendly-section">
+
+    <div class="calendly-box">
+
+      <!-- 🔥 remplace ce lien par ton vrai Calendly -->
+      <iframe
+        src="https://calendly.com/"
+        width="100%"
+        height="650"
+        frameborder="0">
+      </iframe>
+
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+  <section class="reservation-cta">
+
+    <h2>Besoin d’un échange avant réservation ?</h2>
+
+    <p>Je reste disponible pour répondre à vos questions.</p>
+
+    <a href="faq.html" class="btn">Voir les questions fréquentes</a>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    Mondes Subtils — accompagnement bien-être
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    const burger = document.getElementById("burger");
+    const menu = document.getElementById("menu");
+
+    burger.addEventListener("click", () => {
+      burger.classList.toggle("active");
+      menu.classList.toggle("open");
+    });
+  </script>
 
 </body>
 </html>
