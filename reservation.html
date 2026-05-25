@@ -12,24 +12,16 @@
 
   <style>
 
-    /* =========================
-       RESERVATION PREMIUM
-    ========================= */
-
     .reservation-hero{
       height:85vh;
-
       background:
       linear-gradient(rgba(0,32,91,0.30), rgba(0,32,91,0.38)),
       url("https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?q=80&w=1800&auto=format&fit=crop");
-
       background-size:cover;
       background-position:center;
-
       display:flex;
       align-items:center;
       justify-content:center;
-
       text-align:center;
       color:white;
     }
@@ -47,8 +39,6 @@
       line-height:1.7;
     }
 
-    /* INTRO */
-
     .reservation-intro{
       max-width:850px;
       margin:auto;
@@ -63,14 +53,10 @@
       color:#222;
     }
 
-    /* CARDS SELECTION */
-
     .reservation-grid{
       max-width:1200px;
       margin:auto;
-
       padding:20px 20px 80px;
-
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
       gap:22px;
@@ -78,16 +64,10 @@
 
     .res-card{
       background:white;
-
       border-radius:28px;
-
       padding:32px;
-
       box-shadow:0 10px 35px rgba(0,0,0,0.06);
-
       transition:0.3s ease;
-
-      cursor:pointer;
     }
 
     .res-card:hover{
@@ -107,32 +87,26 @@
       color:#333;
     }
 
-    <!-- CALENDLY PREMIUM WRAPPER -->
-<section class="calendly-section">
+    .calendly-section{
+      max-width:1000px;
+      margin:auto;
+      padding:80px 20px;
+    }
 
-  <div class="calendly-header">
+    .calendly-frame{
+      background:rgba(255,255,255,0.8);
+      backdrop-filter:blur(12px);
+      border-radius:28px;
+      padding:18px;
+      box-shadow:0 20px 60px rgba(0,0,0,0.08);
+    }
 
-    <h2>Choisir votre créneau</h2>
-
-    <p>
-      Sélectionnez le moment qui vous convient le mieux.  
-      Les consultations se déroulent dans un cadre calme et respectueux.
-    </p>
-
-  </div>
-
-  <div class="calendly-frame">
-
-    <iframe
-      src="https://calendly.com/"
-      frameborder="0">
-    </iframe>
-
-  </div>
-
-</section>
-
-    /* CTA FINAL */
+    .calendly-frame iframe{
+      width:100%;
+      height:650px;
+      border:none;
+      border-radius:20px;
+    }
 
     .reservation-cta{
       text-align:center;
@@ -152,14 +126,10 @@
       margin-bottom:30px;
     }
 
-    /* MOBILE */
-
     @media(max-width:768px){
-
       .reservation-hero h1{
         font-size:36px;
       }
-
     }
 
   </style>
@@ -169,7 +139,6 @@
 
   <!-- NAVBAR -->
   <header class="navbar">
-
     <a href="index.html" class="logo">
       <img src="logo.png" alt="Mondes Subtils">
     </a>
@@ -179,7 +148,6 @@
       <span></span>
       <span></span>
     </div>
-
   </header>
 
   <!-- MENU -->
@@ -193,23 +161,17 @@
 
   <!-- HERO -->
   <section class="reservation-hero">
-
     <div>
       <h1>Réserver une séance</h1>
-      <p>
-        Un espace calme, respectueux et entièrement dédié à votre besoin du moment.
-      </p>
+      <p>Un espace calme, respectueux et entièrement dédié à votre besoin du moment.</p>
     </div>
-
   </section>
 
   <!-- INTRO -->
   <section class="reservation-intro">
-
     <p>
-      Chaque séance est adaptée à votre situation. Vous pouvez choisir un accompagnement à distance ou en présentiel.
+      Chaque séance commence par un échange. Le rythme est adapté à votre situation, sans précipitation.
     </p>
-
   </section>
 
   <!-- SELECTION -->
@@ -217,52 +179,51 @@
 
     <div class="res-card">
       <h2>Arrêt du tabac</h2>
-      <p>Accompagnement progressif ou ponctuel selon votre démarche personnelle.</p>
+      <p>Un accompagnement progressif selon votre rythme.</p>
     </div>
 
     <div class="res-card">
       <h2>Nettoyage énergétique</h2>
-      <p>Harmonisation des lieux ou de votre état émotionnel.</p>
+      <p>Pour alléger les charges et retrouver de l’espace intérieur.</p>
     </div>
 
     <div class="res-card">
       <h2>Libération émotionnelle</h2>
-      <p>Travail d’apaisement dans les périodes de surcharge émotionnelle.</p>
+      <p>Accompagnement dans les périodes de surcharge émotionnelle.</p>
     </div>
 
     <div class="res-card">
       <h2>Douleurs & inconforts</h2>
-      <p>Accompagnement énergétique doux et global.</p>
+      <p>Travail énergétique doux et global.</p>
     </div>
 
+  </section>
+
+  <!-- TRANSITION -->
+  <section class="section">
+    <h2>Prendre rendez-vous</h2>
+    <p>Une fois votre besoin identifié, vous pouvez choisir un créneau ci-dessous.</p>
   </section>
 
   <!-- CALENDLY -->
   <section class="calendly-section">
 
-    <div class="calendly-box">
-
-      <!-- 🔥 remplace ce lien par ton vrai Calendly -->
-      <iframe
-        src="https://calendly.com/"
-        width="100%"
-        height="650"
-        frameborder="0">
-      </iframe>
-
+    <div class="calendly-frame">
+      <iframe src="https://calendly.com/" frameborder="0"></iframe>
     </div>
 
   </section>
 
+  <!-- FIN -->
+  <section class="section">
+    <p>Chaque séance est réalisée dans un cadre respectueux, sans substitution médicale.</p>
+  </section>
+
   <!-- CTA -->
   <section class="reservation-cta">
-
     <h2>Besoin d’un échange avant réservation ?</h2>
-
     <p>Je reste disponible pour répondre à vos questions.</p>
-
     <a href="faq.html" class="btn">Voir les questions fréquentes</a>
-
   </section>
 
   <!-- FOOTER -->
@@ -270,7 +231,6 @@
     Mondes Subtils — accompagnement bien-être
   </footer>
 
-  <!-- SCRIPT -->
   <script>
     const burger = document.getElementById("burger");
     const menu = document.getElementById("menu");
