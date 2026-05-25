@@ -448,163 +448,201 @@ footer{
   }
 
 }
+
 /* =========================
-   PRACTICES PAGE
+   PRACTICES — APPLE PREMIUM CARDS
 ========================= */
 
 .practices-hero{
-  height:75vh;
+  height:78vh;
 
   background:
-  linear-gradient(rgba(0,32,91,0.30), rgba(0,32,91,0.34)),
+  linear-gradient(rgba(0,32,91,0.28), rgba(0,32,91,0.34)),
   url("https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1800&auto=format&fit=crop");
 
   background-size:cover;
   background-position:center;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  text-align:center;
+}
+
+.hero-overlay{
+  position:absolute;
+  inset:0;
 }
 
 .practices-intro{
-  padding-bottom:30px;
+  max-width:850px;
+  margin:auto;
+  padding:80px 20px 30px;
+  text-align:center;
 }
 
 .practices-intro p{
   font-size:22px;
-  line-height:1.8;
+  line-height:1.9;
   font-weight:300;
-
-  max-width:760px;
-  margin:auto;
+  color:#1a1a1a;
 }
 
 /* GRID */
 
 .practices-grid{
-  max-width:1200px;
-
+  max-width:1350px;
   margin:auto;
 
   padding:20px 20px 120px;
 
   display:grid;
-
-  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-
-  gap:28px;
+  grid-template-columns:repeat(auto-fit,minmax(380px,1fr));
+  gap:26px;
 }
 
-/* APPLE CARD */
+/* APPLE CARD STYLE */
 
 .practice-card{
-  background:rgba(255,255,255,0.9);
+  position:relative;
+  min-height:620px;
 
-  border-radius:34px;
-
+  border-radius:36px;
   overflow:hidden;
 
-  backdrop-filter:blur(18px);
+  display:flex;
+  align-items:flex-end;
 
-  box-shadow:
-    0 8px 40px rgba(0,0,0,0.06);
+  background:#000;
 
-  transition:0.45s ease;
+  box-shadow:0 10px 40px rgba(0,0,0,0.08);
+
+  transition:transform 0.45s ease, box-shadow 0.45s ease;
 }
 
 .practice-card:hover{
   transform:translateY(-4px) scale(1.01);
-
-  box-shadow:
-    0 20px 60px rgba(0,0,0,0.08);
+  box-shadow:0 25px 70px rgba(0,0,0,0.12);
 }
 
-/* IMAGE */
+/* IMAGE FULL */
 
 .practice-image{
-  height:260px;
+  position:absolute;
+  inset:0;
 
   background-size:cover;
   background-position:center;
+
+  transition:transform 1.2s ease;
+}
+
+.practice-card:hover .practice-image{
+  transform:scale(1.03);
+}
+
+/* DARK OVERLAY */
+
+.practice-card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:linear-gradient(
+    to top,
+    rgba(0,0,0,0.72) 10%,
+    rgba(0,0,0,0.15) 60%,
+    rgba(0,0,0,0.05) 100%
+  );
 }
 
 /* CONTENT */
 
 .practice-content{
-  padding:34px;
+  position:relative;
+  z-index:2;
+
+  padding:42px;
+  color:white;
 }
 
 .practice-content h2{
-  font-size:28px;
-
-  color:#00205b;
-
+  font-size:34px;
   font-weight:300;
-
-  margin-bottom:18px;
-
-  line-height:1.3;
+  margin-bottom:16px;
+  letter-spacing:-0.03em;
 }
 
 .practice-content p{
   font-size:17px;
-
   line-height:1.8;
-
-  margin-bottom:28px;
-
-  color:#333;
+  margin-bottom:26px;
+  color:rgba(255,255,255,0.88);
 }
 
-/* NOTE */
+/* BUTTON reuse global .btn */
+
+.practice-content .btn{
+  background:white;
+  color:#00205b;
+}
+
+/* DISCLAIMER */
 
 .medical-note{
   max-width:900px;
-
   margin:0 auto 100px;
-
   padding:0 20px;
-
-  text-align:center;
 }
 
 .medical-note p{
+  background:rgba(255,255,255,0.92);
+  backdrop-filter:blur(16px);
+
+  border-radius:26px;
+  padding:30px;
+
+  text-align:center;
+
+  box-shadow:0 10px 40px rgba(0,0,0,0.05);
+
   font-size:16px;
-
   line-height:1.8;
-
-  color:#555;
-
-  background:white;
-
-  padding:28px;
-
-  border-radius:24px;
-
-  box-shadow:
-  0 8px 30px rgba(0,0,0,0.04);
+  color:#444;
 }
 
-/* MOBILE */
+/* RESPONSIVE */
 
-@media(max-width:768px){
-
-  .practices-hero{
-    height:65vh;
-  }
+@media(max-width:900px){
 
   .practices-grid{
     grid-template-columns:1fr;
-    gap:22px;
   }
 
-  .practice-image{
-    height:220px;
+  .practice-card{
+    min-height:520px;
+  }
+
+}
+
+@media(max-width:768px){
+
+  .practices-intro p{
+    font-size:18px;
+  }
+
+  .practice-card{
+    min-height:480px;
+    border-radius:28px;
   }
 
   .practice-content{
-    padding:28px;
+    padding:30px;
   }
 
   .practice-content h2{
-    font-size:24px;
+    font-size:28px;
   }
 
 }
