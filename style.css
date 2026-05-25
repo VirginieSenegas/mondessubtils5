@@ -731,7 +731,7 @@ footer{
   position:absolute;
   inset:0;
 
-  background:url("/images/temoignageimage.png"); /* ⚠️ IMPORTANT */
+  background:url("/temoignageimage.png"); /* ⚠️ IMPORTANT */
   background-size:cover;
   background-position:center;
 
