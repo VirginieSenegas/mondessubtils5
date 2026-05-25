@@ -1,32 +1,301 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>FAQ - Mondes Subtils</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>FAQ — Mondes Subtils</title>
+
+  <meta name="description" content="Questions fréquentes sur les séances de magnétisme, le déroulement, les consultations à distance et les accompagnements proposés par Mondes Subtils.">
+
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* =========================
+       FAQ PREMIUM APPLE STYLE
+    ========================= */
+
+    .faq-hero{
+      height:70vh;
+
+      background:
+      linear-gradient(rgba(0,32,91,0.28), rgba(0,32,91,0.35)),
+      url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1800&auto=format&fit=crop");
+
+      background-size:cover;
+      background-position:center;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      text-align:center;
+      color:white;
+    }
+
+    .faq-hero h1{
+      font-size:54px;
+      font-weight:300;
+      letter-spacing:-0.02em;
+    }
+
+    .faq-intro{
+      max-width:800px;
+      margin:auto;
+      padding:80px 20px 40px;
+      text-align:center;
+    }
+
+    .faq-intro p{
+      font-size:20px;
+      line-height:1.8;
+      font-weight:300;
+      color:#222;
+    }
+
+    /* CONTAINER */
+
+    .faq-container{
+      max-width:900px;
+      margin:auto;
+      padding:20px 20px 120px;
+    }
+
+    /* ACCORDION */
+
+    .faq-item{
+      background:rgba(255,255,255,0.75);
+
+      backdrop-filter:blur(18px);
+
+      border-radius:22px;
+
+      margin-bottom:16px;
+
+      overflow:hidden;
+
+      box-shadow:0 10px 30px rgba(0,0,0,0.04);
+
+      transition:0.3s ease;
+    }
+
+    .faq-question{
+      padding:24px 26px;
+
+      cursor:pointer;
+
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+
+      font-size:18px;
+      font-weight:400;
+      color:#00205b;
+
+      transition:0.3s;
+    }
+
+    .faq-question:hover{
+      opacity:0.75;
+    }
+
+    .faq-question span{
+      font-size:22px;
+      transition:0.3s ease;
+    }
+
+    .faq-answer{
+      max-height:0;
+      overflow:hidden;
+
+      padding:0 26px;
+
+      font-size:16px;
+      line-height:1.8;
+
+      color:#333;
+
+      transition:max-height 0.5s ease, padding 0.5s ease;
+    }
+
+    .faq-item.active .faq-answer{
+      max-height:300px;
+      padding:0 26px 24px;
+    }
+
+    .faq-item.active .faq-question span{
+      transform:rotate(45deg);
+    }
+
+    /* CTA */
+
+    .faq-cta{
+      text-align:center;
+      padding:80px 20px 120px;
+    }
+
+    .faq-cta h2{
+      font-size:34px;
+      font-weight:300;
+      color:#00205b;
+      margin-bottom:16px;
+    }
+
+    .faq-cta p{
+      font-size:18px;
+      line-height:1.7;
+      margin-bottom:30px;
+      color:#333;
+    }
+
+    /* MOBILE */
+
+    @media(max-width:768px){
+
+      .faq-hero h1{
+        font-size:36px;
+      }
+
+      .faq-question{
+        font-size:16px;
+      }
+
+    }
+  </style>
 </head>
 
 <body>
 
-<header class="page-header">
-  <h1>FAQ</h1>
-</header>
+  <!-- NAVBAR -->
+  <header class="navbar">
 
-<section class="section">
+    <a href="index.html" class="logo">
+      <img src="logo.png" alt="Mondes Subtils">
+    </a>
 
-  <h3>Comment se déroule une séance ?</h3>
-  <p>Chaque séance débute par un échange afin de comprendre votre besoin.</p>
+    <div class="burger" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
 
-  <h3>À distance ou en présentiel ?</h3>
-  <p>Les deux sont possibles selon la situation.</p>
+  </header>
 
-  <h3>Combien de séances ?</h3>
-  <p>Variable selon les besoins et l’évolution personnelle.</p>
+  <!-- MENU -->
+  <nav class="menu" id="menu">
+    <a href="index.html">Accueil</a>
+    <a href="a-propos.html">À propos</a>
+    <a href="pratiques.html">Les pratiques</a>
+    <a href="faq.html">FAQ</a>
+    <a href="reservation.html">Réserver</a>
+  </nav>
 
-  <h3>Remplace un traitement médical ?</h3>
-  <p>Non, c’est une approche complémentaire de bien-être.</p>
+  <!-- HERO -->
+  <section class="faq-hero">
+    <h1>Questions fréquentes</h1>
+  </section>
 
-</section>
+  <!-- INTRO -->
+  <section class="faq-intro">
+    <p>
+      Voici les réponses aux questions les plus courantes concernant les séances et l’accompagnement.
+    </p>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-container">
+
+    <div class="faq-item">
+      <div class="faq-question">
+        Comment se déroule une séance ?
+        <span>+</span>
+      </div>
+      <div class="faq-answer">
+        Chaque séance débute par un échange afin de comprendre votre besoin et votre état du moment. Ensuite, l’accompagnement s’adapte à votre situation.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        Peut-on faire une séance à distance ?
+        <span>+</span>
+      </div>
+      <div class="faq-answer">
+        Oui, certaines séances peuvent être réalisées à distance avec la même qualité d’attention et d’accompagnement.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        Combien de séances sont nécessaires ?
+        <span>+</span>
+      </div>
+      <div class="faq-answer">
+        Cela dépend entièrement de votre situation. Certaines personnes ressentent un mieux-être dès la première séance.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        Est-ce un traitement médical ?
+        <span>+</span>
+      </div>
+      <div class="faq-answer">
+        Non. Les séances de magnétisme ne remplacent en aucun cas un suivi médical ou un traitement prescrit par un professionnel de santé.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        Comment réserver une séance ?
+        <span>+</span>
+      </div>
+      <div class="faq-answer">
+        Vous pouvez réserver directement via la page réservation du site ou me contacter pour échanger sur votre besoin.
+      </div>
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+  <section class="faq-cta">
+
+    <h2>Besoin d’un échange ?</h2>
+
+    <p>
+      Je reste disponible pour toute question avant réservation.
+    </p>
+
+    <a href="reservation.html" class="btn">Réserver une séance</a>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    Mondes Subtils — accompagnement bien-être
+  </footer>
+
+  <!-- SCRIPT BURGER -->
+  <script>
+    const burger = document.getElementById("burger");
+    const menu = document.getElementById("menu");
+
+    burger.addEventListener("click", () => {
+      burger.classList.toggle("active");
+      menu.classList.toggle("open");
+    });
+  </script>
+
+  <!-- ACCORDION SCRIPT -->
+  <script>
+    const items = document.querySelectorAll(".faq-item");
+
+    items.forEach(item => {
+      item.addEventListener("click", () => {
+        item.classList.toggle("active");
+      });
+    });
+  </script>
 
 </body>
 </html>
