@@ -726,12 +726,17 @@ footer{
   gap:24px;
 }
 
+.testimonials-grid{
+  position:relative;
+  isolation:isolate; /* IMPORTANT pour éviter les bugs de z-index */
+}
+
 .testimonials-grid::before{
   content:"";
   position:absolute;
   inset:0;
 
-  background:url("temoignageimage.png"); /* ⚠️ IMPORTANT */
+  background:url("temoignageimage.png");
   background-size:cover;
   background-position:center;
 
@@ -739,9 +744,10 @@ footer{
   filter:blur(2px);
 
   z-index:0;
+  pointer-events:none; /* évite les conflits de clic */
 }
 
-/* pour que les cartes passent au-dessus du fond */
+/* cartes au-dessus du fond */
 .testimonial-card{
   position:relative;
   z-index:1;
