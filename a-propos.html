@@ -6,117 +6,123 @@
 
   <title>À propos — Mondes Subtils</title>
 
-  <meta name="description" content="Approche humaine et accompagnement personnalisé en magnétisme à Castres, Toulouse et en Occitanie.">
+  <meta name="description" content="Découvrez l’approche humaine et apaisante de Mondes Subtils, accompagnement en magnétisme et mieux-être à Castres, Toulouse et en Occitanie.">
 
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-<header class="navbar">
+  <!-- NAVBAR -->
+  <header class="navbar">
 
-  <a href="index.html" class="logo">
-    <img src="logo.png" alt="Mondes Subtils">
-  </a>
+    <a href="index.html" class="logo">
+      <img src="logo.png" alt="Mondes Subtils">
+    </a>
 
-  <div class="burger" id="burger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
+    <div class="burger" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
 
-</header>
+  </header>
 
-<nav class="menu" id="menu">
-  <a href="index.html">Accueil</a>
-  <a href="a-propos.html">À propos</a>
-  <a href="pratiques.html">Les pratiques</a>
-  <a href="faq.html">FAQ</a>
-  <a href="reservation.html">Réserver</a>
-</nav>
+  <!-- MENU -->
+  <nav class="menu" id="menu">
+    <a href="index.html">Accueil</a>
+    <a href="a-propos.html">À propos</a>
+    <a href="pratiques.html">Les pratiques</a>
+    <a href="faq.html">FAQ</a>
+    <a href="reservation.html">Réserver</a>
+  </nav>
 
-<section class="page-hero">
+  <!-- HERO -->
+  <section class="hero about-hero">
 
-  <div class="page-hero-content">
+    <div class="hero-overlay"></div>
 
-    <p class="mini-title">Mondes Subtils</p>
+    <div class="hero-content">
 
-    <h1>Une approche douce, humaine et respectueuse.</h1>
+      <p class="mini-title">Mondes Subtils</p>
 
-  </div>
+      <h1>Une approche humaine, calme et respectueuse.</h1>
 
-</section>
+    </div>
 
-<section class="editorial-section">
+  </section>
 
-  <div class="editorial-text">
+  <!-- CONTENU -->
+  <section class="about-wrapper">
+
+    <div class="about-card">
+      <p>
+        En formation continue depuis plusieurs années, j’ai débuté mon apprentissage auprès d’une praticienne reconnue dans ce domaine.
+      </p>
+    </div>
+
+    <div class="about-card">
+      <p>
+        L’accompagnement vers un mieux-être global guide aujourd’hui ma pratique avec attention, écoute et bienveillance.
+      </p>
+    </div>
+
+    <div class="about-card">
+      <p>
+        Chaque séance se déroule uniquement avec votre accord, dans un cadre respectueux et après un échange clair sur vos besoins et les possibilités d’accompagnement.
+      </p>
+    </div>
+
+    <div class="about-card">
+      <p>
+        Titulaire d’une licence en psychologie, j’accorde une importance particulière à l’écoute de votre histoire, de votre vécu et de vos ressentis.
+      </p>
+    </div>
+
+    <div class="about-card">
+      <p>
+        Les consultations se réalisent sur rendez-vous, à distance ou en présentiel, selon la nature de la demande et les possibilités.
+      </p>
+    </div>
+
+    <div class="about-card">
+      <p>
+        Les règlements prennent la forme de dons libres, afin de laisser à chacun la liberté de définir le prix juste de la pratique reçue.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+  <section class="section section-soft">
+
+    <h2>Prendre rendez-vous</h2>
 
     <p>
-      En formation continue depuis plusieurs années,
-      j’ai débuté mon apprentissage auprès d’une praticienne reconnue dans ce domaine.
+      Un accompagnement personnalisé, dans un cadre calme et respectueux.
     </p>
 
-    <p>
-      L’accompagnement vers un mieux-être global guide aujourd’hui ma pratique
-      avec attention, écoute et bienveillance.
-    </p>
+    <a href="reservation.html" class="btn">
+      Réserver une séance
+    </a>
 
-    <p>
-      Chaque séance se déroule uniquement avec votre accord,
-      dans un cadre respectueux et après un échange clair
-      sur vos besoins et les possibilités d’accompagnement.
-    </p>
+  </section>
 
-    <p>
-      Titulaire d’une licence en psychologie,
-      j’accorde une importance particulière à l’écoute
-      de votre histoire, de votre vécu et de vos ressentis.
-    </p>
+  <!-- FOOTER -->
+  <footer>
+    Mondes Subtils — accompagnement bien-être
+  </footer>
 
-    <p>
-      Les consultations se réalisent sur rendez-vous,
-      à distance ou en présentiel,
-      selon la nature de la demande et les possibilités.
-    </p>
+  <!-- SCRIPT -->
+  <script>
+    const burger = document.getElementById("burger");
+    const menu = document.getElementById("menu");
 
-    <p>
-      Les règlements prennent la forme de dons libres,
-      afin de laisser à chacun la liberté
-      de définir le prix juste de la pratique reçue.
-    </p>
-
-  </div>
-
-</section>
-
-<section class="soft-cta">
-
-  <h2>Prendre rendez-vous</h2>
-
-  <p>
-    Un premier échange permet de comprendre votre besoin
-    et de vous orienter avec clarté.
-  </p>
-
-  <a href="reservation.html" class="btn">
-    Réserver une séance
-  </a>
-
-</section>
-
-<footer>
-  Mondes Subtils — accompagnement bien-être
-</footer>
-
-<script>
-const burger = document.getElementById("burger");
-const menu = document.getElementById("menu");
-
-burger.addEventListener("click", () => {
-  burger.classList.toggle("active");
-  menu.classList.toggle("open");
-});
-</script>
+    burger.addEventListener("click", () => {
+      burger.classList.toggle("active");
+      menu.classList.toggle("open");
+    });
+  </script>
 
 </body>
 </html>
