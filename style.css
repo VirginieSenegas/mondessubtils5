@@ -278,3 +278,127 @@ footer{
   }
 
 }
+/* =========================
+   ABOUT PAGE PREMIUM
+========================= */
+
+.about-hero{
+  height:75vh;
+
+  background:
+  linear-gradient(rgba(0,32,91,0.28), rgba(0,32,91,0.32)),
+  url("https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1800&auto=format&fit=crop");
+
+  background-size:cover;
+  background-position:center;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  text-align:center;
+  position:relative;
+
+  color:white;
+}
+
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  backdrop-filter:blur(1px);
+}
+
+.about-hero .hero-content{
+  position:relative;
+  z-index:2;
+  max-width:800px;
+  padding:20px;
+}
+
+.mini-title{
+  font-size:12px;
+  letter-spacing:0.35em;
+  text-transform:uppercase;
+  opacity:0.85;
+  margin-bottom:20px;
+}
+
+.about-hero h1{
+  font-size:56px;
+  font-weight:300;
+  line-height:1.2;
+  letter-spacing:-0.03em;
+}
+
+/* WRAPPER */
+
+.about-wrapper{
+  max-width:980px;
+  margin:auto;
+
+  padding:80px 20px 120px;
+
+  display:grid;
+  gap:24px;
+}
+
+/* CARDS APPLE */
+
+.about-card{
+  background:rgba(255,255,255,0.78);
+
+  backdrop-filter:blur(12px);
+
+  padding:38px;
+
+  border-radius:28px;
+
+  box-shadow:
+  0 10px 30px rgba(0,0,0,0.04);
+
+  transition:0.35s ease;
+}
+
+.about-card:hover{
+  transform:translateY(-2px);
+}
+
+.about-card p{
+  font-size:19px;
+  line-height:1.9;
+  color:#1a1a1a;
+  font-weight:300;
+}
+
+/* SECTION DOUCE */
+
+.section-soft{
+  background:#f5f6f8;
+  border-radius:40px;
+  margin:0 20px 80px;
+  padding:80px 30px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+  .about-hero{
+    height:65vh;
+  }
+
+  .about-hero h1{
+    font-size:38px;
+  }
+
+  .about-card{
+    padding:28px;
+    border-radius:22px;
+  }
+
+  .about-card p{
+    font-size:17px;
+    line-height:1.7;
+  }
+
+}
