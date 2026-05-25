@@ -728,7 +728,9 @@ footer{
 
 .testimonials-grid{
   position:relative;
-  isolation:isolate; /* IMPORTANT pour éviter les bugs de z-index */
+  isolation:isolate;
+  width:100%;
+  overflow:hidden; /* IMPORTANT : supprime les bandes blanches */
 }
 
 .testimonials-grid::before{
@@ -744,18 +746,11 @@ footer{
   filter:blur(2px);
 
   z-index:0;
-  pointer-events:none; /* évite les conflits de clic */
+  pointer-events:none;
 }
 
-/* cartes au-dessus du fond */
-.testimonial-card{
+/* assure que tout le contenu est bien au-dessus */
+.testimonials-grid > *{
   position:relative;
   z-index:1;
-
-  background:rgba(255,255,255,0.9);
-  border-radius:24px;
-  padding:28px;
-
-  box-shadow:0 10px 30px rgba(0,0,0,0.06);
-  backdrop-filter:blur(12px);
 }
