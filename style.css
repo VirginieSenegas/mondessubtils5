@@ -1005,3 +1005,60 @@ html, body{
 .res-card:hover::before{
   opacity:1;
 }
+
+/* =========================
+   PREMIUM SOFT IMAGE CARDS
+========================= */
+
+.cards .card{
+  position:relative;
+  overflow:hidden;
+
+  background-size:cover;
+  background-position:center;
+
+  isolation:isolate;
+}
+
+/* voile poudré premium */
+
+.cards .card::after{
+  content:"";
+
+  position:absolute;
+  inset:0;
+
+  background:
+    linear-gradient(
+      rgba(255,255,255,0.82),
+      rgba(255,255,255,0.88)
+    );
+
+  z-index:0;
+}
+
+/* contenu au-dessus */
+
+.cards .card h3,
+.cards .card p{
+  position:relative;
+  z-index:2;
+}
+
+/* images discrètes */
+
+.cards .card:nth-child(1){
+  background-image:url("photoarrettabac.avif");
+}
+
+.cards .card:nth-child(2){
+  background-image:url("photonettoyagepersonne.png");
+}
+
+.cards .card:nth-child(3){
+  background-image:url("photoliberationemotionnelle.avif");
+}
+
+.cards .card:nth-child(4){
+  background-image:url("douleursinconforts.png");
+}
