@@ -289,7 +289,8 @@ footer{
 
 .about-hero{
   position:relative;
-  height:100vh;
+  height:68vh;
+  min-height:560px;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -393,13 +394,15 @@ footer{
 /* SECTION DOUCE */
 
 .section-soft{
-  background:#f5f6f8;
+  max-width:1100px;
+
+  margin:0 auto 80px;
+
+  padding:80px 30px;
 
   border-radius:40px;
 
-  margin:0 20px 80px;
-
-  padding:80px 30px;
+  background:#f5f6f8;
 }
 
 /* RESPONSIVE */
