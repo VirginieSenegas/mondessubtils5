@@ -1062,3 +1062,38 @@ html, body{
 .cards .card:nth-child(4){
   background-image:url("douleursinconforts.png");
 }
+
+/* =========================
+   ABOUT CARDS — PREMIUM SOFT
+========================= */
+
+.about-card{
+  background:rgba(248,246,242,0.84);
+
+  border:1px solid rgba(255,255,255,0.5);
+
+  box-shadow:
+    0 8px 40px rgba(0,0,0,0.05),
+    0 1px 1px rgba(255,255,255,0.9) inset;
+
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+}
+
+/* lumière douce premium */
+
+.about-card::after{
+  content:"";
+
+  position:absolute;
+  inset:0;
+
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(255,255,255,0.65),
+      transparent 42%
+    );
+
+  pointer-events:none;
+}
