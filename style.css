@@ -1097,16 +1097,3 @@ html, body{
 
   pointer-events:none;
 }
-
-.about-wrapper{
-  align-items:center;
-}
-
-.about-card{
-  width:100%;
-}
-
-.about-card{
-  display:flex;
-  align-items:center;
-}
