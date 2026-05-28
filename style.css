@@ -1100,3 +1100,26 @@ html, body{
 
   pointer-events:none;
 }
+
+.res-card{
+  background-size:cover;
+  background-position:center;
+  position:relative;
+  color:white;
+}
+
+/* voile sombre pour lisibilité */
+.res-card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.35);
+  border-radius:inherit;
+}
+
+.res-card h2,
+.res-card p{
+  position:relative;
+  z-index:2;
+  color:white;
+}
