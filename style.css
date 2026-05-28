@@ -231,6 +231,75 @@ body{
   transform:translateY(-4px);
 }
 
+/* =========================
+   PREMIUM SOFT IMAGE CARDS
+========================= */
+
+.cards .card{
+  position:relative;
+  overflow:hidden;
+
+  background-size:cover;
+  background-position:center;
+
+  isolation:isolate;
+}
+
+/* voile blanc premium */
+
+.cards .card::after{
+  content:"";
+
+  position:absolute;
+  inset:0;
+
+  background:
+    linear-gradient(
+      rgba(255,255,255,0.82),
+      rgba(255,255,255,0.88)
+    );
+
+  z-index:0;
+}
+
+/* contenu au-dessus */
+
+.cards .card h3,
+.cards .card p{
+  position:relative;
+  z-index:2;
+}
+
+/* images */
+
+.cards .card:nth-child(1){
+  background-image:url("photoarrettabac.avif");
+}
+
+.cards .card:nth-child(2){
+  background-image:url("photonettoyagepersonne.png");
+}
+
+.cards .card:nth-child(3){
+  background-image:url("photonettoyagelieu.avif");
+}
+
+.cards .card:nth-child(4){
+  background-image:url("photoliberationemotionnelle.avif");
+}
+
+.cards .card:nth-child(5){
+  background-image:url("douleursinconforts.png");
+}
+
+.cards .card:nth-child(6){
+  background-image:url("zonefeubrulure.png");
+}
+
+.cards .card:nth-child(7){
+  background-image:url("liberationrelationsousemprise.png");
+}
+
 /* FOOTER */
 
 footer{
