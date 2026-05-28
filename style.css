@@ -79,8 +79,6 @@ body{
   transition:0.4s;
 }
 
-/* ANIMATION */
-
 .burger.active span:nth-child(1){
   transform:rotate(45deg) translateY(8px);
 }
@@ -138,7 +136,6 @@ body{
 
 .hero{
   position:relative;
-
   height:100vh;
 
   background:
@@ -155,23 +152,11 @@ body{
   text-align:center;
 }
 
-/* OVERLAY */
-
-.overlay{
-  position:absolute;
-  inset:0;
-}
-
-/* HERO CONTENT */
-
 .hero-content{
   position:relative;
   z-index:2;
-
   max-width:700px;
-
   padding:20px;
-
   color:white;
 }
 
@@ -179,8 +164,6 @@ body{
   font-size:64px;
   font-weight:300;
   margin-bottom:20px;
-
-  letter-spacing:-0.03em;
 }
 
 .hero-content p{
@@ -193,17 +176,12 @@ body{
 
 .btn{
   display:inline-block;
-
   padding:14px 30px;
-
   background:white;
   color:#00205b;
-
   border-radius:40px;
-
   text-decoration:none;
   font-weight:600;
-
   transition:0.3s ease;
 }
 
@@ -215,11 +193,8 @@ body{
 
 .section{
   padding:100px 20px;
-
   max-width:900px;
-
   margin:auto;
-
   text-align:center;
 }
 
@@ -227,7 +202,6 @@ body{
   font-size:40px;
   margin-bottom:20px;
   color:#00205b;
-
   font-weight:300;
 }
 
@@ -240,36 +214,21 @@ body{
 
 .cards{
   display:grid;
-
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-
   gap:24px;
-
   padding:40px 20px 100px;
 }
 
 .card{
   background:white;
-
   padding:32px;
-
   border-radius:24px;
-
-  box-shadow:
-  0 10px 30px rgba(0,0,0,0.05);
-
+  box-shadow:0 10px 30px rgba(0,0,0,0.05);
   transition:0.35s ease;
 }
 
 .card:hover{
   transform:translateY(-4px);
-}
-
-.card h3{
-  margin-bottom:12px;
-  color:#00205b;
-
-  font-weight:500;
 }
 
 /* FOOTER */
@@ -278,19 +237,19 @@ footer{
   text-align:center;
   padding:50px 20px;
   background:#f0f0f0;
-
   font-size:14px;
   color:#666;
 }
 
 /* =========================
-   ABOUT PAGE PREMIUM
+   ABOUT PAGE
 ========================= */
 
 .about-hero{
   position:relative;
   height:68vh;
   min-height:560px;
+
   display:flex;
   align-items:center;
   justify-content:center;
@@ -309,99 +268,85 @@ footer{
 .hero-overlay{
   position:absolute;
   inset:0;
-  backdrop-filter:blur(1px);
-}
-
-.about-hero .hero-content{
-  position:relative;
-  z-index:2;
-  max-width:800px;
-  padding:20px;
-}
-
-.mini-title{
-  font-size:12px;
-  letter-spacing:0.35em;
-  text-transform:uppercase;
-  opacity:0.85;
-  margin-bottom:20px;
 }
 
 .about-hero h1{
   font-size:56px;
   font-weight:300;
-  line-height:1.2;
-  letter-spacing:-0.03em;
 }
 
 /* WRAPPER */
 
 .about-wrapper{
   max-width:1100px;
-
   margin:auto;
-
   padding:70px 20px 120px;
 
   display:flex;
   flex-direction:column;
-
   gap:18px;
 }
 
-/* APPLE CARDS */
+/* =========================
+   ABOUT CARD (CLEAN UNIQUE VERSION)
+========================= */
 
 .about-card{
-  background:rgba(255,255,255,0.92);
-
-  border-radius:32px;
-
-  padding:42px;
-
-  border:1px solid rgba(255,255,255,0.6);
-
-  box-shadow:
-    0 8px 40px rgba(0,0,0,0.06),
-    0 1px 1px rgba(255,255,255,0.9) inset;
-
-  backdrop-filter:blur(18px);
-  -webkit-backdrop-filter:blur(18px);
-
-  transition:all 0.4s ease;
+  position:relative;
 
   max-width:860px;
-
   margin:0 auto;
+
+  background:#fbfaf8;
+  border:1px solid rgba(0,0,0,0.06);
+  border-radius:18px;
+
+  padding:34px 38px;
+
+  box-shadow:0 8px 22px rgba(0,0,0,0.04);
+
+  transition:all 0.25s ease;
 }
 
 .about-card:hover{
-  transform:translateY(-3px) scale(1.01);
+  transform:translateY(-2px);
+  box-shadow:0 14px 30px rgba(0,0,0,0.06);
+  border-color:rgba(0,32,91,0.12);
+}
 
-  box-shadow:
-    0 20px 60px rgba(0,0,0,0.08),
-    0 1px 1px rgba(255,255,255,0.95) inset;
+.about-card::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:2px;
+
+  background:linear-gradient(
+    to right,
+    transparent,
+    rgba(0,32,91,0.25),
+    transparent
+  );
+
+  opacity:0.5;
+  pointer-events:none;
 }
 
 .about-card p{
-  font-size:20px;
-  line-height:1.9;
+  font-size:16px;
+  line-height:1.75;
   font-weight:300;
-  color:#111;
-
-  letter-spacing:-0.01em;
+  color:#444;
 }
 
-/* SECTION DOUCE */
+/* SECTION SOFT */
 
 .section-soft{
   max-width:1100px;
-
   margin:0 auto 80px;
-
   padding:80px 30px;
-
   border-radius:40px;
-
   background:#f5f6f8;
 }
 
@@ -440,697 +385,11 @@ footer{
 
   .about-card{
     padding:28px;
-    border-radius:24px;
+    border-radius:22px;
   }
 
   .about-card p{
-    font-size:17px;
+    font-size:15px;
     line-height:1.7;
   }
-
-}
-
-/* =========================
-   PRACTICES — APPLE PREMIUM CARDS
-========================= */
-
-.practices-hero{
-  height:78vh;
-
-  background:
-  linear-gradient(rgba(0,32,91,0.28), rgba(0,32,91,0.34)),
-  url("backgroundpratiques.png");
-
-  background-size:cover;
-  background-position:center 95%;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  text-align:center;
-}
-
-.hero-overlay{
-  position:absolute;
-  inset:0;
-}
-
-.practices-intro{
-  max-width:850px;
-  margin:auto;
-  padding:80px 20px 30px;
-  text-align:center;
-}
-
-.practices-intro p{
-  font-size:22px;
-  line-height:1.9;
-  font-weight:300;
-  color:#1a1a1a;
-}
-
-/* GRID */
-
-.practices-grid{
-  max-width:1350px;
-  margin:auto;
-
-  padding:20px 20px 120px;
-
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(380px,1fr));
-  gap:26px;
-}
-
-/* APPLE CARD STYLE */
-
-.practice-card{
-  position:relative;
-  min-height:620px;
-
-  border-radius:36px;
-  overflow:hidden;
-
-  display:flex;
-  align-items:flex-end;
-
-  background:#000;
-
-  box-shadow:0 10px 40px rgba(0,0,0,0.08);
-
-  transition:transform 0.45s ease, box-shadow 0.45s ease;
-}
-
-.practice-card:hover{
-  transform:translateY(-4px) scale(1.01);
-  box-shadow:0 25px 70px rgba(0,0,0,0.12);
-}
-
-/* IMAGE FULL */
-
-.practice-image{
-  position:absolute;
-  inset:0;
-
-  background-size:cover;
-  background-position:center;
-
-  transition:transform 1.2s ease;
-}
-
-.practice-card:hover .practice-image{
-  transform:scale(1.03);
-}
-
-/* DARK OVERLAY */
-
-.practice-card::after{
-  content:"";
-  position:absolute;
-  inset:0;
-
-  background:linear-gradient(
-    to top,
-    rgba(0,0,0,0.72) 10%,
-    rgba(0,0,0,0.15) 60%,
-    rgba(0,0,0,0.05) 100%
-  );
-}
-
-/* CONTENT */
-
-.practice-content{
-  position:relative;
-  z-index:2;
-
-  padding:42px;
-  color:white;
-}
-
-.practice-content h2{
-  font-size:34px;
-  font-weight:300;
-  margin-bottom:16px;
-  letter-spacing:-0.03em;
-}
-
-.practice-content p{
-  font-size:17px;
-  line-height:1.8;
-  margin-bottom:26px;
-  color:rgba(255,255,255,0.88);
-}
-
-/* BUTTON reuse global .btn */
-
-.practice-content .btn{
-  background:white;
-  color:#00205b;
-}
-
-/* DISCLAIMER */
-
-.medical-note{
-  max-width:900px;
-  margin:0 auto 100px;
-  padding:0 20px;
-}
-
-.medical-note p{
-  background:rgba(255,255,255,0.92);
-  backdrop-filter:blur(16px);
-
-  border-radius:26px;
-  padding:30px;
-
-  text-align:center;
-
-  box-shadow:0 10px 40px rgba(0,0,0,0.05);
-
-  font-size:16px;
-  line-height:1.8;
-  color:#444;
-}
-
-/* RESPONSIVE */
-
-@media(max-width:900px){
-
-  .practices-grid{
-    grid-template-columns:1fr;
-  }
-
-  .practice-card{
-    min-height:520px;
-  }
-
-}
-
-@media(max-width:768px){
-
-  .practices-intro p{
-    font-size:18px;
-  }
-
-  .practice-card{
-    min-height:480px;
-    border-radius:28px;
-  }
-
-  .practice-content{
-    padding:30px;
-  }
-
-  .practice-content h2{
-    font-size:28px;
-  }
-
-}
-
-/* =========================
-   CALENDLY PREMIUM STYLE
-========================= */
-
-.calendly-section{
-  max-width:1000px;
-  margin:auto;
-  padding:100px 20px;
-  text-align:center;
-}
-
-.calendly-header{
-  max-width:700px;
-  margin:auto;
-  margin-bottom:40px;
-}
-
-.calendly-header h2{
-  font-size:36px;
-  font-weight:300;
-  color:#00205b;
-  margin-bottom:12px;
-}
-
-.calendly-header p{
-  font-size:18px;
-  line-height:1.8;
-  color:#333;
-  font-weight:300;
-}
-
-/* FRAME LUXE */
-
-.calendly-frame{
-  background:rgba(255,255,255,0.8);
-
-  backdrop-filter:blur(18px);
-
-  border-radius:28px;
-
-  padding:18px;
-
-  box-shadow:0 20px 60px rgba(0,0,0,0.08);
-}
-
-.calendly-frame iframe{
-  width:100%;
-  height:700px;
-
-  border-radius:20px;
-
-  border:none;
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-  .calendly-header h2{
-    font-size:28px;
-  }
-
-  .calendly-frame iframe{
-    height:600px;
-  }
-}
-
-/* =========================
-   TESTIMONIALS
-========================= */
-
-.testimonials-grid{
-  position:relative;
-  isolation:isolate;
-  overflow:hidden; /* empêche la bande sur les côtés */
-}
-
-.testimonials-grid::before{
-  content:"";
-  position:absolute;
-  inset:0;
-
-  background:url("temoignageimage.png");
-  background-size:cover;
-  background-position:center;
-
-  opacity:0.06;
-  filter:blur(2px);
-
-  z-index:0;
-  pointer-events:none;
-}
-
-/* sécurité : tout le contenu passe au-dessus */
-.testimonials-grid > *{
-  position:relative;
-  z-index:1;
-}
-
-body{
-  overflow-x:hidden;
-}
-
-html, body{
-  width:100%;
-  overflow-x:hidden;
-}
-
-*{
-  box-sizing:border-box;
-}
-
-.card{
-  background:white;
-  padding:32px;
-  border-radius:22px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.06);
-  transition:0.35s ease;
-  position:relative;
-  overflow:hidden;
-}
-
-/* hover premium */
-.card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 18px 45px rgba(0,0,0,0.10);
-}
-
-/* ligne accent élégante */
-.card::before{
-  content:"";
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:3px;
-  background:#00205b;
-  opacity:0;
-  transition:0.3s ease;
-}
-
-.card:hover::before{
-  opacity:1;
-}
-
-/* typo plus clean */
-.card h3{
-  margin-bottom:12px;
-  color:#00205b;
-  font-weight:400;
-  font-size:20px;
-}
-
-.card p{
-  color:#444;
-  font-size:16px;
-  line-height:1.6;
-}
-
-.about-hero{
-  height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  background:
-    linear-gradient(rgba(0,32,91,0.35), rgba(0,32,91,0.35)),
-    url("photoapropo1.png");
-  background-size:cover;
-  background-position:center;
-  color:white;
-}
-
-.hero-overlay{
-  position:absolute;
-  inset:0;
-}
-
-/* TITRE HERO IDENTIQUE AUX AUTRES PAGES */
-.about-hero .hero-content h1{
-  font-size:64px;
-  font-weight:300;
-}
-
-.about-hero .mini-title{
-  letter-spacing:0.1em;
-  text-transform:uppercase;
-  font-size:14px;
-  opacity:0.8;
-  margin-bottom:10px;
-}
-
-/* WRAPPER DES CARDS ABOUT = IDENTIQUE AU SYSTEME GLOBAL */
-.about-wrapper{
-  max-width:900px;
-  margin:auto;
-  padding:100px 20px;
-
-  display:grid;
-  gap:24px;
-}
-
-/* CARD ABOUT = ALIGNÉE SUR .card GLOBAL */
-.about-card{
-  background:white;
-  padding:32px;
-  border-radius:22px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.06);
-  transition:0.35s ease;
-  position:relative;
-  overflow:hidden;
-}
-
-/* même ligne premium que index */
-.about-card::before{
-  content:"";
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:3px;
-  background:#00205b;
-  opacity:0.12;
-  transition:0.3s ease;
-}
-
-/* hover identique index */
-.about-card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 18px 45px rgba(0,0,0,0.10);
-}
-
-.about-card:hover::before{
-  opacity:1;
-}
-
-/* texte propre */
-.about-card p{
-  color:#444;
-  font-size:16px;
-  line-height:1.6;
-}
-
-/* TEXTE */
-.about-card p{
-  color:#444;
-  font-size:16px;
-  line-height:1.6;
-}
-
-/* CTA SOFT = IDENTIQUE SECTION PRINCIPALE */
-.section-soft{
-  background:#f7f7f9;
-}
-
-.testimonial-card{
-  background:white;
-  border-radius:22px;
-  padding:40px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.06);
-  transition:0.35s ease;
-  position:relative;
-  overflow:hidden;
-}
-
-/* même trait bleu premium que les autres cards */
-.testimonial-card::before{
-  content:"";
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:3px;
-  background:#00205b;
-  opacity:0.12;
-  transition:0.3s ease;
-}
-
-.testimonial-card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 18px 45px rgba(0,0,0,0.10);
-}
-
-.testimonial-card:hover::before{
-  opacity:1;
-}
-
-.faq-item{
-  background:white;
-  border-radius:22px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.06);
-  transition:0.35s ease;
-  position:relative;
-  overflow:hidden;
-}
-
-/* trait bleu premium identique au reste du site */
-.faq-item::before{
-  content:"";
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:3px;
-  background:#00205b;
-  opacity:0.12;
-  transition:0.3s ease;
-}
-
-/* hover premium cohérent index */
-.faq-item:hover{
-  transform:translateY(-6px);
-  box-shadow:0 18px 45px rgba(0,0,0,0.10);
-}
-
-.faq-item:hover::before{
-  opacity:1;
-}
-
-/* amélioration micro UX (option luxe discret) */
-.faq-question{
-  transition:0.3s ease;
-}
-
-.faq-question:hover{
-  opacity:0.75;
-}
-
-.res-card{
-  position:relative;
-  overflow:hidden;
-
-  min-height:320px;
-
-  padding:38px;
-  border-radius:22px;
-
-  background-size:cover;
-  background-position:center;
-  background-repeat:no-repeat;
-  box-shadow:0 10px 30px rgba(0,0,0,0.06);
-
-  transition:0.35s ease;
-
-  isolation:isolate;
-}
-
-.res-card::after{
-  content:"";
-
-  position:absolute;
-  inset:0;
-
-  background:
-    linear-gradient(
-      rgba(255,255,255,0.78),
-      rgba(255,255,255,0.88)
-    );
-
-  z-index:1;
-}
-
-.res-card h2,
-.res-card p{
-  position:relative;
-  z-index:3;
-}
-
-/* =========================
-   PREMIUM SOFT IMAGE CARDS
-========================= */
-
-.cards .card{
-  position:relative;
-  overflow:hidden;
-
-  background-size:cover;
-  background-position:center;
-
-  isolation:isolate;
-}
-
-/* voile poudré premium */
-
-.cards .card::after{
-  content:"";
-
-  position:absolute;
-  inset:0;
-
-  background:
-    linear-gradient(
-      rgba(255,255,255,0.82),
-      rgba(255,255,255,0.88)
-    );
-
-  z-index:0;
-}
-
-/* contenu au-dessus */
-
-.cards .card h3,
-.cards .card p{
-  position:relative;
-  z-index:2;
-}
-
-/* images discrètes */
-
-.cards .card:nth-child(1){
-  background-image:url("photoarrettabac.avif");
-}
-
-.cards .card:nth-child(2){
-  background-image:url("photonettoyagepersonne.png");
-}
-
-.cards .card:nth-child(3){
-  background-image:url("photonettoyagelieu.avif");
-}
-
-.cards .card:nth-child(4){
-  background-image:url("photoliberationemotionnelle.avif");
-}
-
-.cards .card:nth-child(5){
-  background-image:url("douleursinconforts.png");
-}
-
-.cards .card:nth-child(6){
-  background-image:url("zonefeubrulure.png");
-}
-
-.cards .card:nth-child(7){
-  background-image:url("liberationrelationsousemprise.png");
-}
-/* =========================
-   ABOUT CARDS — PREMIUM SOFT
-========================= */
-
-.about-card{
-  background:rgba(248,246,242,0.84);
-
-  border:1px solid rgba(255,255,255,0.5);
-
-  box-shadow:
-    0 8px 40px rgba(0,0,0,0.05),
-    0 1px 1px rgba(255,255,255,0.9) inset;
-
-  backdrop-filter:blur(14px);
-  -webkit-backdrop-filter:blur(14px);
-}
-
-/* lumière douce premium */
-
-.about-card::after{
-  content:"";
-
-  position:absolute;
-  inset:0;
-
-  background:
-    radial-gradient(
-      circle at top right,
-      rgba(255,255,255,0.65),
-      transparent 42%
-    );
-
-  pointer-events:none;
-}
-
-/* voile sombre pour lisibilité */
-.res-card::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:rgba(0,0,0,0.35);
-  border-radius:inherit;
-}
-
-.res-card h2,
-.res-card p{
-  position:relative;
-  z-index:2;
-  color:white;
 }
