@@ -37,21 +37,10 @@ body{
   padding:0 32px;
 
   background:rgba(255,255,255,0.72);
-
   backdrop-filter:blur(12px);
   -webkit-backdrop-filter:blur(12px);
 
   z-index:9999;
-}
-
-.logo img{
-  height:44px;
-  width:auto;
-  transition:transform 0.5s ease;
-}
-
-.logo img:hover{
-  transform:rotate(4deg) scale(1.02);
 }
 
 /* =========================
@@ -116,7 +105,6 @@ body{
   color:white;
   text-decoration:none;
   font-size:28px;
-  letter-spacing:0.05em;
 }
 
 .menu a:hover{
@@ -155,7 +143,6 @@ body{
 .hero-content h1{
   font-size:64px;
   font-weight:300;
-  margin-bottom:20px;
 }
 
 .hero-content p{
@@ -174,7 +161,6 @@ body{
   background:white;
   color:#00205b;
   border-radius:40px;
-  text-decoration:none;
   font-weight:600;
   transition:0.3s ease;
 }
@@ -184,7 +170,7 @@ body{
 }
 
 /* =========================
-   SECTION GENERIC
+   SECTION
 ========================= */
 
 .section{
@@ -207,7 +193,7 @@ body{
 }
 
 /* =========================
-   CARDS HOME
+   CARDS HOME (FIX CENTRAGE + IMAGES)
 ========================= */
 
 .cards{
@@ -215,23 +201,46 @@ body{
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
   gap:24px;
   padding:40px 20px 100px;
+
+  max-width:1100px; /* FIX CENTRAGE */
+  margin:0 auto;    /* FIX CENTRAGE */
 }
 
 .card{
-  background:white;
-  padding:32px;
-  border-radius:24px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.05);
-  transition:0.35s ease;
   position:relative;
   overflow:hidden;
+
+  background-size:cover;
+  background-position:center;
+
+  padding:32px;
+  border-radius:24px;
+
+  box-shadow:0 10px 30px rgba(0,0,0,0.05);
+
+  transition:0.35s ease;
+  text-align:center;
 }
 
 .card:hover{
-  transform:translateY(-4px);
+  transform:translateY(-6px);
 }
 
-/* images cards */
+/* overlay doux (IMPORTANT DESIGN APPLE) */
+.card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(255,255,255,0.85);
+}
+
+.card h3,
+.card p{
+  position:relative;
+  z-index:2;
+}
+
+/* images */
 .cards .card:nth-child(1){background-image:url("photoarrettabac.avif");}
 .cards .card:nth-child(2){background-image:url("photonettoyagepersonne.png");}
 .cards .card:nth-child(3){background-image:url("photonettoyagelieu.avif");}
@@ -240,26 +249,6 @@ body{
 .cards .card:nth-child(6){background-image:url("zonefeubrulure.png");}
 .cards .card:nth-child(7){background-image:url("liberationrelationsousemprise.png");}
 
-/* voile doux */
-.cards .card::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:rgba(255,255,255,0.85);
-}
-
-/* =========================
-   FOOTER
-========================= */
-
-footer{
-  text-align:center;
-  padding:50px 20px;
-  background:#f0f0f0;
-  font-size:14px;
-  color:#666;
-}
-
 /* =========================
    ABOUT HERO
 ========================= */
@@ -267,7 +256,6 @@ footer{
 .about-hero{
   position:relative;
   height:68vh;
-  min-height:560px;
 
   display:flex;
   align-items:center;
@@ -304,7 +292,7 @@ footer{
 }
 
 /* =========================
-   ABOUT CARD (FIX UNIQUE — NE PAS DOUBLER)
+   ABOUT CARD (CLEAN FIX UNIQUE)
 ========================= */
 
 .about-card{
@@ -321,7 +309,7 @@ footer{
 
   box-shadow:0 8px 22px rgba(0,0,0,0.04);
 
-  transition:all 0.25s ease;
+  transition:0.25s ease;
 }
 
 .about-card:hover{
@@ -346,33 +334,22 @@ footer{
   );
 
   opacity:0.5;
-  pointer-events:none;
 }
 
 .about-card p{
   font-size:16px;
   line-height:1.75;
-  font-weight:300;
   color:#444;
 }
 
 /* =========================
-   PRACTICES
+   PRACTICES (FIX IMPORTANT NOIR)
 ========================= */
-
-.practices-grid{
-  max-width:1350px;
-  margin:auto;
-  padding:20px 20px 120px;
-
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(380px,1fr));
-  gap:26px;
-}
 
 .practice-card{
   position:relative;
   min-height:620px;
+
   border-radius:36px;
   overflow:hidden;
 
@@ -380,8 +357,19 @@ footer{
   align-items:flex-end;
 
   background:#000;
+
+  box-shadow:0 10px 40px rgba(0,0,0,0.08);
 }
 
+.practice-image{
+  position:absolute;
+  inset:0;
+
+  background-size:cover;
+  background-position:center;
+}
+
+/* FIX OVERLAY TROP NOIR */
 .practice-card::after{
   content:"";
   position:absolute;
@@ -389,7 +377,7 @@ footer{
 
   background:linear-gradient(
     to top,
-    rgba(0,0,0,0.72),
+    rgba(0,0,0,0.65),
     rgba(0,0,0,0.15)
   );
 }
@@ -420,6 +408,6 @@ footer{
 
   .hero-content h1{font-size:42px;}
   .about-hero h1{font-size:38px;}
-
   .about-card{padding:28px;}
+  .practice-card{min-height:480px;}
 }
