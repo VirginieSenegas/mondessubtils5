@@ -1129,13 +1129,6 @@ html, body{
   pointer-events:none;
 }
 
-.res-card{
-  background-size:cover;
-  background-position:center;
-  position:relative;
-  color:white;
-}
-
 /* voile sombre pour lisibilité */
 .res-card::after{
   content:"";
