@@ -619,16 +619,10 @@ footer{
   url("https://virginiesenegas.github.io/mondessubtils5/photoapropo2.jpg") center/cover no-repeat;
   
   box-shadow:0 20px 60px rgba(0,0,0,0.06);
+  
   transition:transform 0.5s ease;
 }
 
 .about-image-break:hover{
   transform:scale(1.01);
 }
-
-.about-image-break{
-  height:300px;
-  background:red !important;
-}
-
-background: red;
