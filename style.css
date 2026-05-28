@@ -1,6 +1,4 @@
-/* =========================
-   RESET
-========================= */
+/* RESET */
 
 *{
   margin:0;
@@ -19,9 +17,7 @@ body{
   overflow-x:hidden;
 }
 
-/* =========================
-   NAVBAR
-========================= */
+/* NAVBAR */
 
 .navbar{
   position:fixed;
@@ -44,12 +40,13 @@ body{
   z-index:9999;
 }
 
-/* =========================
-   LOGO
-========================= */
+/* LOGO */
 
 .logo img{
   height:44px;
+  width:auto;
+  display:block;
+
   transition:transform 0.5s ease;
 }
 
@@ -57,34 +54,49 @@ body{
   transform:rotate(4deg) scale(1.02);
 }
 
-/* =========================
-   BURGER / MENU
-========================= */
+/* BURGER */
 
 .burger{
   width:32px;
   height:22px;
+
   display:flex;
   flex-direction:column;
   justify-content:space-between;
+
   cursor:pointer;
   z-index:10000;
 }
 
 .burger span{
+  width:100%;
   height:2px;
+
   background:#00205b;
+
   border-radius:2px;
+
   transition:0.4s;
 }
 
-.burger.active span:nth-child(1){transform:rotate(45deg) translateY(8px);}
-.burger.active span:nth-child(2){opacity:0;}
-.burger.active span:nth-child(3){transform:rotate(-45deg) translateY(-8px);}
+.burger.active span:nth-child(1){
+  transform:rotate(45deg) translateY(8px);
+}
+
+.burger.active span:nth-child(2){
+  opacity:0;
+}
+
+.burger.active span:nth-child(3){
+  transform:rotate(-45deg) translateY(-8px);
+}
+
+/* MENU */
 
 .menu{
   position:fixed;
   inset:0;
+
   background:#00205b;
 
   display:flex;
@@ -96,6 +108,7 @@ body{
 
   opacity:0;
   pointer-events:none;
+
   transition:0.4s ease;
 
   z-index:9000;
@@ -110,47 +123,56 @@ body{
   color:white;
   text-decoration:none;
   font-size:28px;
+  letter-spacing:0.05em;
+
+  transition:opacity 0.3s ease;
 }
 
-.menu a:hover{opacity:0.7;}
+.menu a:hover{
+  opacity:0.7;
+}
 
-/* =========================
-   HERO INDEX
-========================= */
+/* HERO */
 
 .hero{
+  position:relative;
   height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
 
   background:
-    linear-gradient(rgba(0,32,91,0.35), rgba(0,32,91,0.35)),
-    url("photoindex-1506744038136-46273834b3fb.avif");
+  linear-gradient(rgba(0,32,91,0.35), rgba(0,32,91,0.35)),
+  url("photoindex-1506744038136-46273834b3fb.avif");
 
   background-size:cover;
   background-position:center;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  text-align:center;
 }
 
 .hero-content{
+  position:relative;
+  z-index:2;
   max-width:700px;
+  padding:20px;
   color:white;
 }
 
 .hero-content h1{
   font-size:64px;
   font-weight:300;
+  margin-bottom:20px;
 }
 
 .hero-content p{
   font-size:20px;
   line-height:1.7;
+  margin-bottom:30px;
 }
 
-/* =========================
-   BUTTON
-========================= */
+/* BUTTON */
 
 .btn{
   display:inline-block;
@@ -158,17 +180,16 @@ body{
   background:white;
   color:#00205b;
   border-radius:40px;
+  text-decoration:none;
   font-weight:600;
-  transition:0.3s;
+  transition:0.3s ease;
 }
 
 .btn:hover{
   transform:translateY(-2px);
 }
 
-/* =========================
-   SECTION GENERALE
-========================= */
+/* SECTION */
 
 .section{
   padding:100px 20px;
@@ -179,8 +200,9 @@ body{
 
 .section h2{
   font-size:40px;
-  font-weight:300;
+  margin-bottom:20px;
   color:#00205b;
+  font-weight:300;
 }
 
 .section p{
@@ -188,9 +210,7 @@ body{
   line-height:1.8;
 }
 
-/* =========================
-   CARDS INDEX (POUDRÉES)
-========================= */
+/* CARDS */
 
 .cards{
   display:grid;
@@ -199,64 +219,37 @@ body{
   padding:40px 20px 100px;
 }
 
-.cards .card{
-  position:relative;
+.card{
+  background:white;
   padding:32px;
-  border-radius:22px;
-
-  background-size:cover;
-  background-position:center;
-
+  border-radius:24px;
   box-shadow:0 10px 30px rgba(0,0,0,0.05);
-  overflow:hidden;
-
   transition:0.35s ease;
 }
 
-.cards .card::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(rgba(255,255,255,0.82), rgba(255,255,255,0.88));
-}
-
-.cards .card h3,
-.cards .card p{
-  position:relative;
-  z-index:2;
-}
-
-.cards .card:hover{
+.card:hover{
   transform:translateY(-4px);
 }
 
-/* IMAGES */
-.cards .card:nth-child(1){background-image:url("photoarrettabac.avif");}
-.cards .card:nth-child(2){background-image:url("photonettoyagepersonne.png");}
-.cards .card:nth-child(3){background-image:url("photonettoyagelieu.avif");}
-.cards .card:nth-child(4){background-image:url("photoliberationemotionnelle.avif");}
-.cards .card:nth-child(5){background-image:url("douleursinconforts.png");}
-.cards .card:nth-child(6){background-image:url("zonefeubrulure.png");}
-.cards .card:nth-child(7){background-image:url("liberationrelationsousemprise.png");}
-
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 footer{
   text-align:center;
-  padding:50px;
+  padding:50px 20px;
   background:#f0f0f0;
   font-size:14px;
   color:#666;
 }
 
 /* =========================
-   ABOUT HERO
+   ABOUT PAGE
 ========================= */
 
 .about-hero{
-  height:100vh;
+  position:relative;
+  height:68vh;
+  min-height:560px;
+
   display:flex;
   align-items:center;
   justify-content:center;
@@ -268,7 +261,13 @@ footer{
 
   background-size:cover;
   background-position:center;
+
   color:white;
+}
+
+.hero-overlay{
+  position:absolute;
+  inset:0;
 }
 
 .about-hero h1{
@@ -276,30 +275,43 @@ footer{
   font-weight:300;
 }
 
-/* =========================
-   ABOUT WRAPPER
-========================= */
+/* WRAPPER */
 
 .about-wrapper{
-  max-width:900px;
+  max-width:1100px;
   margin:auto;
-  padding:100px 20px;
-  display:grid;
-  gap:24px;
+  padding:70px 20px 120px;
+
+  display:flex;
+  flex-direction:column;
+  gap:18px;
 }
 
 /* =========================
-   ABOUT CARDS (VERSION CLEAN UNIQUE)
+   ABOUT CARD (CLEAN UNIQUE VERSION)
 ========================= */
 
 .about-card{
   position:relative;
-  background:white;
-  padding:32px;
-  border-radius:22px;
 
-  box-shadow:0 10px 30px rgba(0,0,0,0.06);
-  transition:0.35s ease;
+  max-width:860px;
+  margin:0 auto;
+
+  background:#fbfaf8;
+  border:1px solid rgba(0,0,0,0.06);
+  border-radius:18px;
+
+  padding:34px 38px;
+
+  box-shadow:0 8px 22px rgba(0,0,0,0.04);
+
+  transition:all 0.25s ease;
+}
+
+.about-card:hover{
+  transform:translateY(-2px);
+  box-shadow:0 14px 30px rgba(0,0,0,0.06);
+  border-color:rgba(0,32,91,0.12);
 }
 
 .about-card::before{
@@ -307,95 +319,77 @@ footer{
   position:absolute;
   top:0;
   left:0;
-  height:2px;
   width:100%;
-  background:linear-gradient(to right, transparent, rgba(0,32,91,0.25), transparent);
+  height:2px;
+
+  background:linear-gradient(
+    to right,
+    transparent,
+    rgba(0,32,91,0.25),
+    transparent
+  );
+
   opacity:0.5;
+  pointer-events:none;
 }
 
-.about-card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 18px 45px rgba(0,0,0,0.10);
+.about-card p{
+  font-size:16px;
+  line-height:1.75;
+  font-weight:300;
+  color:#444;
 }
 
-/* =========================
-   PRACTICES (IMPORTANT - RESTAURÉ)
-========================= */
+/* SECTION SOFT */
 
-.practices-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(380px,1fr));
-  gap:26px;
+.section-soft{
+  max-width:1100px;
+  margin:0 auto 80px;
+  padding:80px 30px;
+  border-radius:40px;
+  background:#f5f6f8;
 }
 
-.practice-card{
-  position:relative;
-  min-height:620px;
-  border-radius:36px;
-  overflow:hidden;
+/* RESPONSIVE */
 
-  display:flex;
-  align-items:flex-end;
+@media(max-width:768px){
 
-  background:#000;
-}
+  .navbar{
+    padding:0 20px;
+  }
 
-.practice-card::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(to top, rgba(0,0,0,0.72), transparent);
-}
+  .hero-content h1{
+    font-size:42px;
+  }
 
-.practice-content{
-  position:relative;
-  z-index:2;
-  padding:42px;
-  color:white;
-}
+  .hero-content p{
+    font-size:18px;
+  }
 
-/* =========================
-   CALENDLY
-========================= */
+  .menu a{
+    font-size:24px;
+  }
 
-.calendly-frame{
-  background:rgba(255,255,255,0.8);
-  backdrop-filter:blur(18px);
-  border-radius:28px;
-  padding:18px;
-}
+  .about-hero{
+    height:65vh;
+  }
 
-/* =========================
-   TESTIMONIALS / FAQ
-========================= */
+  .about-hero h1{
+    font-size:38px;
+  }
 
-.testimonial-card,
-.faq-item{
-  background:white;
-  border-radius:22px;
-  padding:40px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.06);
-  transition:0.35s ease;
-}
+  .about-wrapper{
+    gap:16px;
+    padding:50px 16px 100px;
+  }
 
-.testimonial-card:hover,
-.faq-item:hover{
-  transform:translateY(-6px);
-}
+  .about-card{
+    padding:28px;
+    border-radius:22px;
+  }
 
-/* =========================
-   RES CARDS
-========================= */
-
-.res-card{
-  position:relative;
-  border-radius:22px;
-  overflow:hidden;
-}
-
-.res-card::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:rgba(255,255,255,0.8);
+  .about-card p{
+    font-size:15px;
+    line-height:1.7;
+  }
 }
