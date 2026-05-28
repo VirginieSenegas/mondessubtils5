@@ -623,3 +623,8 @@ footer{
 .about-image-break:hover{
   transform:scale(1.01);
 }
+
+.about-image-break{
+  height:300px;
+  background:red !important;
+}
