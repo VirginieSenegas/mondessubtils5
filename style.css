@@ -980,6 +980,8 @@ html, body{
   position:relative;
   overflow:hidden;
 
+  min-height:320px;
+
   padding:38px;
   border-radius:22px;
 
