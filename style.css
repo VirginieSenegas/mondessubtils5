@@ -607,12 +607,12 @@ footer{
 }
 
 .about-image-break{
-  position:relative;
   height:380px;
   max-width:980px;
   margin:20px auto;
 
   border-radius:36px;
+  overflow:hidden;
 
   background:
     linear-gradient(
@@ -620,7 +620,6 @@ footer{
       rgba(255,255,255,0.18)
     ),
     url("photoapropo2.jpg");
-
   background-size:cover;
   background-position:center;
 
