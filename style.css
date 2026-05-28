@@ -985,7 +985,7 @@ html, body{
 
   background-size:cover;
   background-position:center;
-
+  background-repeat:no-repeat;
   box-shadow:0 10px 30px rgba(0,0,0,0.06);
 
   transition:0.35s ease;
@@ -1005,13 +1005,13 @@ html, body{
       rgba(255,255,255,0.88)
     );
 
-  z-index:0;
+  z-index:1;
 }
 
 .res-card h2,
 .res-card p{
   position:relative;
-  z-index:2;
+  z-index:3;
 }
 
 /* petit trait bleu premium identique au reste du site */
