@@ -1003,7 +1003,7 @@ html, body{
 
   background:
     linear-gradient(
-      rgba(255,255,255,0.82),
+      rgba(255,255,255,0.78),
       rgba(255,255,255,0.88)
     );
 
@@ -1014,29 +1014,6 @@ html, body{
 .res-card p{
   position:relative;
   z-index:3;
-}
-
-/* petit trait bleu premium identique au reste du site */
-.res-card::before{
-  content:"";
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:3px;
-  background:#00205b;
-  opacity:0.12;
-  transition:0.3s ease;
-}
-
-/* hover cohérent global */
-.res-card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 18px 45px rgba(0,0,0,0.10);
-}
-
-.res-card:hover::before{
-  opacity:1;
 }
 
 /* =========================
