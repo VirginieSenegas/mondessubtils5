@@ -589,23 +589,13 @@ footer{
   max-width:900px;
   margin:0 auto 100px;
   padding:0 20px;
+  display:flex;
+  justify-content:center;
 }
 
 .medical-note p{
   width:100%;
-
-  background:rgba(255,255,255,0.92);
-  backdrop-filter:blur(16px);
-
-  border-radius:26px;
-
-  padding:30px;
-
-  text-align:center !important;
-
-  box-shadow:0 10px 40px rgba(0,0,0,0.05);
-
-  font-size:16px;
-  line-height:1.8;
-  color:#444;
+  text-align:center;
 }
+
+
