@@ -607,20 +607,25 @@ footer{
 }
 
 .about-image-break{
-  height:380px;
+  width:100%;
   max-width:980px;
+  height:380px;
+  min-height:380px;
+
   margin:20px auto;
+
   border-radius:36px;
 
-  background: url("https://virginiesenegas.github.io/mondessubtils5/photoapropo2.jpg");
-  background-size:cover;
-  background-position:center;
+  background:
+    url("https://virginiesenegas.github.io/mondessubtils5/photoapropo2.jpg")
+    center/cover no-repeat;
+
+  display:block;
+  flex-shrink:0;
+
+  transition:transform 0.5s ease;
 }
 
 .about-image-break:hover{
   transform:scale(1.01);
-}
-
-.about-image-break{
-  border: 3px solid red;
 }
