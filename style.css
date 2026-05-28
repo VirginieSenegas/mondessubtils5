@@ -640,3 +640,37 @@ footer{
   transform: translateY(-3px) scale(1.01);
   box-shadow: 0 28px 65px rgba(0,0,0,0.12);
 }
+
+/* =========================
+   FAQ STYLE
+========================= */
+
+.faq-item{
+  background:rgba(255,255,255,0.75);
+  backdrop-filter:blur(18px);
+  border-radius:22px;
+  margin-bottom:16px;
+  overflow:hidden;
+  box-shadow:0 10px 30px rgba(0,0,0,0.04);
+}
+
+.faq-question{
+  padding:24px 26px;
+  cursor:pointer;
+  display:flex;
+  justify-content:space-between;
+  font-size:18px;
+  color:#00205b;
+}
+
+.faq-answer{
+  max-height:0;
+  overflow:hidden;
+  padding:0 26px;
+  transition:0.5s ease;
+}
+
+.faq-item.active .faq-answer{
+  max-height:300px;
+  padding:0 26px 24px;
+}
