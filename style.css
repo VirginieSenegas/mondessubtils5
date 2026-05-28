@@ -441,6 +441,30 @@ footer{
   color:rgba(255,255,255,0.88);
 }
 
+.medical-note{
+  max-width:900px;
+  margin:0 auto 100px;
+  padding:0 20px;
+}
+
+.medical-note p{
+  background:rgba(255,255,255,0.92);
+
+  backdrop-filter:blur(16px);
+
+  border-radius:26px;
+
+  padding:30px;
+
+  text-align:center;
+
+  box-shadow:0 10px 40px rgba(0,0,0,0.05);
+
+  font-size:16px;
+  line-height:1.8;
+  color:#444;
+}
+
 /* RESPONSIVE */
 
 @media(max-width:768px){
