@@ -614,8 +614,10 @@ footer{
   border-radius:36px;
   overflow:hidden;
 
-  background: url("photoapropo2.jpg") center/cover no-repeat;
-
+  background:
+  linear-gradient(rgba(255,255,255,0.12), rgba(255,255,255,0.18)),
+  url("https://virginiesenegas.github.io/mondessubtils5/photoapropo2.jpg") center/cover no-repeat;
+  
   box-shadow:0 20px 60px rgba(0,0,0,0.06);
   transition:transform 0.5s ease;
 }
