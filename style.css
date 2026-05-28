@@ -1066,13 +1066,24 @@ html, body{
 }
 
 .cards .card:nth-child(3){
-  background-image:url("photoliberationemotionnelle.avif");
+  background-image:url("photonettoyagelieu.avif");
 }
 
 .cards .card:nth-child(4){
+  background-image:url("photoliberationemotionnelle.avif");
+}
+
+.cards .card:nth-child(5){
   background-image:url("douleursinconforts.png");
 }
 
+.cards .card:nth-child(6){
+  background-image:url("zonefeubrulure.png");
+}
+
+.cards .card:nth-child(7){
+  background-image:url("liberationrelationsousemprise.png");
+}
 /* =========================
    ABOUT CARDS — PREMIUM SOFT
 ========================= */
