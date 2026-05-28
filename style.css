@@ -607,25 +607,33 @@ footer{
 }
 
 .about-image-break{
-  width:100%;
-  max-width:980px;
-  height:380px;
-  min-height:380px;
+  width:90%;
+  max-width:760px;
+  height:320px;
 
-  margin:20px auto;
+  margin:40px auto;
 
-  border-radius:36px;
+  border-radius:28px;
+  overflow:hidden;
 
   background:
+    linear-gradient(
+      rgba(255,255,255,0.10),
+      rgba(255,255,255,0.15)
+    ),
     url("https://virginiesenegas.github.io/mondessubtils5/photoapropo2.jpg")
     center/cover no-repeat;
 
-  display:block;
-  flex-shrink:0;
+  box-shadow:
+    0 20px 50px rgba(0,0,0,0.08),
+    0 1px 0 rgba(255,255,255,0.4) inset;
 
-  transition:transform 0.5s ease;
+  transform: translateZ(0);
+  transition: all 0.5s ease;
 }
 
 .about-image-break:hover{
-  transform:scale(1.01);
+  transform: translateY(-4px) scale(1.01);
+  box-shadow:
+    0 30px 70px rgba(0,0,0,0.12);
 }
