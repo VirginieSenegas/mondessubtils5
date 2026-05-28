@@ -607,13 +607,13 @@ footer{
 }
 
 .about-image-break{
-  width:90%;
-  max-width:760px;
-  height:320px;
+  width:100%;
+  max-width:620px;
+  height:280px;
 
-  margin:40px auto;
+  margin:50px auto;
 
-  border-radius:28px;
+  border-radius:26px;
   overflow:hidden;
 
   background:
@@ -625,15 +625,13 @@ footer{
     center/cover no-repeat;
 
   box-shadow:
-    0 20px 50px rgba(0,0,0,0.08),
+    0 18px 45px rgba(0,0,0,0.08),
     0 1px 0 rgba(255,255,255,0.4) inset;
 
-  transform: translateZ(0);
   transition: all 0.5s ease;
 }
 
 .about-image-break:hover{
-  transform: translateY(-4px) scale(1.01);
-  box-shadow:
-    0 30px 70px rgba(0,0,0,0.12);
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: 0 28px 65px rgba(0,0,0,0.12);
 }
