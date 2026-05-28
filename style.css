@@ -977,13 +977,41 @@ html, body{
 }
 
 .res-card{
-  background:white;
-  border-radius:22px;
-  padding:38px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.06);
-  transition:0.35s ease;
   position:relative;
   overflow:hidden;
+
+  padding:38px;
+  border-radius:22px;
+
+  background-size:cover;
+  background-position:center;
+
+  box-shadow:0 10px 30px rgba(0,0,0,0.06);
+
+  transition:0.35s ease;
+
+  isolation:isolate;
+}
+
+.res-card::after{
+  content:"";
+
+  position:absolute;
+  inset:0;
+
+  background:
+    linear-gradient(
+      rgba(255,255,255,0.82),
+      rgba(255,255,255,0.88)
+    );
+
+  z-index:0;
+}
+
+.res-card h2,
+.res-card p{
+  position:relative;
+  z-index:2;
 }
 
 /* petit trait bleu premium identique au reste du site */
