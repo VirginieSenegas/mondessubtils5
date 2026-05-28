@@ -304,7 +304,7 @@ footer{
 }
 
 /* =========================
-   ABOUT CARD (FINAL CLEAN)
+   ABOUT CARD (FIX UNIQUE — NE PAS DOUBLER)
 ========================= */
 
 .about-card{
@@ -346,11 +346,13 @@ footer{
   );
 
   opacity:0.5;
+  pointer-events:none;
 }
 
 .about-card p{
   font-size:16px;
   line-height:1.75;
+  font-weight:300;
   color:#444;
 }
 
