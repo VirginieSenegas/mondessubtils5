@@ -275,11 +275,6 @@ footer{
   color:white;
 }
 
-.hero-overlay{
-  position:absolute;
-  inset:0;
-}
-
 .about-hero .hero-content h1{
   font-size:64px;
   font-weight:300;
@@ -345,12 +340,6 @@ footer{
   color:#444;
   font-size:16px;
   line-height:1.6;
-}
-
-/* SECTION SOFT */
-
-.section-soft{
-  background:#f7f7f9;
 }
 
 /* TESTIMONIAL */
@@ -477,17 +466,21 @@ footer{
 
 .practices-hero{
   height:78vh;
+  position:relative;
+
   background:
     linear-gradient(rgba(0,32,91,0.28), rgba(0,32,91,0.34)),
     url("backgroundpratiques.png");
+
   background-size:cover;
   background-position:center;
+
   display:flex;
   align-items:center;
   justify-content:center;
+
   text-align:center;
   color:white;
-  position:relative;
 }
 
 .hero-overlay{
@@ -615,4 +608,8 @@ footer{
   background:#f7f7f9;
   text-align:center;
   padding:80px 20px;
+}
+
+html, body{
+  overflow-x:hidden;
 }
