@@ -46,6 +46,7 @@ body{
   height:44px;
   width:auto;
   display:block;
+
   transition:transform 0.5s ease;
 }
 
@@ -70,8 +71,11 @@ body{
 .burger span{
   width:100%;
   height:2px;
+
   background:#00205b;
+
   border-radius:2px;
+
   transition:0.4s;
 }
 
@@ -92,6 +96,7 @@ body{
 .menu{
   position:fixed;
   inset:0;
+
   background:#00205b;
 
   display:flex;
@@ -103,6 +108,7 @@ body{
 
   opacity:0;
   pointer-events:none;
+
   transition:0.4s ease;
 
   z-index:9000;
@@ -118,6 +124,7 @@ body{
   text-decoration:none;
   font-size:28px;
   letter-spacing:0.05em;
+
   transition:opacity 0.3s ease;
 }
 
@@ -141,6 +148,7 @@ body{
   display:flex;
   align-items:center;
   justify-content:center;
+
   text-align:center;
 }
 
@@ -241,6 +249,7 @@ footer{
   position:relative;
   height:68vh;
   min-height:560px;
+
   display:flex;
   align-items:center;
   justify-content:center;
@@ -272,13 +281,14 @@ footer{
   max-width:1100px;
   margin:auto;
   padding:70px 20px 120px;
+
   display:flex;
   flex-direction:column;
   gap:18px;
 }
 
 /* =========================
-   ABOUT CARD (FIX UNIQUE CLEAN VERSION)
+   ABOUT CARD (CLEAN UNIQUE VERSION)
 ========================= */
 
 .about-card{
@@ -294,6 +304,7 @@ footer{
   padding:34px 38px;
 
   box-shadow:0 8px 22px rgba(0,0,0,0.04);
+
   transition:all 0.25s ease;
 }
 
@@ -310,7 +321,14 @@ footer{
   left:0;
   width:100%;
   height:2px;
-  background:linear-gradient(to right, transparent, rgba(0,32,91,0.25), transparent);
+
+  background:linear-gradient(
+    to right,
+    transparent,
+    rgba(0,32,91,0.25),
+    transparent
+  );
+
   opacity:0.5;
   pointer-events:none;
 }
@@ -332,130 +350,46 @@ footer{
   background:#f5f6f8;
 }
 
-/* =========================
-   PRACTICES (RESTORED - IMPORTANT)
-========================= */
+/* RESPONSIVE */
 
-.practices-hero{
-  height:78vh;
-  background:
-  linear-gradient(rgba(0,32,91,0.28), rgba(0,32,91,0.34)),
-  url("backgroundpratiques.png");
+@media(max-width:768px){
 
-  background-size:cover;
-  background-position:center 95%;
+  .navbar{
+    padding:0 20px;
+  }
 
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-}
+  .hero-content h1{
+    font-size:42px;
+  }
 
-.practices-intro{
-  max-width:850px;
-  margin:auto;
-  padding:80px 20px 30px;
-  text-align:center;
-}
+  .hero-content p{
+    font-size:18px;
+  }
 
-.practices-intro p{
-  font-size:22px;
-  line-height:1.9;
-  font-weight:300;
-  color:#1a1a1a;
-}
+  .menu a{
+    font-size:24px;
+  }
 
-/* GRID */
+  .about-hero{
+    height:65vh;
+  }
 
-.practices-grid{
-  max-width:1350px;
-  margin:auto;
-  padding:20px 20px 120px;
+  .about-hero h1{
+    font-size:38px;
+  }
 
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(380px,1fr));
-  gap:26px;
-}
+  .about-wrapper{
+    gap:16px;
+    padding:50px 16px 100px;
+  }
 
-/* PRACTICE CARD FIX (overlay restored) */
+  .about-card{
+    padding:28px;
+    border-radius:22px;
+  }
 
-.practice-card{
-  position:relative;
-  min-height:620px;
-
-  border-radius:36px;
-  overflow:hidden;
-
-  display:flex;
-  align-items:flex-end;
-
-  background:#000;
-
-  box-shadow:0 10px 40px rgba(0,0,0,0.08);
-  transition:transform 0.45s ease, box-shadow 0.45s ease;
-}
-
-.practice-card:hover{
-  transform:translateY(-4px) scale(1.01);
-  box-shadow:0 25px 70px rgba(0,0,0,0.12);
-}
-
-.practice-image{
-  position:absolute;
-  inset:0;
-  background-size:cover;
-  background-position:center;
-  transition:transform 1.2s ease;
-}
-
-.practice-card:hover .practice-image{
-  transform:scale(1.03);
-}
-
-.practice-card::after{
-  content:"";
-  position:absolute;
-  inset:0;
-
-  background:linear-gradient(
-    to top,
-    rgba(0,0,0,0.72) 10%,
-    rgba(0,0,0,0.15) 60%,
-    rgba(0,0,0,0.05) 100%
-  );
-}
-
-.practice-content{
-  position:relative;
-  z-index:2;
-  padding:42px;
-  color:white;
-}
-
-/* CALENDLY */
-
-.calendly-frame{
-  background:rgba(255,255,255,0.8);
-  backdrop-filter:blur(18px);
-  border-radius:28px;
-  padding:18px;
-}
-
-/* TESTIMONIALS */
-
-.testimonials-grid{
-  position:relative;
-  isolation:isolate;
-}
-
-.testimonials-grid::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:url("temoignageimage.png");
-  background-size:cover;
-  background-position:center;
-  opacity:0.06;
-  filter:blur(2px);
-  z-index:0;
+  .about-card p{
+    font-size:15px;
+    line-height:1.7;
+  }
 }
