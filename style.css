@@ -606,4 +606,31 @@ footer{
   text-align:center;
 }
 
+.about-image-break{
+  position:relative;
+  height:380px;
+  max-width:980px;
+  margin:30px auto;
 
+  border-radius:36px;
+
+  background:
+    linear-gradient(
+      rgba(255,255,255,0.12),
+      rgba(255,255,255,0.18)
+    ),
+    url("photoapropo2.png");
+
+  background-size:cover;
+  background-position:center;
+
+  box-shadow:0 20px 60px rgba(0,0,0,0.06);
+
+  overflow:hidden;
+
+  transition:transform 0.5s ease;
+}
+
+.about-image-break:hover{
+  transform:scale(1.01);
+}
