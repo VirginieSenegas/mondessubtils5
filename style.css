@@ -252,14 +252,14 @@ body{
 /* SECTION */
 
 .section{
-  padding:30px 20px 80px;
+  padding:50px 20px 80px;
   max-width:900px;
   margin:auto;
   text-align:center;
 }
 
 .section:first-of-type{
-  padding-top:40px;
+  padding-top:30px;
 }
 
 .section h2{
@@ -278,7 +278,7 @@ body{
 
 .cards{
   display:grid;
-  grid-template-columns:repeat(3, 1fr);
+  grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
   gap:24px;
   padding:20px 20px 60px;
 }
@@ -831,11 +831,14 @@ h1,h2,h3{
   box-shadow:0 20px 50px rgba(0,0,0,0.22);
 }
 
-/* IMAGES PREMIUM UNIFORMES */
+/* IMAGES + BLOCS UNIFORMES */
+
 .hero,
 .about-hero,
 .about-image-break,
-.practice-card{
-  border-radius:var(--radius);
-  overflow:hidden;
+.practice-card,
+.cards .card,
+.practice-image {
+  border-radius: var(--radius);
+  overflow: hidden;
 }
