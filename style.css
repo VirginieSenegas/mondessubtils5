@@ -191,7 +191,7 @@ body{
     url("backgroundpratiques.webp");
 
   background-size:cover;
-  background-position:center;
+  background-position:center bottom;
 }
 
 /* BUTTON */
