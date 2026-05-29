@@ -874,6 +874,10 @@ h1,h2,h3{
   background-position:center;
 }
 
+.faq-hero::before{
+  display:none;
+}
+
 .page-hero p{
   font-size:18px;
   line-height:1.7;
