@@ -137,11 +137,13 @@ body{
 .hero{
   position:relative;
 
-  min-height:78vh;
-  height:78vh;
+  min-height:58vh;
+  height:58vh;
+
+  margin:110px 24px 40px;
 
   background:
-  linear-gradient(rgba(0,32,91,0.35), rgba(0,32,91,0.35)),
+  linear-gradient(rgba(0,32,91,0.30), rgba(0,32,91,0.30)),
   url("photomondesubtilbacground.webp");
 
   background-size:cover;
@@ -152,6 +154,8 @@ body{
   justify-content:center;
 
   text-align:center;
+  box-shadow:
+    0 20px 60px rgba(0,0,0,0.08);
 }
 
 .hero-content{
