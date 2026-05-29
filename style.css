@@ -818,3 +818,58 @@ h1,h2,h3{
   --muted:#444;
   --bg:#f7f7f9;
 }
+
+/* =========================
+   HERO GLOBAL POUR TOUTES LES PAGES
+========================= */
+
+.page-hero{
+  position:relative;
+  min-height:58vh;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+
+  background-size:cover;
+  background-position:center;
+
+  border-radius:28px;
+
+  overflow:hidden;
+
+  box-shadow:0 25px 70px rgba(0,0,0,0.12);
+
+  margin:110px 24px 20px;
+}
+
+.page-hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:rgba(0,32,91,0.35);
+
+  z-index:1;
+}
+
+.page-hero .hero-content{
+  position:relative;
+  z-index:2;
+  max-width:720px;
+  padding:20px;
+  color:white;
+}
+
+.page-hero h1{
+  font-size:56px;
+  font-weight:300;
+  margin-bottom:16px;
+}
+
+.page-hero p{
+  font-size:18px;
+  line-height:1.7;
+  opacity:0.95;
+}
