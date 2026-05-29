@@ -755,3 +755,11 @@ footer{
   max-height:300px;
   padding:0 26px 24px;
 }
+
+.hero,
+.about-hero,
+.about-image-break,
+.practice-card{
+  border-radius:28px;
+  overflow:hidden;
+}
