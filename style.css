@@ -655,7 +655,7 @@ footer{
 
   .about-card{
     padding:28px;
-    border-radius:22px;
+    border-radius:18px;
   }
 
   .about-card p{
@@ -817,18 +817,4 @@ h1,h2,h3{
   --text:#111;
   --muted:#444;
   --bg:#f7f7f9;
-  --radius: 28px;
-}
-
-/* GLOBAL BORDER RADIUS FIX */
-.hero,
-.about-hero,
-.practice-card,
-.about-image-break,
-.cards .card,
-.card,
-.about-card,
-.menu{
-  border-radius: var(--radius);
-  overflow: hidden;
 }
