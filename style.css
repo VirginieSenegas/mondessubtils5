@@ -194,18 +194,31 @@ body{
 /* BUTTON */
 
 .btn{
-  display:inline-block;
-  padding:14px 30px;
-  background:white;
-  color:#00205b;
-  border-radius:40px;
-  text-decoration:none;
-  font-weight:600;
-  transition:0.3s ease;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:14px 26px;
+
+  border-radius:999px;
+
+  background:#0d2249;
+  color:white;
+
+  font-size:15px;
+  font-weight:500;
+  letter-spacing:0.01em;
+
+  box-shadow:
+    0 8px 24px rgba(0,0,0,0.08);
+
+  transition:all 0.35s ease;
 }
 
 .btn:hover{
-  transform:translateY(-2px);
+  transform:translateY(-1px);
+  box-shadow:
+    0 12px 30px rgba(0,0,0,0.10);
 }
 
 /* SECTION */
