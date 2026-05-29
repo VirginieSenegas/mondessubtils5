@@ -172,6 +172,19 @@ body{
   margin-bottom:30px;
 }
 
+/* =========================
+   PRACTICES HERO
+========================= */
+
+.practices-hero{
+  background:
+    linear-gradient(rgba(0,32,91,0.35), rgba(0,32,91,0.35)),
+    url("backgroundpratiques.webp");
+
+  background-size:cover;
+  background-position:center;
+}
+
 /* BUTTON */
 
 .btn{
