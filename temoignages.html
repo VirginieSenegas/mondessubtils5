@@ -37,12 +37,15 @@
       pointer-events:none;
     }
 
-    .testimonials-hero{
-  height:72vh;
+.testimonials-hero{
+  position:relative;
 
-  background:
-    linear-gradient(rgba(0,32,91,0.30), rgba(0,32,91,0.38)),
-    url("temoignageimage.png");
+  min-height:58vh;
+  height:58vh;
+
+  margin:110px 24px 20px;
+
+  background:url("temoignageimage.png");
 
   background-size:cover;
   background-position:center;
@@ -55,10 +58,13 @@
 
   color:white;
 
-  position:relative;
+  border-radius:28px;
+  overflow:hidden;
+
+  box-shadow:0 25px 70px rgba(0,0,0,0.12);
+
   z-index:1;
 }
-
     .testimonials-hero-content{
       max-width:760px;
       padding:20px;
