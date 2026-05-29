@@ -287,9 +287,12 @@ body{
 
   background:
     linear-gradient(
-      rgba(255,255,255,0.45),
+      to bottom,
+      rgba(255,255,255,0.18),
       rgba(255,255,255,0.58)
     );
+
+    backdrop-filter:blur(2px);
 
   z-index:0;
 }
