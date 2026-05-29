@@ -187,11 +187,11 @@ body{
 
 .practices-hero{
   background:
-    linear-gradient(rgba(0,32,91,0.35), rgba(0,32,91,0.35)),
+    linear-gradient(rgba(0,32,91,0.30), rgba(0,32,91,0.30)),
     url("backgroundpratiques.webp");
 
   background-size:cover;
-  background-position:center bottom;
+  background-position:center 70%;
 }
 
 /* BUTTON */
