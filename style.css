@@ -290,7 +290,7 @@ body{
 }
 
 .cards .card:nth-child(2){
-  background-image:url("photonettoyagepersonne.png");
+  background-image:url("photonettoyagepersonne.webp");
 }
 
 .cards .card:nth-child(3){
@@ -302,15 +302,15 @@ body{
 }
 
 .cards .card:nth-child(5){
-  background-image:url("douleursinconforts.png");
+  background-image:url("douleursinconforts.webp");
 }
 
 .cards .card:nth-child(6){
-  background-image:url("zonefeubrulure.png");
+  background-image:url("zonefeubrulure.webp");
 }
 
 .cards .card:nth-child(7){
-  background-image:url("liberationrelationsousemprise.png");
+  background-image:url("liberationrelationsousemprise.webp");
 }
 
 /* FOOTER */
@@ -339,7 +339,7 @@ footer{
 
   background:
     linear-gradient(rgba(0,32,91,0.35), rgba(0,32,91,0.35)),
-    url("photoapropo1.png");
+    url("photoapropo1.webp");
 
   background-size:cover;
   background-position:center;
