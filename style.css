@@ -288,7 +288,6 @@ body{
   overflow:hidden;
 
   padding:26px;
-  border-radius:24px;
 
   border:1px solid rgba(255,255,255,0.6);
 
@@ -450,7 +449,6 @@ footer{
 
   background:#fbfaf8;
   border:1px solid rgba(0,0,0,0.06);
-  border-radius:18px;
 
   padding:34px 38px;
 
@@ -529,7 +527,6 @@ footer{
   position:relative;
   min-height:620px;
 
-  border-radius:36px;
   overflow:hidden;
 
   display:flex;
@@ -756,22 +753,6 @@ footer{
   padding:0 26px 24px;
 }
 
-.hero,
-.about-hero,
-.about-image-break,
-.practice-card{
-  border-radius:28px;
-  overflow:hidden;
-}
-
-:root{
-  --primary:#0d2249;
-  --text:#111;
-  --muted:#444;
-  --bg:#f7f7f9;
-  --radius:28px;
-}
-
 /* BASE TYPO / RYTHME */
 body{
   background:var(--bg);
@@ -831,14 +812,23 @@ h1,h2,h3{
   box-shadow:0 20px 50px rgba(0,0,0,0.22);
 }
 
-/* IMAGES + BLOCS UNIFORMES */
+:root{
+  --primary:#0d2249;
+  --text:#111;
+  --muted:#444;
+  --bg:#f7f7f9;
+  --radius: 28px;
+}
 
+/* GLOBAL BORDER RADIUS FIX */
 .hero,
 .about-hero,
-.about-image-break,
 .practice-card,
+.about-image-break,
 .cards .card,
-.practice-image {
+.card,
+.about-card,
+.menu{
   border-radius: var(--radius);
   overflow: hidden;
 }
