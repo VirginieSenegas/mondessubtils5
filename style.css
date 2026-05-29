@@ -205,7 +205,7 @@ body{
 
   border-radius:999px;
 
-  background:linear-gradient(135deg, #0d2249, #1b3a6b);
+  background:linear-gradient(135deg, #0d2249 0%, #1b3a6b 60%, #2a4f8a 100%);
   color:white;
 
   font-size:15px;
@@ -217,8 +217,30 @@ body{
   box-shadow:
     0 12px 30px rgba(0,0,0,0.18),
     inset 0 1px 0 rgba(255,255,255,0.12);
+
+  position:relative;
+  overflow:hidden;
   
   transition:all 0.3s ease;
+}
+
+.btn::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-60%;
+  width:60%;
+  height:100%;
+
+  background:linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.25),
+    transparent
+  );
+
+  transform:skewX(-20deg);
+  transition:0.6s ease;
 }
 
 .btn:hover{
