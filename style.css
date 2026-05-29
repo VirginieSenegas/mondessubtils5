@@ -140,7 +140,7 @@ body{
 
   background:
   linear-gradient(rgba(0,32,91,0.35), rgba(0,32,91,0.35)),
-  url("photoindex-1506744038136-46273834b3fb.avif");
+  url("photomondesubtilbacground.webp");
 
   background-size:cover;
   background-position:center;
@@ -626,7 +626,7 @@ footer{
       rgba(255,255,255,0.10),
       rgba(255,255,255,0.15)
     ),
-    url("https://virginiesenegas.github.io/mondessubtils5/photoapropo2.jpg")
+    url("https://virginiesenegas.github.io/mondessubtils5/photoapropo2.webp")
     center/cover no-repeat;
 
   box-shadow:
