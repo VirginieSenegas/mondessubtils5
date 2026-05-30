@@ -916,13 +916,12 @@ h1,h2,h3{
 }
 
 .page-hero h1,
-.hero-content h1,
-.testimonials-hero h1,
-.hero h1 {
+.about-hero h1,
+.faq-hero h1,
+.reservation-hero h1,
+.testimonials-hero h1{
   font-size:56px;
   font-weight:300;
-  margin-bottom:20px;
-  
   color:#f4e7c5;
   letter-spacing:-0.02em;
   text-shadow:0 4px 16px rgba(0,0,0,0.45);
