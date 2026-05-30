@@ -333,16 +333,11 @@ body{
 
 /* TEXTE AU-DESSUS */
 .cards .card h2,
-.cards .card h3{
-  position:relative;
-  z-index:2;
-  opacity:1;
-}
-
+.cards .card h3,
 .cards .card p{
   position:relative;
   z-index:2;
-  opacity:0.88;
+  opacity:1;
 }
 
 /* TITRE */
