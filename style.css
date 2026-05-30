@@ -878,7 +878,8 @@ h1,h2,h3{
   background-position:center;
 }
 
-.faq-hero::before{
+.faq-hero::before
+.reservation-hero::before{
   display:none;
 }
 
