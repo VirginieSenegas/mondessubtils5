@@ -323,18 +323,32 @@ body{
 
   background:linear-gradient(
     to top,
-    rgba(0,0,0,0.35),
-    rgba(255,255,255,0.10),60%
-    rgba(255,255,255,0.55)
+    rgba(0,0,0,0.45),
+    rgba(0,0,0,0.15),45%
+    rgba(255,255,255,0.20)
   );
 
   z-index:0;
 }
 
 /* TEXTE AU-DESSUS */
+
 .cards .card h2,
-.cards .card h3{
-  text-shadow:0 6px 18px rgba(0,0,0,0.18);
+.cards .card h3,
+.cards .card p{
+  position:relative;
+  z-index:2;
+}
+
+  .cards .card h2{
+  color:#f4e7c5;
+  text-shadow:0 4px 16px rgba(0,0,0,0.45);
+}
+
+.cards .card p{
+  color:#fff7e8;
+  text-shadow:0 2px 12px rgba(0,0,0,0.40);
+
 }
 
 .cards .card p{
