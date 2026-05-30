@@ -1029,15 +1029,15 @@ h1,h2,h3{
 
 /* IMAGE BACKGROUND */
 .seo-castres{
-  background:url("castres.webp") center/cover no-repeat;
+  background:url("photomagnetiseurcastres.webp") center/cover no-repeat;
 }
 
 .seo-toulouse{
-  background:url("toulouse.webp") center/cover no-repeat;
+  background:url("photomagnetiseurtoulouse.webp") center/cover no-repeat;
 }
 
 .seo-tarn{
-  background:url("tarn.webp") center/cover no-repeat;
+  background:url("photomagnetiseurtarn.webp") center/cover no-repeat;
 }
 
 /* DARK OVERLAY (lisibilité Apple style) */
