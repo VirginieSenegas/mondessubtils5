@@ -170,7 +170,7 @@ body{
 }
 
 .hero-content h1{
-  font-size:64px;
+  font-size:56px;
   font-weight:300;
   margin-bottom:20px;
   
@@ -924,7 +924,6 @@ h1,h2,h3{
   color:#f4e7c5;
   letter-spacing:-0.02em;
   text-shadow:0 4px 16px rgba(0,0,0,0.45);
-}
 }
 
 .faq-hero{
