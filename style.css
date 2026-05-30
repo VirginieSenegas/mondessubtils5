@@ -340,6 +340,17 @@ body{
   z-index:2;
 }
 
+.practice-card h2,
+.practice-card h3{
+  color:#f4e7c5;
+  text-shadow:0 4px 16px rgba(0,0,0,0.45);
+}
+
+.practice-card p{
+  color:#fff7e8;
+  text-shadow:0 2px 12px rgba(0,0,0,0.40);
+}
+
   .cards .card h2{
   color:#f4e7c5;
   text-shadow:0 4px 16px rgba(0,0,0,0.45);
