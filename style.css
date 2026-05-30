@@ -172,7 +172,6 @@ body{
 .hero-content h1{
   font-size:56px;
   font-weight:300;
-  margin-bottom:20px;
   
   color:#f4e7c5;
   letter-spacing:-0.02em;
@@ -916,14 +915,25 @@ h1,h2,h3{
   color:white;
 }
 
-.page-hero h1{
+.page-hero h1,
+.hero-content h1,
+.testimonials-hero h1,
+.hero h1 {
   font-size:56px;
   font-weight:300;
-  margin-bottom:16px;
+  margin-bottom:20px;
   
   color:#f4e7c5;
   letter-spacing:-0.02em;
   text-shadow:0 4px 16px rgba(0,0,0,0.45);
+}
+
+.mini-title {
+  font-size: 14px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(244,231,197,0.85);
+  margin-bottom: 10px;
 }
 
 .faq-hero{
