@@ -882,6 +882,12 @@ h1,h2,h3{
   display:none;
 }
 
+.reservation-hero{
+  background-image:url("photoreservation.webp");
+  background-size:cover;
+  background-position:center;
+}
+
 .page-hero p{
   font-size:18px;
   line-height:1.7;
