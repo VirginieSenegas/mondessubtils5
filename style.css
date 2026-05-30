@@ -173,6 +173,10 @@ body{
   font-size:64px;
   font-weight:300;
   margin-bottom:20px;
+  
+  color:#f4e7c5;
+  letter-spacing:-0.02em;
+  text-shadow:0 4px 16px rgba(0,0,0,0.45);
 }
 
 .hero-content p{
@@ -625,7 +629,10 @@ footer{
 
   margin-bottom:16px;
 
+  color:#f4e7c5;
   letter-spacing:-0.03em;
+
+  text-shadow:0 4px 16px rgba(0,0,0,0.45);
 }
 
 .practice-content p{
@@ -914,6 +921,11 @@ h1,h2,h3{
   font-size:56px;
   font-weight:300;
   margin-bottom:16px;
+  
+  color:#f4e7c5;
+  letter-spacing:-0.02em;
+  text-shadow:0 4px 16px rgba(0,0,0,0.45);
+}
 }
 
 .faq-hero{
