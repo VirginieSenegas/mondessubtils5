@@ -178,10 +178,16 @@ body{
   text-shadow:0 4px 16px rgba(0,0,0,0.45);
 }
 
-.hero-content p{
-  font-size:20px;
+.hero-content p,
+.page-hero p,
+.testimonials-hero p,
+.faq-hero p,
+.about-hero p,
+.reservation-hero p{
+  font-size:18px;
   line-height:1.7;
-  margin-bottom:30px;
+  margin-top:10px;
+  color:rgba(255,255,255,0.92);
 }
 
 /* =========================
