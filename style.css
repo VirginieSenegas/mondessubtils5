@@ -921,6 +921,15 @@ h1,h2,h3{
   color:white;
 }
 
+.brand-title{
+  font-size:14px;
+  letter-spacing:0.25em;
+  text-transform:uppercase;
+  color:rgba(244,231,197,0.85);
+  margin-bottom:10px;
+  font-weight:400;
+}
+
 .page-hero h1,
 .about-hero h1,
 .faq-hero h1,
