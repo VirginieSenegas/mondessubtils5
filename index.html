@@ -153,17 +153,28 @@
   </footer>
 
   <!-- SCRIPT -->
-  <script>
+<script>
 
-    const burger = document.getElementById("burger");
-    const menu = document.getElementById("menu");
+  const burger = document.getElementById("burger");
+  const menu = document.getElementById("menu");
 
+  if (burger && menu) {
     burger.addEventListener("click", () => {
       burger.classList.toggle("active");
       menu.classList.toggle("open");
     });
+  }
 
-  </script>
+  // CONTACT PANEL
+  const trigger = document.getElementById("contactTrigger");
+  const panel = document.getElementById("contactPanel");
 
+  if (trigger && panel) {
+    trigger.addEventListener("click", () => {
+      panel.classList.toggle("open");
+    });
+  }
+
+</script>
 </body>
 </html>
