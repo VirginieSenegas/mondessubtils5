@@ -11,37 +11,25 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
+<body>
+
   <!-- CONTACT FLOATING APPLE -->
+  <div class="contact-floating">
 
-<div class="contact-floating">
+    <button class="contact-trigger" id="contactTrigger">
+      Prendre contact
+    </button>
 
-  <button class="contact-trigger" id="contactTrigger">
-    Prendre contact
-  </button>
+    <div class="contact-panel" id="contactPanel">
 
-  <div class="contact-panel" id="contactPanel">
+      <a href="tel:+33607149158">Téléphone</a>
+      <a href="sms:+33607149158">SMS</a>
+      <a href="mailto:mondessubtils@yahoo.com">E-mail</a>
+      <a href="reservation.html">Réserver une séance</a>
 
-    <a href="tel:+33607149158">
-      Téléphone
-    </a>
-
-    <a href="sms:+33607149158">
-      SMS
-    </a>
-
-    <a href="mailto:mondessubtils@yahoo.com">
-      E-mail
-    </a>
-
-    <a href="reservation.html">
-      Réserver une séance
-    </a>
+    </div>
 
   </div>
-
-</div>
-
-<body>
 
   <!-- NAVBAR -->
   <header class="navbar">
@@ -104,46 +92,46 @@
 
   </section>
 
-<!-- CARDS -->
-<section class="cards">
+  <!-- CARDS -->
+  <section class="cards">
 
-  <div class="card card-tabac">
-    <h3>Arrêt du tabac</h3>
-    <p>Accompagnement progressif selon votre démarche et votre rythme personnel.</p>
-  </div>
+    <div class="card card-tabac">
+      <h3>Arrêt du tabac</h3>
+      <p>Accompagnement progressif selon votre démarche et votre rythme personnel.</p>
+    </div>
 
-  <div class="card card-nettoyage-energetique">
-    <h3>Nettoyage énergétique</h3>
-    <p>Nettoyer les ombres et harmoniser les ressentis pour retrouver un équilibre intérieur.</p>
-  </div>
+    <div class="card card-nettoyage-energetique">
+      <h3>Nettoyage énergétique</h3>
+      <p>Nettoyer les ombres et harmoniser les ressentis pour retrouver un équilibre intérieur.</p>
+    </div>
 
-  <div class="card card-lieu">
-    <h3>Nettoyage énergétique de lieux</h3>
-    <p>Cleaner et harmoniser les lieux pour lever les blocages.</p>
-  </div>
+    <div class="card card-lieu">
+      <h3>Nettoyage énergétique de lieux</h3>
+      <p>Cleaner et harmoniser les lieux pour lever les blocages.</p>
+    </div>
 
-  <div class="card card-liberation-emo">
-    <h3>Libération émotionnelle</h3>
-    <p>Renouer en paix avec son intériorité.</p>
-  </div>
+    <div class="card card-liberation-emo">
+      <h3>Libération émotionnelle</h3>
+      <p>Renouer en paix avec son intériorité.</p>
+    </div>
 
-  <div class="card card-douleurs">
-    <h3>Douleurs & inconforts</h3>
-    <p>Travail énergétique global dans une approche douce et complémentaire.</p>
-  </div>
+    <div class="card card-douleurs">
+      <h3>Douleurs & inconforts</h3>
+      <p>Travail énergétique global dans une approche douce et complémentaire.</p>
+    </div>
 
-  <div class="card card-zona">
-    <h3>Zona, feu, brûlure, psoriasis</h3>
-    <p>L'inflammation crée douleurs et inconforts, couper le feu permet souvent de les stopper.</p>
-  </div>
+    <div class="card card-zona">
+      <h3>Zona, feu, brûlure, psoriasis</h3>
+      <p>L'inflammation crée douleurs et inconforts, couper le feu permet souvent de les stopper.</p>
+    </div>
 
-  <div class="card card-emprise">
-    <h3>Libération des relations sous emprise</h3>
-    <p>Retrouver sa liberté intérieure et sortir des schémas d’emprise.</p>
-  </div>
+    <div class="card card-emprise">
+      <h3>Libération des relations sous emprise</h3>
+      <p>Retrouver sa liberté intérieure et sortir des schémas d’emprise.</p>
+    </div>
 
-</section>
-  
+  </section>
+
   <!-- CTA -->
   <section class="section">
 
@@ -171,10 +159,8 @@
     const menu = document.getElementById("menu");
 
     burger.addEventListener("click", () => {
-
       burger.classList.toggle("active");
       menu.classList.toggle("open");
-
     });
 
   </script>
