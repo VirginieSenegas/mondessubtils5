@@ -152,28 +152,26 @@
     Mondes Subtils — Accompagnement mieux-être
   </footer>
 
-  <!-- SCRIPT -->
 <script>
 
-  const burger = document.getElementById("burger");
-  const menu = document.getElementById("menu");
+const burger = document.getElementById("burger");
+const menu = document.getElementById("menu");
 
-  if (burger && menu) {
-    burger.addEventListener("click", () => {
-      burger.classList.toggle("active");
-      menu.classList.toggle("open");
-    });
-  }
+burger.addEventListener("click", () => {
 
-  // CONTACT PANEL
-  const trigger = document.getElementById("contactTrigger");
-  const panel = document.getElementById("contactPanel");
+  burger.classList.toggle("active");
+  menu.classList.toggle("open");
 
-  if (trigger && panel) {
-    trigger.addEventListener("click", () => {
-      panel.classList.toggle("open");
-    });
-  }
+});
+
+const trigger = document.getElementById("contactTrigger");
+const panel = document.getElementById("contactPanel");
+
+trigger.addEventListener("click", () => {
+
+  panel.classList.toggle("open");
+
+});
 
 </script>
 </body>
