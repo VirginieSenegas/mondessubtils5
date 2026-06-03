@@ -1086,6 +1086,7 @@ h1,h2,h3{
 
 /* mobile */
 @media(max-width:768px){
+  
   .contact-floating{
     right:16px;
     bottom:16px;
@@ -1111,6 +1112,12 @@ h1,h2,h3{
 
   transition:transform 0.2s ease, box-shadow 0,25s ease;
 }
+
+  .contact-panel{
+    bottom:70px;
+ }
+
+  }
 
 .contact-trigger img{
   width:26px;
@@ -1257,17 +1264,10 @@ h1,h2,h3{
   cursor:pointer;
 }
 
-.contact-trigger img{
-  width:26px;
-  height:26px;
-  display:block;
-}
-
 .contact-panel{
   position:absolute;
   bottom:70px;
   right:0;
-  width:220px;
 
   opacity:0;
   visibility:hidden;
@@ -1290,4 +1290,12 @@ h1,h2,h3{
   visibility:visible;
   pointer-events:auto;
   transform:translateY(0);
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .contact-floating{
+    right:16px;
+    bottom:16px;
+  }
 }
