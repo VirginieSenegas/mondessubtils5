@@ -813,12 +813,6 @@ footer{
   padding:0 26px 24px;
 }
 
-/* BASE TYPO / RYTHME */
-body{
-  background:var(--bg);
-  color:var(--text);
-}
-
 /* TITRES STANDARD */
 h1,h2,h3{
   font-weight:300;
@@ -1089,25 +1083,7 @@ h1,h2,h3{
    CONTACT FLOATING CLEAN (APPLE STYLE)
 ========================= */
 
-.contact-panel a{
-  display:flex;
-  align-items:center;
 
-  padding:14px 16px;
-
-  border-radius:16px;
-
-  text-decoration:none;
-
-  font-size:15px;
-  font-weight:500;
-
-  color:#00205b;
-
-  background:rgba(255,255,255,0.6);
-
-  transition:all 0.2s ease;
-}
 /* mobile */
 @media(max-width:768px){
   .contact-floating{
@@ -1124,3 +1100,72 @@ h1,h2,h3{
     width:210px;
   }
 }
+
+/* =========================
+   CONTACT PANEL BASE FIX
+========================= */
+
+.contact-panel{
+  position:absolute;
+  bottom:65px;
+  right:0;
+
+  width:220px;
+
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+
+  padding:10px;
+
+  border-radius:18px;
+
+  background:rgba(255,255,255,0.9);
+  backdrop-filter:blur(22px);
+
+  border:1px solid rgba(255,255,255,0.4);
+
+  box-shadow:0 20px 60px rgba(0,0,0,0.12);
+
+  /* IMPORTANT */
+  opacity:0;
+  transform:translateY(10px);
+  pointer-events:none;
+  visibility:hidden;
+
+  transition:0.25s ease;
+}
+
+.contact-panel.open{
+  opacity:1;
+  transform:translateY(0);
+  pointer-events:auto;
+  visibility:visible;
+}
+
+.contact-panel a{
+  display:flex;
+  align-items:center;
+  gap:10px;
+
+  padding:12px 14px;
+
+  border-radius:16px;
+
+  text-decoration:none;
+
+  font-size:15px;
+  font-weight:500;
+
+  color:#00205b;
+
+  background:rgba(255,255,255,0.6);
+
+  transition:all 0.2s ease;
+}
+
+.contact-panel a:hover{
+  transform:translateX(3px)
+  background:rgba(255,255,255,0.9);
+  }
+
