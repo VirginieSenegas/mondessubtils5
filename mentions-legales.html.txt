@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mentions légales — Mondes Subtils</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- NAVBAR (simple retour accueil) -->
+  <header class="navbar">
+    <a href="index.html" class="logo">
+      <img src="logo.png" alt="Mondes Subtils">
+    </a>
+  </header>
+
+  <!-- CONTENU -->
+  <section class="section">
+
+    <h1>Mentions légales</h1>
+
+    <h2>1. Éditeur du site</h2>
+
+    <p>
+      Le présent site est édité par :<br><br>
+
+      Virginie Senegas<br>
+      Auto-entrepreneur<br>
+      Adresse : 618 route de Saïx, 81290 Viviers les Montagnes<br>
+      Email : mondessubtils@yahoo.com<br><br>
+
+      Numéro SIRET : 103 654 885 00013
+    </p>
+
+    <h2>2. Responsable de la publication</h2>
+
+    <p>
+      Le responsable de la publication est : Virginie Senegas
+    </p>
+
+    <h2>3. Hébergement</h2>
+
+    <p>
+      Le site est hébergé par :<br><br>
+      XXX à compléter
+    </p>
+
+    <h2>4. Activité</h2>
+
+    <p>
+      Le site propose des prestations de bien-être et de relaxation par magnétisme.<br><br>
+
+      <strong>Important :</strong><br>
+      Les pratiques proposées ne relèvent pas de la médecine conventionnelle et ne se substituent en aucun cas à un diagnostic, un traitement médical ou un suivi par un professionnel de santé.<br><br>
+
+      La praticienne ne pose aucun diagnostic médical et ne demande jamais l’interruption d’un traitement médical en cours.
+    </p>
+
+    <h2>5. Propriété intellectuelle</h2>
+
+    <p>
+      L’ensemble des contenus présents sur ce site (textes, images, logo, etc.) est la propriété exclusive de Virginie Senegas, sauf mention contraire.<br><br>
+
+      Toute reproduction, distribution ou utilisation sans autorisation écrite préalable est interdite.
+    </p>
+
+    <h2>6. Données personnelles</h2>
+
+    <p>
+      Les informations collectées via le site (formulaire de contact, prise de rendez-vous, etc.) sont destinées uniquement à Virginie Senegas.<br><br>
+
+      Elles sont utilisées pour :<br>
+      - Répondre aux demandes<br>
+      - Gérer les rendez-vous<br><br>
+
+      Conformément à la réglementation en vigueur, vous disposez des droits suivants :<br>
+      - Droit d’accès<br>
+      - Droit de rectification<br>
+      - Droit de suppression<br>
+      - Droit d’opposition<br><br>
+
+      Pour exercer ces droits, vous pouvez contacter : mondessubtils@yahoo.com<br><br>
+
+      Les données sont conservées pendant une durée maximale de 5 ans.
+    </p>
+
+    <h2>7. Cookies</h2>
+
+    <p>
+      Le site peut utiliser des cookies afin :<br>
+      - D’améliorer l’expérience utilisateur<br>
+      - De réaliser des statistiques de visite<br><br>
+
+      Vous pouvez accepter ou refuser les cookies via le bandeau prévu à cet effet.
+    </p>
+
+    <h2>8. Responsabilité</h2>
+
+    <p>
+      L’éditeur du site s’efforce de fournir des informations aussi précises que possible. Toutefois, il ne saurait être tenu responsable des omissions, inexactitudes ou carences dans la mise à jour.<br><br>
+
+      Les liens externes présents sur le site ne sont pas sous la responsabilité de l’éditeur.
+    </p>
+
+    <h2>9. Droit applicable</h2>
+
+    <p>
+      Le présent site est soumis au droit français.<br><br>
+      Tout litige relatif à son utilisation sera soumis aux tribunaux compétents.
+    </p>
+
+    <h2>10. Contact</h2>
+
+    <p>
+      Virginie Senegas<br>
+      mondessubtils@yahoo.com
+    </p>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    Mondes Subtils — accompagnement bien-être
+  </footer>
+
+</body>
+</html>

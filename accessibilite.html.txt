@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Accessibilité — Mondes Subtils</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <a href="index.html" class="logo">
+      <img src="logo.png" alt="Mondes Subtils">
+    </a>
+  </header>
+
+  <!-- CONTENU -->
+  <section class="section">
+
+    <h1>Accessibilité</h1>
+
+    <p>
+      Ce site a été conçu dans le but d’être accessible au plus grand nombre.
+    </p>
+
+    <p>
+      Nous nous efforçons de respecter les bonnes pratiques d’accessibilité web, notamment les recommandations issues des WCAG (Web Content Accessibility Guidelines).
+    </p>
+
+    <h2>Améliorations mises en place</h2>
+
+    <p>
+      - Structure claire des pages (titres, sections)<br>
+      - Textes lisibles avec contraste suffisant<br>
+      - Navigation simple et intuitive<br>
+      - Compatibilité avec les supports mobiles<br>
+      - Ajout de descriptions alternatives sur les images lorsque possible
+    </p>
+
+    <h2>Limites éventuelles</h2>
+
+    <p>
+      Malgré notre vigilance, certaines parties du site peuvent présenter des défauts d’accessibilité.
+    </p>
+
+    <h2>Contact</h2>
+
+    <p>
+      Si vous rencontrez une difficulté d’accès à un contenu ou à un service, vous pouvez nous contacter afin que nous vous proposions une alternative :<br><br>
+
+      Email : mondessubtils@yahoo.com
+    </p>
+
+    <p>
+      Nous nous engageons à vous répondre dans les meilleurs délais.
+    </p>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    Mondes Subtils — accompagnement bien-être
+  </footer>
+
+</body>
+</html>

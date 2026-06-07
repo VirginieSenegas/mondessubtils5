@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CGV — Mondes Subtils</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <a href="index.html" class="logo">
+      <img src="logo.png" alt="Mondes Subtils">
+    </a>
+  </header>
+
+  <!-- CONTENU -->
+  <section class="section">
+
+    <h1>Conditions Générales de Vente</h1>
+
+    <h2>1. Objet</h2>
+    <p>
+      Les présentes Conditions Générales de Vente (CGV) régissent les prestations de services proposées par Virginie Senegas, praticienne en magnétisme, auprès de toute personne physique souhaitant bénéficier de pratiques énergétiques (ci-après “le client”).<br><br>
+
+      Toute réservation de séance implique l’acceptation sans réserve des présentes CGV.
+    </p>
+
+    <h2>2. Nature des prestations</h2>
+    <p>
+      Les prestations proposées sont des séances de magnétisme et de mieux-être, elles ne peuvent concerner que la personne qui fait la réservation. La praticienne n'agit pas pour un tier.<br><br>
+
+      Elles visent exclusivement à favoriser le mieux être et l’harmonisation énergétique de la personne ou du lieu.<br><br>
+
+      <strong>Important :</strong><br>
+      Ces pratiques ne relèvent pas de la médecine conventionnelle et ne se substituent en aucun cas à un acte médical, un diagnostic ou un traitement prescrit par un professionnel de santé.<br><br>
+
+      La praticienne ne pose aucun diagnostic médical et ne demande jamais l’arrêt d’un traitement médical en cours.
+    </p>
+
+    <h2>3. Réservation</h2>
+    <p>
+      Les séances peuvent être réservées via :<br>
+      - Le site internet<br>
+      - Par téléphone<br>
+      - Par email<br><br>
+
+      La réservation est considérée comme ferme après confirmation par la praticienne.
+    </p>
+
+    <h2>4. Tarifs</h2>
+    <p>
+      Les prix des prestations sont indiqués en euros (€).<br><br>
+
+      [TVA non applicable, art. 293B du CGI auto-entrepreneur]<br><br>
+
+      La praticienne se réserve le droit de modifier ses tarifs à tout moment. Toutefois, le prix appliqué est celui en vigueur au moment de la réservation.
+    </p>
+
+    <h2>5. Paiement</h2>
+    <p>
+      Le paiement peut s’effectuer :<br>
+      - En espèces<br>
+      - Par virement<br>
+      - Paiement en ligne si disponible lors de la réservation<br><br>
+
+      Toute séance doit être réglée le jour de la prestation, sauf conditions particulières.
+    </p>
+
+    <h2>6. Droit de rétractation</h2>
+    <p>
+      Conformément à la législation en vigueur, le client dispose d’un délai de 14 jours pour exercer son droit de rétractation en cas de réservation à distance.<br><br>
+
+      Toutefois, ce droit ne peut être exercé si la prestation a été réalisée avant la fin de ce délai avec l’accord du client.
+    </p>
+
+    <h2>7. Annulation et report</h2>
+    <p>
+      Toute annulation ou demande de report doit être effectuée au moins 48 heures à l’avance.<br><br>
+
+      En cas d’annulation tardive ou d’absence, la séance pourra être facturée.<br>
+      La praticienne se réserve le droit de refuser un nouveau rendez-vous en cas d’abus.<br>
+      La praticienne se réserve le droit de refuser tout rendez-vous ou demandes de pratiques qui ne correspondrait pas à ses valeurs.
+    </p>
+
+    <h2>8. Responsabilité</h2>
+    <p>
+      La praticienne s’engage à mettre en œuvre tous les moyens nécessaires pour assurer une prestation de qualité.<br><br>
+
+      Toutefois, elle ne peut être tenue à une obligation de résultat.<br><br>
+
+      Les pratiques proposées étant des pratiques de bien-être ou de mieux-être, aucun résultat ne peut être garanti.
+    </p>
+
+    <h2>9. Données personnelles</h2>
+    <p>
+      Les informations personnelles collectées sont utilisées uniquement dans le cadre de la relation client.<br><br>
+
+      Elles ne sont ni vendues ni transmises à des tiers.<br><br>
+
+      Conformément à la réglementation en vigueur, le client dispose d’un droit d’accès, de modification et de suppression de ses données.
+    </p>
+
+    <h2>10. Propriété intellectuelle</h2>
+    <p>
+      Tous les contenus du site (textes, images, etc.) restent la propriété exclusive de Virginie Sénégas, Mondes Subtils.<br><br>
+
+      Toute reproduction est interdite sans autorisation préalable.
+    </p>
+
+    <h2>11. Litiges</h2>
+    <p>
+      Les présentes CGV sont soumises au droit français.<br><br>
+
+      En cas de litige, une solution amiable sera recherchée en priorité.<br><br>
+
+      À défaut, les tribunaux compétents seront saisis.
+    </p>
+
+    <h2>12. Médiation de la consommation</h2>
+    <p>
+      Conformément aux articles L.616-1 et R.616-1 du Code de la consommation, le client a la possibilité de recourir gratuitement à un médiateur de la consommation.
+    </p>
+
+    <h2>13. Contact</h2>
+    <p>
+      Pour toute question ou réclamation :<br><br>
+      mondessubtils@yahoo.com
+    </p>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    Mondes Subtils — accompagnement bien-être
+  </footer>
+
+</body>
+</html>
