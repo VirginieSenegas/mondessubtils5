@@ -39,17 +39,12 @@
   </nav>
 
   <!-- HERO -->
-<section class="page-hero faq-hero">
-
-  <div class="hero-content">
-
-    <p class="mini-title">Mondes Subtils</p>
-
-    <h1>A propos</h1>
-
-  </div>
-
-</section>
+  <section class="page-hero faq-hero">
+    <div class="hero-content">
+      <p class="mini-title">Mondes Subtils</p>
+      <h1>A propos</h1>
+    </div>
+  </section>
 
   <!-- CONTENU -->
   <section class="about-wrapper">
@@ -73,7 +68,7 @@
       </p>
     </div>
 
-        <div class="about-card">
+    <div class="about-card">
       <p>
         Mon accompagnement ne se substitue pas à un suivi médical. Il s’inscrit dans une démarche complémentaire de mieux-être.
       </p>
@@ -99,7 +94,6 @@
       </p>
     </div>
 
-    
     <div class="about-card">
       <p>
         Je suis disponible pour tout échange télephonique,
@@ -129,7 +123,23 @@
     Mondes Subtils — Accompagnement mieux-être
   </footer>
 
-  <!-- SCRIPT -->
+  <!-- CONTACT FLOATING -->
+  <div class="contact-floating">
+
+    <button class="contact-trigger" id="contactTrigger">
+      <img src="phonepluslight.svg" alt="Contact">
+    </button>
+
+    <div class="contact-panel" id="contactPanel">
+      <a href="tel:+33607149158">Téléphone</a>
+      <a href="sms:+33607149158">SMS</a>
+      <a href="mailto:mondessubtils@yahoo.com">E-mail</a>
+      <a href="reservation.html">Réserver une séance</a>
+    </div>
+
+  </div>
+
+  <!-- SCRIPTS (PROPRE + SANS DOUBLONS) -->
   <script>
     const burger = document.getElementById("burger");
     const menu = document.getElementById("menu");
@@ -138,6 +148,15 @@
       burger.classList.toggle("active");
       menu.classList.toggle("open");
     });
+
+    const trigger = document.getElementById("contactTrigger");
+    const panel = document.getElementById("contactPanel");
+
+    if (trigger && panel) {
+      trigger.addEventListener("click", () => {
+        panel.classList.toggle("open");
+      });
+    }
   </script>
 
 </body>
