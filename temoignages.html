@@ -11,7 +11,6 @@
   <link rel="stylesheet" href="style.css" />
 
   <style>
-
     /* =========================
        TESTIMONIALS PREMIUM
     ========================= */
@@ -21,34 +20,25 @@
       overflow:hidden;
     }
 
-.testimonials-hero{
-  position:relative;
+    .testimonials-hero{
+      position:relative;
+      min-height:58vh;
+      height:58vh;
+      margin:110px 24px 20px;
+      background:url("temoignageimage.png");
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      color:white;
+      border-radius:28px;
+      overflow:hidden;
+      box-shadow:0 25px 70px rgba(0,0,0,0.12);
+      z-index:1;
+    }
 
-  min-height:58vh;
-  height:58vh;
-
-  margin:110px 24px 20px;
-
-  background:url("temoignageimage.png");
-
-  background-size:cover;
-  background-position:center;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  text-align:center;
-
-  color:white;
-
-  border-radius:28px;
-  overflow:hidden;
-
-  box-shadow:0 25px 70px rgba(0,0,0,0.12);
-
-  z-index:1;
-}
     .testimonials-hero-content{
       max-width:760px;
       padding:20px;
@@ -90,19 +80,15 @@
       color:#222;
     }
 
-    /* GRID */
     .testimonials-grid{
       max-width:1200px;
       margin:auto;
-
       padding:20px 20px 120px;
-
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
       gap:28px;
     }
 
-    /* CARD */
     .testimonial-card{
       background:rgba(255,255,255,0.82);
       backdrop-filter:blur(14px);
@@ -156,7 +142,6 @@
       margin-top:4px;
     }
 
-    /* CTA */
     .testimonials-cta{
       padding:100px 20px 120px;
       text-align:center;
@@ -177,14 +162,12 @@
       margin-bottom:34px;
     }
 
-    /* MOBILE */
     @media(max-width:768px){
       .testimonials-hero h1{font-size:38px;}
       .testimonials-grid{grid-template-columns:1fr;}
       .testimonial-card{padding:30px;border-radius:28px;}
       .testimonial-text{font-size:17px;}
     }
-
   </style>
 </head>
 
@@ -213,21 +196,15 @@
     <a href="reservation.html">Réserver</a>
   </nav>
 
-  <!-- PAGE WRAPPER AVEC FOND -->
   <main class="testimonials-page-bg">
 
-<!-- HERO -->
-<section class="page-hero testimonials-hero">
-
-  <div class="hero-content">
-
-    <p class="mini-title">Mondes Subtils</p>
-
-    <h1>En quelques mots ...</h1>
-
-  </div>
-
-</section>
+    <!-- HERO -->
+    <section class="page-hero testimonials-hero">
+      <div class="hero-content">
+        <p class="mini-title">Mondes Subtils</p>
+        <h1>En quelques mots ...</h1>
+      </div>
+    </section>
 
     <!-- INTRO -->
     <section class="testimonials-intro">
@@ -237,18 +214,11 @@
       </p>
     </section>
 
-    <!-- TESTIMONIALS -->
+    <!-- GRID -->
     <section class="testimonials-grid">
 
       <article class="testimonial-card">
-        <p class="testimonial-text">
-          “J’ai beaucoup apprécié l’accompagnement de Virginie. 
-          J’ai trouvé une personne attentive, bienveillante et investie dans ce qu’elle fait. 
-          Au fil des séances, j’ai ressenti des effets positifs et une sensation d'apaisement qui m’ont fait du bien. 
-          Une belle expérience que je suis heureuse de partager." 
- 
-        </p>
-
+        <p class="testimonial-text">“J’ai beaucoup apprécié l’accompagnement…”</p>
         <div class="testimonial-author">
           <div class="author-circle">M</div>
           <div>
@@ -259,10 +229,7 @@
       </article>
 
       <article class="testimonial-card">
-        <p class="testimonial-text">
-          “Merci à Virginie pour ces deux séances d’accompagnement pour l’arrêt du tabac. J’ai beaucoup apprécié sa bienveillance, son écoute et la douceur avec laquelle elle met à l’aise. Je me suis sentie en confiance dès le début, et le suivi par message est un vrai plus qui montre son implication et son attention.”
-        </p>
-
+        <p class="testimonial-text">“Merci à Virginie…”</p>
         <div class="testimonial-author">
           <div class="author-circle">E</div>
           <div>
@@ -273,10 +240,7 @@
       </article>
 
       <article class="testimonial-card">
-        <p class="testimonial-text">
-          “Une magnifique découverte avec Virginie Senegas. J'ai été impressionnée par sa capacité à percevoir les éléments de mon corps sans que j'aie besoin de parler. Ses soins sont d'une grande justesse, menés avec beaucoup de discernement et une efficacité remarquable. On se sent en totale confiance. Merci encore!”
-        </p>
-
+        <p class="testimonial-text">“Une magnifique découverte…”</p>
         <div class="testimonial-author">
           <div class="author-circle">S</div>
           <div>
@@ -287,15 +251,12 @@
       </article>
 
       <article class="testimonial-card">
-        <p class="testimonial-text">
-          “Je me suis sentie en confiance immédiatement.”
-        </p>
-
+        <p class="testimonial-text">“Virginie m'a sauvé…”</p>
         <div class="testimonial-author">
-          <div class="author-circle">L</div>
+          <div class="author-circle">M</div>
           <div>
-            <span class="author-name">Séance</span>
-            <span class="author-city">Tarn</span>
+            <span class="author-name">Marina</span>
+            <span class="author-city">Castres</span>
           </div>
         </div>
       </article>
@@ -305,7 +266,7 @@
     <!-- CTA -->
     <section class="testimonials-cta">
       <h2>Prendre contact</h2>
-      <p>Chaque demande est accueillie avec attention, dans un cadre calme et personnalisé.</p>
+      <p>Chaque demande est accueillie avec attention.</p>
       <a href="reservation.html" class="btn">Réserver une séance</a>
     </section>
 
@@ -316,6 +277,21 @@
     Mondes Subtils — accompagnement bien-être
   </footer>
 
+  <!-- CONTACT FLOATING BUTTON -->
+  <div class="contact-floating">
+    <button class="contact-trigger" id="contactTrigger">
+      <img src="phonepluslight.svg" alt="Contact">
+    </button>
+
+    <div class="contact-panel" id="contactPanel">
+      <a href="tel:+33607149158">Téléphone</a>
+      <a href="sms:+33607149158">SMS</a>
+      <a href="mailto:mondessubtils@yahoo.com">E-mail</a>
+      <a href="reservation.html">Réserver une séance</a>
+    </div>
+  </div>
+
+  <!-- SCRIPTS CLEAN -->
   <script>
     const burger = document.getElementById("burger");
     const menu = document.getElementById("menu");
@@ -324,6 +300,15 @@
       burger.classList.toggle("active");
       menu.classList.toggle("open");
     });
+
+    const trigger = document.getElementById("contactTrigger");
+    const panel = document.getElementById("contactPanel");
+
+    if (trigger && panel) {
+      trigger.addEventListener("click", () => {
+        panel.classList.toggle("open");
+      });
+    }
   </script>
 
 </body>
