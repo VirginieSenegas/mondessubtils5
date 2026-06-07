@@ -1299,3 +1299,23 @@ h1,h2,h3{
     bottom:16px;
   }
 }
+
+.footer-links{
+  margin-top:12px;
+  display:flex;
+  gap:18px;
+  justify-content:center;
+  flex-wrap:wrap;
+  font-size:14px;
+}
+
+.footer-links a{
+  color:#666;
+  text-decoration:none;
+  transition:0.2s ease;
+}
+
+.footer-links a:hover{
+  color:#00205b;
+  text-decoration:underline;
+}
