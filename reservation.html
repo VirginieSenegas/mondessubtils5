@@ -6,15 +6,22 @@
 
   <title>Réserver — Mondes Subtils</title>
 
-  <meta name="description" content="Prendre contact avec Mondes Subtils pour une séance de magnétisme à distance ou en présentiel dans le Tarn, Toulouse et Occitanie.">
+  <meta name="description" content="Prendre contact avec Mondes Subtils pour une séance de magnétisme à distance ou en présentiel.">
 
   <link rel="stylesheet" href="style.css" />
 
   <style>
+
+    body{
+      margin:0;
+      font-family:Arial, sans-serif;
+      background:#fff;
+    }
+
+    /* HERO */
     .reservation-hero{
       height:85vh;
-      background:
-      linear-gradient(rgba(0,32,91,0.32), rgba(0,32,91,0.38)),
+      background:linear-gradient(rgba(0,32,91,0.35), rgba(0,32,91,0.35)),
       url("photoreservervotreseance.webp");
       background-size:cover;
       background-position:center;
@@ -26,189 +33,200 @@
       padding:20px;
     }
 
-    .reservation-hero h1{font-size:58px;font-weight:300;line-height:1.1;margin-bottom:22px;}
-    .reservation-hero p{font-size:20px;line-height:1.8;opacity:0.95;}
+    .reservation-hero h1{
+      font-size:54px;
+      font-weight:300;
+      margin-bottom:15px;
+    }
 
+    .reservation-hero p{
+      font-size:20px;
+      opacity:0.9;
+    }
+
+    /* INTRO */
     .reservation-intro{
       max-width:850px;
-      margin:auto;
-      padding:90px 20px 50px;
+      margin:80px auto 40px;
       text-align:center;
+      font-size:20px;
+      color:#222;
+      padding:0 20px;
     }
 
-    .reservation-intro p{
-      font-size:22px;
-      line-height:1.9;
-      color:#1c1c1c;
+    /* CARDS */
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
+      gap:20px;
+      max-width:1000px;
+      margin:40px auto;
+      padding:0 20px;
     }
 
-    .reservation-transition{
-      max-width:820px;
-      margin:auto;
-      padding:0 20px 80px;
-      text-align:center;
+    .card{
+      height:180px;
+      border-radius:18px;
+      color:white;
+      display:flex;
+      flex-direction:column;
+      justify-content:flex-end;
+      padding:15px;
+      cursor:pointer;
+      background-size:cover;
+      background-position:center;
+      box-shadow:0 8px 25px rgba(0,0,0,0.15);
+      transition:0.3s;
     }
 
-    .reservation-transition h2{
-      font-size:40px;
-      font-weight:300;
-      color:#00205b;
+    .card:hover{
+      transform:scale(1.03);
     }
 
+    /* FORM */
     .contact-wrapper{
       max-width:850px;
-      margin:auto;
-      padding:0 20px 120px;
+      margin:80px auto;
+      padding:0 20px;
     }
 
     .contact-card{
-      background:white;
-      border-radius:38px;
+      background:#fff;
       padding:50px;
-      box-shadow:0 12px 40px rgba(0,0,0,0.05);
+      border-radius:30px;
+      box-shadow:0 10px 40px rgba(0,0,0,0.08);
     }
 
     .contact-card h2{
-      font-size:42px;
-      font-weight:300;
+      text-align:center;
+      font-size:40px;
       color:#00205b;
-      text-align:center;
-    }
-
-    .contact-card .intro{
-      text-align:center;
-      font-size:18px;
-      color:#444;
-      margin-bottom:40px;
+      font-weight:300;
     }
 
     .contact-form{
       display:grid;
-      gap:22px;
+      gap:18px;
+      margin-top:30px;
     }
 
     .contact-form input,
     .contact-form textarea{
-      width:100%;
+      padding:16px;
+      border-radius:14px;
       border:none;
       background:#f5f6f8;
-      border-radius:18px;
-      padding:18px 20px;
       font-size:16px;
-      outline:none;
     }
 
     .contact-form textarea{
       min-height:160px;
     }
 
-    .reservation-final{
-      background:#f1f3f6;
-      padding:90px 20px;
-      text-align:center;
+    /* BUTTON PREMIUM */
+    .btn{
+      background:#00205b;
+      color:white;
+      border:none;
+      padding:16px;
+      border-radius:14px;
+      font-size:16px;
+      cursor:pointer;
+      transition:0.3s;
     }
+
+    .btn:hover{
+      background:#003a9b;
+    }
+
+    /* FINAL */
+    .reservation-final{
+      text-align:center;
+      padding:80px 20px;
+      background:#f1f3f6;
+      margin-top:60px;
+    }
+
   </style>
 </head>
 
 <body>
 
-<header class="navbar">
-  <a href="index.html" class="logo">
-    <img src="logo.png" alt="Mondes Subtils">
-  </a>
-
-  <div class="burger" id="burger">
-    <span></span><span></span><span></span>
-  </div>
-</header>
-
-<nav class="menu" id="menu">
-  <a href="index.html">Accueil</a>
-  <a href="a-propos.html">À propos</a>
-  <a href="pratiques.html">Les pratiques</a>
-  <a href="temoignages.html">Témoignages</a>
-  <a href="faq.html">FAQ</a>
-  <a href="reservation.html">Réserver</a>
-</nav>
-
+<!-- HERO -->
 <section class="reservation-hero">
   <div>
     <h1>Réserver une séance</h1>
-    <p>Un espace de calme, d’écoute et d’accompagnement personnalisé.</p>
+    <p>Un espace d’écoute et d’accompagnement personnalisé</p>
   </div>
 </section>
 
+<!-- INTRO -->
 <section class="reservation-intro">
-  <p>
-    Chaque séance commence par un échange attentif afin de comprendre votre besoin.
-  </p>
+  Chaque séance commence par un échange afin de comprendre votre besoin.
 </section>
 
-<section class="cards reservation-cards">
+<!-- CARDS -->
+<section class="cards">
 
   <div class="card pratique-card" data-pratique="Arrêt du tabac" style="background-image:url('photoarrettabac.avif');">
-    <h3>Arrêt du tabac</h3>
+    Arrêt du tabac
   </div>
 
   <div class="card pratique-card" data-pratique="Nettoyage énergétique" style="background-image:url('photonettoyagepersonne.png');">
-    <h3>Nettoyage énergétique</h3>
+    Nettoyage énergétique
   </div>
 
   <div class="card pratique-card" data-pratique="Nettoyage de lieux" style="background-image:url('photonettoyagelieu.avif');">
-    <h3>Nettoyage de lieux</h3>
+    Nettoyage de lieux
+  </div>
+
+  <div class="card pratique-card" data-pratique="Libération émotionnelle" style="background-image:url('photoliberationemotionnelle.avif');">
+    Libération émotionnelle
+  </div>
+
+  <div class="card pratique-card" data-pratique="Douleurs et inconforts" style="background-image:url('douleursinconforts.png');">
+    Douleurs & inconforts
+  </div>
+
+  <div class="card pratique-card" data-pratique="Se libérer des emprises" style="background-image:url('liberationrelationsousemprise.png');">
+    Libération des emprises
   </div>
 
 </section>
 
-<section class="reservation-transition">
-  <h2>Prendre contact</h2>
-</section>
-
+<!-- FORM -->
 <section class="contact-wrapper">
+
   <div class="contact-card">
 
     <h2>Votre message</h2>
 
-    <p class="intro">Prenons rendez-vous en toute simplicité :</p>
-
+    <!-- ⚠️ FORMSECURE (à remplacer si tu veux) -->
     <form class="contact-form"
-      action="mailto:mondessubtils@yahoo.com"
-      method="POST"
-      enctype="text/plain">
+          action="https://formspree.io/f/xqazxxxx"
+          method="POST">
 
-  <input type="text" name="Nom" placeholder="Nom" required>
-  <input type="text" name="Prénom" placeholder="Prénom" required>
-  <input type="tel" name="Téléphone" placeholder="Téléphone" required>
+      <input type="text" name="nom" placeholder="Nom" required>
+      <input type="text" name="prenom" placeholder="Prénom" required>
+      <input type="tel" name="telephone" placeholder="Téléphone" required>
 
-  <textarea id="message"
-            name="Message"
-            placeholder="Ici, vous pouvez compléter votre besoin et indiquer vos disponibilités."
-            required></textarea>
+      <textarea id="message" name="message" placeholder="Votre message" required></textarea>
 
-  <button type="submit" class="btn">Envoyer ma demande</button>
+      <button type="submit" class="btn">Envoyer ma demande</button>
 
-</form>
+    </form>
 
   </div>
+
 </section>
 
+<!-- FINAL -->
 <section class="reservation-final">
-  <p>Chaque séance se déroule dans un cadre respectueux.</p>
+  Chaque séance se déroule dans un cadre respectueux.
 </section>
 
-<footer>
-  <div class="footer-content">
-    Mondes Subtils — Accompagnement mieux-être
-  </div>
-</footer>
-
+<!-- SCRIPT CARDS -->
 <script>
-document.getElementById("burger").addEventListener("click", () => {
-  document.getElementById("menu").classList.toggle("open");
-});
-</script>
-
-  <script>
 document.querySelectorAll(".pratique-card").forEach(card => {
 
   card.addEventListener("click", () => {
@@ -234,19 +252,14 @@ Mon mode de contact préféré :
 Un complément d'information :`;
 
     } else if (!message.value.includes(pratique)) {
-
       message.value += `\n• ${pratique}`;
     }
 
-    document.querySelector(".contact-wrapper").scrollIntoView({
-      behavior: "smooth"
-    });
-
-    message.focus();
+    document.querySelector("#message").focus();
   });
 
 });
 </script>
-  
+
 </body>
 </html>
