@@ -532,20 +532,24 @@
         Prenons rendez-vous en toute simplicité :
       </p>
 
-      <form class="contact-form" action="contact.php" method="POST">
-        <input type="text" name="nom" placeholder="Nom" required>
+<form class="contact-form"
+      action="mailto:mondessubtils@yahoo.com"
+      method="POST"
+      enctype="text/plain">
 
-        <input type="text" name="prenom" placeholder="Prénom" required>
+  <input type="text" name="Nom" placeholder="Nom" required>
 
-        <input type="tel" name="telephone" placeholder="Téléphone" required>
+  <input type="text" name="Prénom" placeholder="Prénom" required>
 
-<textarea
-    id="message"
-    name="message"
-    placeholder="Ici, vous pouvez compléter votre besoin et indiquer vos disponibilités."
-></textarea>
+  <input type="tel" name="Téléphone" placeholder="Téléphone" required>
 
-<button type="submit" class="btn">Envoyer ma demande</button>
+  <textarea name="Message"
+    placeholder="Votre message"
+    required></textarea>
+
+  <button type="submit" class="btn">Envoyer ma demande</button>
+
+</form>
 
       <p class="confirmation-text">
         Votre demande a bien été prise en compte, je vous contacte dans les meilleurs délais.
