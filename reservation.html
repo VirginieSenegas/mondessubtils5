@@ -172,18 +172,22 @@
     <p class="intro">Prenons rendez-vous en toute simplicité :</p>
 
     <form class="contact-form"
-          action="mailto:mondessubtils@yahoo.com"
-          method="POST"
-          enctype="text/plain">
+      action="mailto:mondessubtils@yahoo.com"
+      method="POST"
+      enctype="text/plain">
 
-      <input type="text" name="Nom" placeholder="Nom" required>
-      <input type="text" name="Prénom" placeholder="Prénom" required>
-      <input type="tel" name="Téléphone" placeholder="Téléphone" required>
+  <input type="text" name="Nom" placeholder="Nom" required>
+  <input type="text" name="Prénom" placeholder="Prénom" required>
+  <input type="tel" name="Téléphone" placeholder="Téléphone" required>
 
-      <textarea name="Message" placeholder="Votre message" required></textarea>
+  <textarea id="message"
+            name="Message"
+            placeholder="Ici, vous pouvez compléter votre besoin et indiquer vos disponibilités."
+            required></textarea>
 
-      <button type="submit">Envoyer ma demande</button>
-    </form>
+  <button type="submit" class="btn">Envoyer ma demande</button>
+
+</form>
 
   </div>
 </section>
@@ -204,5 +208,45 @@ document.getElementById("burger").addEventListener("click", () => {
 });
 </script>
 
+  <script>
+document.querySelectorAll(".pratique-card").forEach(card => {
+
+  card.addEventListener("click", () => {
+
+    const pratique = card.dataset.pratique;
+    const message = document.getElementById("message");
+
+    if (!message) return;
+
+    if (message.value.trim() === "") {
+
+      message.value =
+`Bonjour,
+
+Je souhaite des informations concernant :
+
+• ${pratique}
+
+Mes disponibilités :
+
+Mon mode de contact préféré :
+
+Un complément d'information :`;
+
+    } else if (!message.value.includes(pratique)) {
+
+      message.value += `\n• ${pratique}`;
+    }
+
+    document.querySelector(".contact-wrapper").scrollIntoView({
+      behavior: "smooth"
+    });
+
+    message.focus();
+  });
+
+});
+</script>
+  
 </body>
 </html>
