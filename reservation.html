@@ -1,130 +1,142 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Réserver — Mondes Subtils</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Réserver — Mondes Subtils</title>
 
-  <link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="style.css" />
 
-  <style>
-    body{
-      margin:0;
-      font-family:Arial;
-      background:#fff;
-    }
+<style>
+body{
+  margin:0;
+  font-family:Arial;
+  background:#fff;
+}
 
-    /* HERO */
-    .reservation-hero{
-      height:85vh;
-      background:
-      linear-gradient(rgba(0,32,91,0.35), rgba(0,32,91,0.35)),
-      url("photoreservervotreseance.webp");
-      background-size:cover;
-      background-position:center;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      color:white;
-      padding:20px;
-    }
+/* HERO */
+.reservation-hero{
+  height:85vh;
+  background:
+  linear-gradient(rgba(0,32,91,0.35), rgba(0,32,91,0.35)),
+  url("photoreservervotreseance.webp");
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:white;
+  padding:20px;
+}
 
-    .reservation-hero h1{
-      font-size:54px;
-      font-weight:300;
-    }
+.reservation-hero h1{
+  font-size:54px;
+  font-weight:300;
+}
 
-    .reservation-intro{
-      max-width:850px;
-      margin:70px auto;
-      text-align:center;
-      font-size:20px;
-      padding:0 20px;
-    }
+/* INTRO */
+.reservation-intro{
+  max-width:850px;
+  margin:70px auto;
+  text-align:center;
+  font-size:20px;
+  padding:0 20px;
+}
 
-    /* CARDS */
-    .cards{
-      display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
-      gap:20px;
-      max-width:1000px;
-      margin:auto;
-      padding:0 20px;
-    }
+/* CARDS */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
+  gap:20px;
+  max-width:1000px;
+  margin:auto;
+  padding:0 20px;
+}
 
-    .card{
-      height:180px;
-      border-radius:18px;
-      color:white;
-      display:flex;
-      align-items:flex-end;
-      padding:15px;
-      cursor:pointer;
-      background-size:cover;
-      background-position:center;
-      box-shadow:0 8px 25px rgba(0,0,0,0.15);
-      transition:0.3s;
-    }
+.card{
+  height:180px;
+  border-radius:18px;
+  color:white;
+  display:flex;
+  align-items:flex-end;
+  padding:15px;
+  cursor:pointer;
+  background-size:cover;
+  background-position:center;
+  box-shadow:0 8px 25px rgba(0,0,0,0.15);
+  transition:0.3s;
+}
 
-    .card:hover{
-      transform:scale(1.03);
-    }
+.card:hover{
+  transform:scale(1.03);
+}
 
-    /* FORM */
-    .contact-wrapper{
-      max-width:850px;
-      margin:80px auto;
-      padding:0 20px;
-    }
+/* FORM WRAPPER FIX (IMPORTANT) */
+.contact-wrapper{
+  max-width:900px;
+  margin:90px auto;
+  padding:0 20px;
+  display:flex;
+  justify-content:center;
+}
 
-    .contact-card{
-      background:white;
-      padding:50px;
-      border-radius:30px;
-      box-shadow:0 10px 40px rgba(0,0,0,0.08);
-    }
+.contact-card{
+  width:100%;
+  max-width:650px; /* 👉 empêche le formulaire de prendre toute la page */
+  background:white;
+  padding:50px;
+  border-radius:30px;
+  box-shadow:0 10px 40px rgba(0,0,0,0.08);
+}
 
-    .contact-card h2{
-      text-align:center;
-      font-size:40px;
-      color:#00205b;
-      font-weight:300;
-    }
+.contact-card h2{
+  text-align:center;
+  font-size:40px;
+  color:#00205b;
+  font-weight:300;
+}
 
-    .contact-form{
-      display:grid;
-      gap:18px;
-      margin-top:30px;
-    }
+.contact-form{
+  display:grid;
+  gap:18px;
+  margin-top:30px;
+}
 
-    .contact-form input,
-    .contact-form textarea{
-      padding:16px;
-      border-radius:14px;
-      border:none;
-      background:#f5f6f8;
-      font-size:16px;
-    }
+.contact-form input,
+.contact-form textarea{
+  padding:16px;
+  border-radius:14px;
+  border:none;
+  background:#f5f6f8;
+  font-size:16px;
+}
 
-    .contact-form textarea{
-      min-height:160px;
-    }
+.contact-form textarea{
+  min-height:160px;
+}
 
-    .btn{
-      background:#00205b;
-      color:white;
-      border:none;
-      padding:16px;
-      border-radius:14px;
-      font-size:16px;
-      cursor:pointer;
-    }
+.btn{
+  background:#00205b;
+  color:white;
+  border:none;
+  padding:16px;
+  border-radius:14px;
+  font-size:16px;
+  cursor:pointer;
+}
 
-    .btn:hover{
-      background:#003a9b;
-    }
-  </style>
+.btn:hover{
+  background:#003a9b;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .contact-card{
+    padding:30px;
+  }
+}
+</style>
 </head>
 
 <body>
@@ -142,44 +154,32 @@
   Choisissez une pratique puis envoyez votre demande.
 </section>
 
-<!-- CARDS -->
+<!-- CARDS (6 EXACTEMENT) -->
 <section class="cards">
 
-  <div class="card pratique-card" data-pratique="Arrêt du tabac" style="background-image:url('photoarrettabac.avif');">
-    Arrêt du tabac
-  </div>
+  <div class="card pratique-card" data-pratique="Arrêt du tabac" style="background-image:url('photoarrettabac.avif');">Arrêt du tabac</div>
 
-  <div class="card pratique-card" data-pratique="Nettoyage énergétique" style="background-image:url('photonettoyagepersonne.png');">
-    Nettoyage énergétique
-  </div>
+  <div class="card pratique-card" data-pratique="Nettoyage énergétique" style="background-image:url('photonettoyagepersonne.png');">Nettoyage énergétique</div>
 
-  <div class="card pratique-card" data-pratique="Nettoyage de lieux" style="background-image:url('photonettoyagelieu.avif');">
-    Nettoyage de lieux
-  </div>
+  <div class="card pratique-card" data-pratique="Nettoyage de lieux" style="background-image:url('photonettoyagelieu.avif');">Nettoyage de lieux</div>
 
-  <div class="card pratique-card" data-pratique="Libération émotionnelle" style="background-image:url('photoliberationemotionnelle.avif');">
-    Libération émotionnelle
-  </div>
+  <div class="card pratique-card" data-pratique="Libération émotionnelle" style="background-image:url('photoliberationemotionnelle.avif');">Libération émotionnelle</div>
 
-  <div class="card pratique-card" data-pratique="Douleurs et inconforts" style="background-image:url('douleursinconforts.png');">
-    Douleurs & inconforts
-  </div>
+  <div class="card pratique-card" data-pratique="Douleurs et inconforts" style="background-image:url('douleursinconforts.png');">Douleurs & inconforts</div>
 
-  <div class="card pratique-card" data-pratique="Se libérer des emprises" style="background-image:url('liberationrelationsousemprise.png');">
-    Se libérer des emprises
-  </div>
+  <div class="card pratique-card" data-pratique="Se libérer des emprises" style="background-image:url('liberationrelationsousemprise.png');">Se libérer des emprises</div>
 
 </section>
 
-<!-- FORM -->
+<!-- FORM CENTRÉ PROPRE -->
 <div class="contact-wrapper">
   <div class="contact-card">
 
     <h2>Votre message</h2>
 
     <form class="contact-form"
-          action="https://formspree.io/f/mlgkzaep"
-          method="POST">
+      action="https://formspree.io/f/mlgkzaep"
+      method="POST">
 
       <input type="text" name="nom" placeholder="Nom" required>
       <input type="text" name="prenom" placeholder="Prénom" required>
@@ -223,7 +223,10 @@ Un complément d'information :`;
       message.value += `\n• ${pratique}`;
     }
 
-    message.scrollIntoView({ behavior: "smooth" });
+    document.querySelector(".contact-wrapper").scrollIntoView({
+      behavior: "smooth"
+    });
+
     message.focus();
   });
 });
