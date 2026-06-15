@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="style.css" />
 
   <style>
-
     body{
       margin:0;
       font-family:Arial;
@@ -125,7 +124,6 @@
     .btn:hover{
       background:#003a9b;
     }
-
   </style>
 </head>
 
@@ -168,56 +166,39 @@
   </div>
 
   <div class="card pratique-card" data-pratique="Se libérer des emprises" style="background-image:url('liberationrelationsousemprise.png');">
-    Libération des emprises
+    Se libérer des emprises
   </div>
 
 </section>
 
 <!-- FORM -->
-<form class="contact-form"
-      action="https://formspree.io/f/mlgkzaep"
-      method="POST">
+<div class="contact-wrapper">
+  <div class="contact-card">
 
-  <input type="text" name="nom" placeholder="Nom" required>
-  <input type="text" name="prenom" placeholder="Prénom" required>
-  <input type="tel" name="telephone" placeholder="Téléphone" required>
+    <h2>Votre message</h2>
 
-  <textarea id="message" name="message"
-    placeholder="Ici, vous pouvez compléter votre besoin et indiquer vos disponibilités."
-    required></textarea>
+    <form class="contact-form"
+          action="https://formspree.io/f/mlgkzaep"
+          method="POST">
 
-  <button type="submit" class="btn">Envoyer ma demande</button>
+      <input type="text" name="nom" placeholder="Nom" required>
+      <input type="text" name="prenom" placeholder="Prénom" required>
+      <input type="tel" name="telephone" placeholder="Téléphone" required>
 
-</form>
+      <textarea id="message" name="message"
+        placeholder="Décrivez votre besoin + disponibilités"
+        required></textarea>
+
+      <button type="submit" class="btn">Envoyer ma demande</button>
+
+    </form>
 
   </div>
+</div>
 
-</section>
-
-<!-- EMAILJS -->
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
-<script>
-emailjs.init("TON_PUBLIC_KEY");
-
-document.getElementById("contact-form").addEventListener("submit", function(e){
-  e.preventDefault();
-
-  emailjs.send("TON_SERVICE_ID", "TON_TEMPLATE_ID", {
-    nom: this.nom.value,
-    prenom: this.prenom.value,
-    telephone: this.telephone.value,
-    message: this.message.value
-  });
-
-  alert("Message envoyé !");
-});
-</script>
-
-<!-- CARDS SCRIPT -->
+<!-- SCRIPT CARDS -->
 <script>
 document.querySelectorAll(".pratique-card").forEach(card => {
-
   card.addEventListener("click", () => {
 
     const pratique = card.dataset.pratique;
@@ -226,7 +207,6 @@ document.querySelectorAll(".pratique-card").forEach(card => {
     if (!message) return;
 
     if (message.value.trim() === "") {
-
       message.value =
 `Bonjour,
 
@@ -239,21 +219,15 @@ Mes disponibilités :
 Mon mode de contact préféré :
 
 Un complément d'information :`;
-
     } else if (!message.value.includes(pratique)) {
       message.value += `\n• ${pratique}`;
     }
 
-    document.querySelector(".contact-wrapper").scrollIntoView({
-      behavior: "smooth"
-    });
-
+    message.scrollIntoView({ behavior: "smooth" });
     message.focus();
-
   });
-
 });
 </script>
-  
+
 </body>
 </html>
