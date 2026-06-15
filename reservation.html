@@ -3,10 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
   <title>Réserver — Mondes Subtils</title>
-
-  <meta name="description" content="Prendre contact avec Mondes Subtils pour une séance de magnétisme à distance ou en présentiel.">
 
   <link rel="stylesheet" href="style.css" />
 
@@ -14,14 +11,15 @@
 
     body{
       margin:0;
-      font-family:Arial, sans-serif;
+      font-family:Arial;
       background:#fff;
     }
 
     /* HERO */
     .reservation-hero{
       height:85vh;
-      background:linear-gradient(rgba(0,32,91,0.35), rgba(0,32,91,0.35)),
+      background:
+      linear-gradient(rgba(0,32,91,0.35), rgba(0,32,91,0.35)),
       url("photoreservervotreseance.webp");
       background-size:cover;
       background-position:center;
@@ -36,21 +34,13 @@
     .reservation-hero h1{
       font-size:54px;
       font-weight:300;
-      margin-bottom:15px;
     }
 
-    .reservation-hero p{
-      font-size:20px;
-      opacity:0.9;
-    }
-
-    /* INTRO */
     .reservation-intro{
       max-width:850px;
-      margin:80px auto 40px;
+      margin:70px auto;
       text-align:center;
       font-size:20px;
-      color:#222;
       padding:0 20px;
     }
 
@@ -60,7 +50,7 @@
       grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
       gap:20px;
       max-width:1000px;
-      margin:40px auto;
+      margin:auto;
       padding:0 20px;
     }
 
@@ -69,8 +59,7 @@
       border-radius:18px;
       color:white;
       display:flex;
-      flex-direction:column;
-      justify-content:flex-end;
+      align-items:flex-end;
       padding:15px;
       cursor:pointer;
       background-size:cover;
@@ -91,7 +80,7 @@
     }
 
     .contact-card{
-      background:#fff;
+      background:white;
       padding:50px;
       border-radius:30px;
       box-shadow:0 10px 40px rgba(0,0,0,0.08);
@@ -123,7 +112,6 @@
       min-height:160px;
     }
 
-    /* BUTTON PREMIUM */
     .btn{
       background:#00205b;
       color:white;
@@ -132,19 +120,10 @@
       border-radius:14px;
       font-size:16px;
       cursor:pointer;
-      transition:0.3s;
     }
 
     .btn:hover{
       background:#003a9b;
-    }
-
-    /* FINAL */
-    .reservation-final{
-      text-align:center;
-      padding:80px 20px;
-      background:#f1f3f6;
-      margin-top:60px;
     }
 
   </style>
@@ -156,13 +135,13 @@
 <section class="reservation-hero">
   <div>
     <h1>Réserver une séance</h1>
-    <p>Un espace d’écoute et d’accompagnement personnalisé</p>
+    <p>Accompagnement personnalisé</p>
   </div>
 </section>
 
 <!-- INTRO -->
 <section class="reservation-intro">
-  Chaque séance commence par un échange afin de comprendre votre besoin.
+  Choisissez une pratique puis envoyez votre demande.
 </section>
 
 <!-- CARDS -->
@@ -201,10 +180,7 @@
 
     <h2>Votre message</h2>
 
-    <!-- ⚠️ FORMSECURE (à remplacer si tu veux) -->
-    <form class="contact-form"
-          action="https://formspree.io/f/xqazxxxx"
-          method="POST">
+    <form id="contact-form" class="contact-form">
 
       <input type="text" name="nom" placeholder="Nom" required>
       <input type="text" name="prenom" placeholder="Prénom" required>
@@ -212,7 +188,7 @@
 
       <textarea id="message" name="message" placeholder="Votre message" required></textarea>
 
-      <button type="submit" class="btn">Envoyer ma demande</button>
+      <button class="btn" type="submit">Envoyer ma demande</button>
 
     </form>
 
@@ -220,12 +196,27 @@
 
 </section>
 
-<!-- FINAL -->
-<section class="reservation-final">
-  Chaque séance se déroule dans un cadre respectueux.
-</section>
+<!-- EMAILJS -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-<!-- SCRIPT CARDS -->
+<script>
+emailjs.init("TON_PUBLIC_KEY");
+
+document.getElementById("contact-form").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  emailjs.send("TON_SERVICE_ID", "TON_TEMPLATE_ID", {
+    nom: this.nom.value,
+    prenom: this.prenom.value,
+    telephone: this.telephone.value,
+    message: this.message.value
+  });
+
+  alert("Message envoyé !");
+});
+</script>
+
+<!-- CARDS SCRIPT -->
 <script>
 document.querySelectorAll(".pratique-card").forEach(card => {
 
@@ -255,7 +246,8 @@ Un complément d'information :`;
       message.value += `\n• ${pratique}`;
     }
 
-    document.querySelector("#message").focus();
+    message.focus();
+
   });
 
 });
