@@ -174,23 +174,21 @@
 </section>
 
 <!-- FORM -->
-<section class="contact-wrapper">
+<form class="contact-form"
+      action="https://formspree.io/f/mlgkzaep"
+      method="POST">
 
-  <div class="contact-card">
+  <input type="text" name="nom" placeholder="Nom" required>
+  <input type="text" name="prenom" placeholder="Prénom" required>
+  <input type="tel" name="telephone" placeholder="Téléphone" required>
 
-    <h2>Votre message</h2>
+  <textarea id="message" name="message"
+    placeholder="Ici, vous pouvez compléter votre besoin et indiquer vos disponibilités."
+    required></textarea>
 
-    <form id="contact-form" class="contact-form">
+  <button type="submit" class="btn">Envoyer ma demande</button>
 
-      <input type="text" name="nom" placeholder="Nom" required>
-      <input type="text" name="prenom" placeholder="Prénom" required>
-      <input type="tel" name="telephone" placeholder="Téléphone" required>
-
-      <textarea id="message" name="message" placeholder="Votre message" required></textarea>
-
-      <button class="btn" type="submit">Envoyer ma demande</button>
-
-    </form>
+</form>
 
   </div>
 
@@ -246,12 +244,16 @@ Un complément d'information :`;
       message.value += `\n• ${pratique}`;
     }
 
+    document.querySelector(".contact-wrapper").scrollIntoView({
+      behavior: "smooth"
+    });
+
     message.focus();
 
   });
 
 });
 </script>
-
+  
 </body>
 </html>
