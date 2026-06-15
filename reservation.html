@@ -265,7 +265,397 @@
         Prenons rendez-vous en toute simplicité :
       </p>
 
-      <form class="contact-form">
+      <!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Réserver — Mondes Subtils</title>
+
+  <meta name="description" content="Prendre contact avec Mondes Subtils pour une séance de magnétisme à distance ou en présentiel dans le Tarn, Toulouse et Occitanie.">
+
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* =========================
+       RESERVATION PREMIUM
+    ========================= */
+
+    .reservation-hero{
+      height:85vh;
+      background:
+      linear-gradient(rgba(0,32,91,0.32), rgba(0,32,91,0.38)),
+      url("photoreservervotreseance.webp");
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      color:white;
+      padding:20px;
+    }
+
+    .reservation-hero-content{
+      max-width:760px;
+    }
+
+    .reservation-hero h1{
+      font-size:58px;
+      font-weight:300;
+      letter-spacing:-0.03em;
+      line-height:1.1;
+      margin-bottom:22px;
+    }
+
+    .reservation-hero p{
+      font-size:20px;
+      line-height:1.8;
+      opacity:0.95;
+      font-weight:300;
+    }
+
+    .reservation-intro{
+      max-width:850px;
+      margin:auto;
+      padding:90px 20px 50px;
+      text-align:center;
+    }
+
+    .reservation-intro p{
+      font-size:22px;
+      line-height:1.9;
+      font-weight:300;
+      color:#1c1c1c;
+    }
+
+    .reservation-transition{
+      max-width:820px;
+      margin:auto;
+      padding:0 20px 80px;
+      text-align:center;
+    }
+
+    .reservation-transition h2{
+      font-size:40px;
+      font-weight:300;
+      color:#00205b;
+      margin-bottom:18px;
+    }
+
+    .reservation-transition p{
+      font-size:18px;
+      line-height:1.9;
+      color:#333;
+    }
+
+    .contact-wrapper{
+      max-width:850px;
+      margin:auto;
+      padding:0 20px 120px;
+    }
+
+    .contact-card{
+      background:white;
+      border-radius:38px;
+      padding:50px;
+      box-shadow:0 12px 40px rgba(0,0,0,0.05);
+    }
+
+    .contact-card h2{
+      font-size:42px;
+      font-weight:300;
+      color:#00205b;
+      margin-bottom:18px;
+      text-align:center;
+    }
+
+    .contact-card .intro{
+      text-align:center;
+      font-size:18px;
+      line-height:1.8;
+      color:#444;
+      margin-bottom:40px;
+    }
+
+    .contact-form{
+      display:grid;
+      gap:22px;
+    }
+
+    .contact-form input,
+    .contact-form textarea{
+      width:100%;
+      border:none;
+      background:#f5f6f8;
+      border-radius:18px;
+      padding:18px 20px;
+      font-size:16px;
+      color:#111;
+      outline:none;
+    }
+
+    .contact-form textarea{
+      min-height:160px;
+      resize:vertical;
+    }
+
+    .confirmation-text{
+      margin-top:26px;
+      text-align:center;
+      font-size:15px;
+      line-height:1.8;
+      color:#666;
+    }
+
+    .reservation-final{
+      background:#f1f3f6;
+      padding:90px 20px;
+      text-align:center;
+    }
+
+    .reservation-final p{
+      max-width:760px;
+      margin:auto;
+      font-size:18px;
+      line-height:1.9;
+      color:#444;
+    }
+
+    @media(max-width:768px){
+      .reservation-hero h1{font-size:40px;}
+      .contact-card{padding:34px 24px;border-radius:28px;}
+      .contact-card h2{font-size:32px;}
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <a href="index.html" class="logo">
+      <img src="logo.png" alt="Mondes Subtils">
+    </a>
+
+    <div class="burger" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <!-- MENU -->
+  <nav class="menu" id="menu">
+    <a href="index.html">Accueil</a>
+    <a href="a-propos.html">À propos</a>
+    <a href="pratiques.html">Les pratiques</a>
+    <a href="temoignages.html">Témoignages</a>
+    <a href="faq.html">FAQ</a>
+    <a href="reservation.html">Réserver</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="page-hero reservation-hero">
+    <div class="hero-content">
+      <p class="mini-title">Mondes Subtils</p>
+      <h1>Réserver une séance</h1>
+      <p>Un espace de calme, d’écoute et d’accompagnement personnalisé.</p>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="reservation-intro">
+    <p>
+      Chaque séance commence par un échange attentif afin de comprendre votre besoin et de vous proposer un accompagnement adapté.
+    </p>
+  </section>
+
+  <!-- CARDS -->
+  <section class="cards reservation-cards">
+  <div class="card pratique-card"
+     data-pratique="Arrêt du tabac"
+     style="background-image:url('photoarrettabac.avif');">
+     <h3>Arrêt du tabac</h3>
+     <p>Un accompagnement progressif ou ponctuel selon votre rythme personnel.</p>
+    </div>
+
+    <div class="card pratique-card"
+     data-pratique="Nettoyage énergétique"
+     style="background-image:url('photonettoyagepersonne.png');">
+     <h3>Nettoyage énergétique</h3>
+     <p>Harmoniser les énergies pour de meilleurs ressentis.</p>
+    </div>
+
+    <div class="card pratique-card"
+     data-pratique="Nettoyage de lieux"
+     style="background-image:url('photonettoyagelieu.avif');">
+     <h3>Nettoyage de lieux</h3>
+     <p>Retrouver un équilibre intérieur dans votre environnement.</p>
+    </div>
+
+    <div class="card pratique-card"
+     data-pratique="Libération émotionnelle"
+     style="background-image:url('photoliberationemotionnelle.avif');">
+     <h3>Libération émotionnelle</h3>
+     <p>Accompagnement des périodes de surcharge émotionnelle.</p>
+    </div>
+
+    <div class="card pratique-card"
+     data-pratique="Douleurs et inconforts"
+     style="background-image:url('douleursinconforts.png');">
+     <h3>Douleurs & inconforts</h3>
+     <p>Travail énergétique doux dans une démarche de mieux-être.</p>
+    </div>
+
+    <div class="card pratique-card"
+     data-pratique="Se libérer des emprises"
+     style="background-image:url('liberationrelationsousemprise.png');">
+     <h3>Se libérer des emprises</h3>
+     <p>Retrouver la paix intérieure.</p>
+    </div>
+  </section>
+
+  <!-- TRANSITION -->
+  <section class="reservation-transition">
+    <h2>Prendre contact</h2>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact-wrapper">
+    <div class="contact-card">
+
+      <h2>Votre message</h2>
+
+      <p class="intro">
+        Prenons rendez-vous en toute simplicité :
+      </p>
+
+      <form class="contact-form" action="contact.php" method="POST">
+        <input type="text" name="nom" placeholder="Nom" required>
+
+        <input type="text" name="prenom" placeholder="Prénom" required>
+
+        <input type="tel" name="telephone" placeholder="Téléphone" required>
+
+<textarea
+    id="message"
+    name="message"
+    placeholder="Ici, vous pouvez compléter votre besoin et indiquer vos disponibilités."
+></textarea>
+
+<button type="submit" class="btn">Envoyer ma demande</button>
+
+      <p class="confirmation-text">
+        Votre demande a bien été prise en compte, je vous contacte dans les meilleurs délais.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- FINAL -->
+  <section class="reservation-final">
+    <p>
+      Chaque séance se déroule dans un cadre respectueux, sans substitution médicale.
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+ <footer>
+
+  <div class="footer-content">
+    Mondes Subtils — Accompagnement mieux-être, magnetiseur sur rendez-vous, en présentiel ou distanciel.
+  </div>
+
+  <div class="footer-links">
+    <a href="mentions-legales.html">Mentions légales</a>
+    <a href="accessibilite.html">Accessibilité</a>
+    <a href="cgv.html">CGV</a>
+  </div>
+
+</footer>
+
+  <!-- CONTACT FLOATING BUTTON -->
+  <div class="contact-floating">
+    <button class="contact-trigger" id="contactTrigger">
+      <img src="phonepluslight.svg" alt="Contact">
+    </button>
+
+    <div class="contact-panel" id="contactPanel">
+      <a href="tel:+33607149158">Téléphone</a>
+      <a href="sms:+33607149158">SMS</a>
+      <a href="mailto:mondessubtils@yahoo.com">E-mail</a>
+      <a href="reservation.html">Réserver une séance</a>
+    </div>
+  </div>
+
+  <!-- SCRIPTS CLEAN -->
+  <script>
+    const burger = document.getElementById("burger");
+    const menu = document.getElementById("menu");
+
+    burger.addEventListener("click", () => {
+      burger.classList.toggle("active");
+      menu.classList.toggle("open");
+    });
+
+    const trigger = document.getElementById("contactTrigger");
+    const panel = document.getElementById("contactPanel");
+
+    if (trigger && panel) {
+      trigger.addEventListener("click", () => {
+        panel.classList.toggle("open");
+      });
+    }
+  </script>
+<script>
+document.querySelectorAll(".pratique-card").forEach(card => {
+
+  card.addEventListener("click", () => {
+
+    const pratique = card.dataset.pratique;
+    const message = document.getElementById("message");
+
+    if (!message) return;
+
+    if (!message.value.includes(pratique)) {
+
+      if (message.value.trim() === "") {
+
+        message.value =
+`Bonjour,
+
+Je souhaite des informations concernant :
+
+• ${pratique}
+
+Mes disponibilités :
+
+Mon mode de contact préféré :
+
+Un complément d'information :`;
+
+      } else {
+
+        message.value += `\n• ${pratique}`;
+
+      }
+
+    }
+
+    document.querySelector(".contact-wrapper").scrollIntoView({
+      behavior: "smooth"
+    });
+
+    message.focus();
+
+  });
+
+});
+</script>
+</body>
+</html>
         <input type="text" placeholder="Nom" required>
         <input type="text" placeholder="Prénom" required>
         <input type="tel" placeholder="Téléphone" required>
