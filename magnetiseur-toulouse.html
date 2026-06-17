@@ -37,6 +37,7 @@
 
     <a href="index.html">Accueil</a>
     <a href="a-propos.html">À propos</a>
+    <a href="temoignages.html">Témoignages</a>
     <a href="pratiques.html">Pratiques</a>
     <a href="faq.html">FAQ</a>
     <a href="reservation.html">Réserver</a>
@@ -53,7 +54,7 @@
       <h1>Magnétiseur à Toulouse</h1>
 
       <p>
-        Un espace de calme, d’écoute et d’accompagnement personnalisé.
+        Un espace de calme, d’écoute et d’accompagnement sur mesure.
       </p>
 
       <a href="reservation.html" class="btn">
@@ -223,14 +224,21 @@
     });
 
     // CONTACT BUTTON
-    const trigger = document.getElementById("contactTrigger");
-    const panel = document.getElementById("contactPanel");
+const trigger = document.getElementById("contactTrigger");
+const panel = document.getElementById("contactPanel");
 
-    if (trigger && panel) {
-      trigger.addEventListener("click", () => {
-        panel.classList.toggle("open");
-      });
+if (trigger && panel) {
+  trigger.addEventListener("click", (e) => {
+    e.stopPropagation();
+    panel.classList.toggle("open");
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!panel.contains(e.target) && !trigger.contains(e.target)) {
+      panel.classList.remove("open");
     }
+  });
+}
 
   </script>
 
