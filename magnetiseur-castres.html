@@ -182,6 +182,22 @@
 
   </section>
 
+  <!-- CONTACT FLOATING -->
+<div class="contact-floating">
+
+  <button class="contact-trigger" id="contactTrigger">
+    <img src="phonepluslight.svg" alt="Contact">
+  </button>
+
+  <div class="contact-panel" id="contactPanel">
+    <a href="tel:+33607149158">Téléphone</a>
+    <a href="sms:+33607149158">SMS</a>
+    <a href="mailto:mondessubtils@yahoo.com">E-mail</a>
+    <a href="reservation.html">Réserver une séance</a>
+  </div>
+
+</div>
+
   <!-- FOOTER -->
   <footer>
 
@@ -207,6 +223,15 @@
       burger.classList.toggle("active");
       menu.classList.toggle("open");
     });
+
+    const trigger = document.getElementById("contactTrigger");
+const panel = document.getElementById("contactPanel");
+
+if (trigger && panel) {
+  trigger.addEventListener("click", () => {
+    panel.classList.toggle("open");
+  });
+}
 
   </script>
 
