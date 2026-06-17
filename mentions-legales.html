@@ -10,11 +10,28 @@
 <body>
 
   <!-- NAVBAR (simple retour accueil) -->
-  <header class="navbar">
-    <a href="index.html" class="logo">
-      <img src="logo.png" alt="Mondes Subtils">
-    </a>
-  </header>
+<header class="navbar">
+
+  <a href="index.html" class="logo">
+    <img src="logo.png" alt="Mondes Subtils">
+  </a>
+
+  <div class="burger" id="burger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+</header>
+
+<nav class="menu" id="menu">
+  <a href="index.html">Accueil</a>
+  <a href="a-propos.html">À propos</a>
+  <a href="pratiques.html">Les pratiques</a>
+  <a href="temoignages.html">Témoignages</a>
+  <a href="faq.html">FAQ</a>
+  <a href="reservation.html">Réserver</a>
+</nav>
 
   <!-- CONTENU -->
   <section class="section">
@@ -124,6 +141,23 @@
 
   </section>
 
+  
+<!-- CONTACT FLOATING -->
+<div class="contact-floating">
+
+  <button class="contact-trigger" id="contactTrigger">
+    <img src="phonepluslight.svg" alt="Contact">
+  </button>
+
+  <div class="contact-panel" id="contactPanel">
+    <a href="tel:+33607149158">Téléphone</a>
+    <a href="sms:+33607149158">SMS</a>
+    <a href="mailto:mondessubtils@yahoo.com">E-mail</a>
+    <a href="reservation.html">Réserver une séance</a>
+  </div>
+
+</div>
+
   <!-- FOOTER -->
  <footer>
 
@@ -138,6 +172,39 @@
   </div>
 
 </footer>
+
+<script>
+const burger = document.getElementById("burger");
+const menu = document.getElementById("menu");
+
+if (burger && menu) {
+  burger.addEventListener("click", () => {
+    burger.classList.toggle("active");
+    menu.classList.toggle("open");
+  });
+}
+
+const trigger = document.getElementById("contactTrigger");
+const panel = document.getElementById("contactPanel");
+
+if (trigger && panel) {
+
+  trigger.addEventListener("click", (e) => {
+    e.stopPropagation();
+    panel.classList.toggle("open");
+  });
+
+  document.addEventListener("click", (e) => {
+    if (
+      !panel.contains(e.target) &&
+      !trigger.contains(e.target)
+    ) {
+      panel.classList.remove("open");
+    }
+  });
+
+}
+</script>
 
 </body>
 </html>
