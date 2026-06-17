@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -7,30 +8,8 @@
 
 <link rel="stylesheet" href="style.css" />
 
-  <!-- NAVBAR --> 
-  <header class="navbar"> 
-  <a href="index.html" class="logo"> 
-  <img src="logo.png" alt="Mondes Subtils"> 
-</a> 
-  
-  <div class="burger" id="burger"> 
-  <span></span> 
-  <span></span> 
-  <span></span> 
-</div> 
-
-</header> 
-  
-  <!-- MENU --> 
-  
-  <nav class="menu" id="menu">
-  <a href="index.html">Accueil</a>
-  <a href="a-propos.html">À propos</a>
-  <a href="pratiques.html">Les pratiques</a>
-  <a href="temoignages.html">Témoignages</a>
-  <a href="faq.html">FAQ</a>
-  <a href="reservation.html">Réserver</a> 
-</nav>
+<!-- CSS LOCAL (si tu ne veux pas toucher style.css) -->
+<style>
 
 /* HERO */
 .reservation-hero{
@@ -90,7 +69,7 @@
   transform:scale(1.03);
 }
 
-/* FORM WRAPPER FIX (IMPORTANT) */
+/* FORM */
 .contact-wrapper{
   max-width:900px;
   margin:90px auto;
@@ -101,7 +80,7 @@
 
 .contact-card{
   width:100%;
-  max-width:650px; /* 👉 empêche le formulaire de prendre toute la page */
+  max-width:650px;
   background:white;
   padding:50px;
   border-radius:30px;
@@ -148,16 +127,39 @@
   background:#003a9b;
 }
 
-/* RESPONSIVE */
 @media(max-width:768px){
   .contact-card{
     padding:30px;
   }
 }
+
 </style>
 </head>
 
 <body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+
+  <a href="index.html" class="logo">
+    <img src="logo.png" alt="Mondes Subtils">
+  </a>
+
+  <div class="burger" id="burger">
+    <span></span><span></span><span></span>
+  </div>
+
+</header>
+
+<!-- MENU -->
+<nav class="menu" id="menu">
+  <a href="index.html">Accueil</a>
+  <a href="a-propos.html">À propos</a>
+  <a href="pratiques.html">Les pratiques</a>
+  <a href="temoignages.html">Témoignages</a>
+  <a href="faq.html">FAQ</a>
+  <a href="reservation.html">Réserver</a>
+</nav>
 
 <!-- HERO -->
 <section class="reservation-hero">
@@ -172,26 +174,20 @@
   Choisissez une pratique puis envoyez votre demande.
 </section>
 
-<!-- CARDS (6 EXACTEMENT) -->
+<!-- CARDS -->
 <section class="cards">
 
   <div class="card pratique-card" data-pratique="Arrêt du tabac" style="background-image:url('photoarrettabac.avif');">Arrêt du tabac</div>
-
   <div class="card pratique-card" data-pratique="Nettoyage énergétique" style="background-image:url('photonettoyagepersonne.png');">Nettoyage énergétique</div>
-
   <div class="card pratique-card" data-pratique="Nettoyage de lieux" style="background-image:url('photonettoyagelieu.avif');">Nettoyage de lieux</div>
-
   <div class="card pratique-card" data-pratique="Libération émotionnelle" style="background-image:url('photoliberationemotionnelle.avif');">Libération émotionnelle</div>
-
   <div class="card pratique-card" data-pratique="Douleurs et inconforts" style="background-image:url('douleursinconforts.png');">Douleurs & inconforts</div>
-
   <div class="card pratique-card" data-pratique="Se libérer des emprises" style="background-image:url('liberationrelationsousemprise.png');">Se libérer des emprises</div>
-
   <div class="card pratique-card" data-pratique="Feu / Inflammations" style="background-image:url('zonefeubrulure.png');">Feu / Inflammations</div>
 
 </section>
 
-<!-- FORM CENTRÉ PROPRE -->
+<!-- FORM -->
 <div class="contact-wrapper">
   <div class="contact-card">
 
@@ -216,40 +212,66 @@
   </div>
 </div>
 
-<!-- SCRIPT CARDS -->
+<!-- FLOATING BUTTON -->
+<div class="contact-floating">
+
+  <button class="contact-trigger" id="contactTrigger">
+    <img src="phonepluslight.svg" alt="Contact">
+  </button>
+
+  <div class="contact-panel" id="contactPanel">
+    <a href="tel:+33607149158">Téléphone</a>
+    <a href="sms:+33607149158">SMS</a>
+    <a href="mailto:mondessubtils@yahoo.com">E-mail</a>
+    <a href="reservation.html">Réserver une séance</a>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+
+  <div class="footer-content">
+    Mondes Subtils — Accompagnement mieux-être, magnétiseur sur rendez-vous.
+  </div>
+
+  <div class="footer-links">
+    <a href="mentions-legales.html">Mentions légales</a>
+    <a href="accessibilite.html">Accessibilité</a>
+    <a href="cgv.html">CGV</a>
+  </div>
+
+</footer>
+
+<!-- SCRIPTS -->
 <script>
-document.querySelectorAll(".pratique-card").forEach(card => {
-  card.addEventListener("click", () => {
 
-    const pratique = card.dataset.pratique;
-    const message = document.getElementById("message");
+const burger = document.getElementById("burger");
+const menu = document.getElementById("menu");
 
-    if (!message) return;
-
-    if (message.value.trim() === "") {
-      message.value =
-`Bonjour,
-
-Je souhaite des informations concernant :
-
-• ${pratique}
-
-Mes disponibilités :
-
-Mon mode de contact préféré :
-
-Un complément d'information :`;
-    } else if (!message.value.includes(pratique)) {
-      message.value += `\n• ${pratique}`;
-    }
-
-    document.querySelector(".contact-wrapper").scrollIntoView({
-      behavior: "smooth"
-    });
-
-    message.focus();
-  });
+burger.addEventListener("click", () => {
+  burger.classList.toggle("active");
+  menu.classList.toggle("open");
 });
+
+const trigger = document.getElementById("contactTrigger");
+const panel = document.getElementById("contactPanel");
+
+if (trigger && panel) {
+
+  trigger.addEventListener("click", (e) => {
+    e.stopPropagation();
+    panel.classList.toggle("open");
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!panel.contains(e.target) && !trigger.contains(e.target)) {
+      panel.classList.remove("open");
+    }
+  });
+
+}
+
 </script>
 
 </body>
