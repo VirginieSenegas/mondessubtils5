@@ -202,7 +202,7 @@
       <input type="tel" name="telephone" placeholder="Téléphone" required>
 
       <textarea id="message" name="message"
-        placeholder="Décrivez votre besoin + disponibilités"
+        placeholder="Cliquez sur une ou plusieurs pratiques ci-dessus pour préremplir votre demande"
         required></textarea>
 
       <button type="submit" class="btn">Envoyer ma demande</button>
@@ -271,6 +271,62 @@ if (trigger && panel) {
   });
 
 }
+
+  const pratiqueCards = document.querySelectorAll(".pratique-card");
+const messageField = document.getElementById("message");
+
+pratiqueCards.forEach(card => {
+  card.addEventListener("click", () => {
+
+    const pratique = card.dataset.pratique;
+
+    card.classList.add("selected");
+
+    // Si le formulaire est vide, on crée le modèle complet
+    if (messageField.value.trim() === "") {
+
+      messageField.value = `Bonjour,
+
+Je souhaite réserver une séance pour :
+
+• ${pratique}
+
+Mes disponibilités :
+-
+
+Je souhaite être contacté(e) par :
+☐ SMS
+☐ Téléphone
+
+Pendant les horaires suivants :
+-
+
+Informations complémentaires :
+-`;
+
+    } else {
+
+      // Ajouter la pratique si elle n'est pas déjà présente
+      if (!messageField.value.includes(`• ${pratique}`)) {
+
+        messageField.value = messageField.value.replace(
+          "Mes disponibilités :",
+          `• ${pratique}
+
+Mes disponibilités :`
+        );
+
+      }
+    }
+
+    messageField.scrollIntoView({
+      behavior: "smooth",
+      block: "center"
+    });
+
+    messageField.focus();
+  });
+});
 
 </script>
 
