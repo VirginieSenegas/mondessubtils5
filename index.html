@@ -171,9 +171,18 @@ const trigger = document.getElementById("contactTrigger");
 const panel = document.getElementById("contactPanel");
 
 if (trigger && panel) {
-  trigger.addEventListener("click", () => {
+
+  trigger.addEventListener("click", (e) => {
+    e.stopPropagation();
     panel.classList.toggle("open");
   });
+
+  document.addEventListener("click", (e) => {
+    if (!panel.contains(e.target) && !trigger.contains(e.target)) {
+      panel.classList.remove("open");
+    }
+  });
+
 }
 
 </script>
