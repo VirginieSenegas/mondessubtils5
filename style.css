@@ -324,6 +324,11 @@ body{
   box-shadow:0 25px 60px rgba(0,0,0,0.18);
 }
 
+.pratique-card.selected{
+  outline: 4px solid #00205b;
+  transform: scale(1.03);
+}
+
 /* VOILE IDENTIQUE INDEX */
 .cards .card::after{
   content:"";
