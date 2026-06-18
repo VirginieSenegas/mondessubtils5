@@ -441,6 +441,10 @@ body{
   background-image:url("liberationrelationsousemprise.webp");
 }
 
+.cards .card:nth-child(8){
+  background-image:url("photoapropo1.png");
+}
+
 /* FOOTER */
 
 footer{
