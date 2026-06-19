@@ -1309,6 +1309,47 @@ h1,h2,h3{
   transform:translateY(0);
 }
 
+.about-pratiques-card{
+  display:flex;
+  align-items:flex-end;
+
+  max-width:860px;
+  margin:0 auto;
+
+  min-height:280px;
+  padding:34px;
+
+  border-radius:28px;
+  overflow:hidden;
+
+  text-decoration:none;
+
+  background:
+    linear-gradient(
+      rgba(0,0,0,0.25),
+      rgba(0,0,0,0.45)
+    ),
+    url("backgroundpratiques.png");
+
+  background-size:cover;
+  background-position:center;
+
+  box-shadow:0 15px 40px rgba(0,0,0,0.12);
+
+  transition:0.3s ease;
+}
+
+.about-pratiques-card:hover{
+  transform:translateY(-4px);
+}
+
+.about-pratiques-card h3{
+  color:#f4e7c5;
+  font-size:26px;
+  font-weight:300;
+  margin:0;
+}
+
 /* MOBILE */
 @media(max-width:768px){
   .contact-floating{
