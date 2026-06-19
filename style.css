@@ -384,6 +384,10 @@ body{
   text-shadow:0 4px 12px rgba(0,0,0,0.12);
 }
 
+.card-pratiques{
+  background-image:url("backgroundpratiques1.png");
+}
+
 /* TITRE */
 .cards .card h2{
   font-size:26px;
