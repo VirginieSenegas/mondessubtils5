@@ -1377,11 +1377,40 @@ h1,h2,h3{
   color:#00205b;
   text-decoration:underline;
 }
+.practice-link-card{
+  min-height:320px;
+  border-radius:28px;
+  overflow:hidden;
 
-.card-temoignages{
-  background-image:url("temoignageimage.webp");
+  display:flex;
+  align-items:flex-end;
+
+  padding:32px;
+  text-decoration:none;
+
+  background-size:cover;
+  background-position:center;
+
+  transition:.3s ease;
 }
 
-.card-faq{
-  background-image:url("photofaq.webp");
+.practice-link-card:hover{
+  transform:translateY(-4px);
+}
+
+.practice-link-card h2{
+  color:#f4e7c5;
+  margin:0;
+}
+
+.practice-link-temoignages{
+  background:
+    linear-gradient(rgba(0,0,0,.25),rgba(0,0,0,.45)),
+    url("temoignageimage.webp");
+}
+
+.practice-link-faq{
+  background:
+    linear-gradient(rgba(0,0,0,.25),rgba(0,0,0,.45)),
+    url("photofaq.webp");
 }
