@@ -1377,3 +1377,11 @@ h1,h2,h3{
   color:#00205b;
   text-decoration:underline;
 }
+
+.card-temoignages{
+  background-image:url("temoignageimage.webp");
+}
+
+.card-faq{
+  background-image:url("photofaq.webp");
+}
