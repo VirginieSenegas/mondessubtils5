@@ -1389,7 +1389,11 @@ h1,h2,h3{
 }
 
 .discover-card{
-  background:#f7f3eb;
+  color:white;
+  min-height:320px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
   border:1px solid rgba(0,0,0,0.06);
   border-radius:28px;
 
@@ -1425,4 +1429,28 @@ h1,h2,h3{
 .discover-card p{
   margin:0;
   line-height:1.7;
+}
+
+.discover-temoignages{
+  background:
+    linear-gradient(
+      rgba(0,0,0,.25),
+      rgba(0,0,0,.45)
+    ),
+    url("temoignageimage.webp");
+
+  background-size:cover;
+  background-position:center;
+}
+
+.discover-faq{
+  background:
+    linear-gradient(
+      rgba(0,0,0,.25),
+      rgba(0,0,0,.45)
+    ),
+    url("photofaq.webp");
+
+  background-size:cover;
+  background-position:center;
 }
