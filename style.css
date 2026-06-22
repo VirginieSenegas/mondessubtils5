@@ -1417,8 +1417,9 @@ h1,h2,h3{
   font-size:12px;
   text-transform:uppercase;
   letter-spacing:2px;
-  opacity:.6;
+  color:#f4e7c5;
   margin-bottom:12px;
+  font-weight:500;
 }
 
 .discover-card h2{
