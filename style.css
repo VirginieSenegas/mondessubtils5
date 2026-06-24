@@ -453,6 +453,10 @@ body{
   background-image:url("photoapropo1.png");
 }
 
+.cards .card:nth-child(9){
+  background-image:url("photoapropo1.png");
+}
+
 /* FOOTER */
 
 footer{
